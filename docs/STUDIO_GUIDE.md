@@ -264,8 +264,9 @@ is unchanged, and a test enforces bit-identity.
 7. **Existing artifacts have no per-task trajectories**; curves exist only for Studio runs.
 8. **Legacy configurations are reconstructed** from script constants; only e20 and e27 stored
    per-seed values, so other artifacts can be compared only at the level of means.
-9. **Two exact reproductions so far** (Table I SGD and Orthogonal, seed 20260824). Other paper
-   values are labelled "consistent with the artifact", which is not an independent reproduction.
+9. **Three Table I records reproduced exactly so far** (SGD, Shrink & Perturb and Orthogonal,
+   seed 20260824, across five Studio runs). Other paper values are labelled "consistent with the
+   artifact", which is not an independent reproduction.
 10. **CNN effective rank** jitters by ~10⁻⁵ between CUDA runs; CNN training itself is reproducible.
 11. **Phase-1 artifacts (e01–e19)** are not comparable with Phase-2 records.
 12. **e18** (Phase-1 scale/mechanism check) has a script but no artifact; the Studio does not
