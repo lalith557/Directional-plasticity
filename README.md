@@ -367,7 +367,7 @@ If you use this code or build on the results, please cite:
 @misc{gona2026weightnorm,
   title  = {Weight-Norm Growth and Update Geometry in Loss of Plasticity:
             A Matched-Step-Size Study},
-  author = {Gona, Lalith and Maji, Ankita},
+  author = {Gona Lalith, Ankita Maji},
   year   = {2026},
   note   = {IEEE ICA 2026},
   url    = {https://github.com/lalith557/Directional-plasticity}
