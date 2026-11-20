@@ -225,4 +225,13 @@ write-up is kept in `paper/phase1_manuscript.md`, with the full record in `decis
 
 ---
 
+## License
+
+The code is released under the [MIT License](LICENSE). The paper (`Research Paper.pdf`,
+`web/public/paper/plasticity-paper.pdf` and the LaTeX source in `paper/`) is not covered by
+that license; it remains © 2026 Gona Lalith and Ankita Maji, or the publisher where copyright
+has been transferred.
+
+---
+
 *Gona Lalith · Ankita Maji · 2026*
