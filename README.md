@@ -128,23 +128,26 @@ only decrease when ⟨θ, d⟩ ≤ −η/2. This predicts both directional ablat
 ## Architecture
 
 ```mermaid
-flowchart LR
-    subgraph research["Research code · PyTorch"]
-        data["MNIST IDX files"] --> streams["Task streams<br/>permuted · rotated"]
-        rules["Update rules<br/>SGD · L2-init · Shrink-and-Perturb · CBP<br/>orthogonal · inward · ANR · ..."] --> loop
-        streams --> loop["Shared training loop<br/>run_arm / run_arm_cnn"]
-        loop --> exps["experiments/e20–e27"]
-    end
-    exps --> tables[("results/tables<br/>JSON · CSV")]
+flowchart TB
+    exps["Experiment scripts<br/>experiments/e20–e27"]
+    studio["Experimental Studio<br/>FastAPI · registry · queue"]
+    data["MNIST IDX files"] --> streams["Task streams<br/>permuted · rotated MNIST"]
+    rules["Update rules<br/>SGD · L2-init · Shrink-and-Perturb · CBP<br/>orthogonal · inward · ANR"]
+    exps -->|"run"| loop
+    studio -->|"run in isolated process"| loop
+    streams --> loop["Shared training loop<br/>run_arm · run_arm_cnn"]
+    rules --> loop
+    loop -->|"scripts"| tables[("results/tables<br/>JSON · CSV")]
+    loop -->|"Studio runs"| runs[("studio/experiments<br/>per-run records")]
     tables --> paper["Paper<br/>LaTeX + figures"]
-    tables --> build["build_data.py"] --> lab["Plasticity Lab<br/>React · Vite"]
-    subgraph studio["Experimental Studio"]
-        api["FastAPI<br/>registry · queue · runner"]
-    end
-    api -->|"launches runs"| loop
-    tables -.->|"read-only"| api
-    lab <-->|"REST + WebSocket"| api
+    tables --> lab["Plasticity Lab<br/>React · Vite"]
+    runs -.->|"indexed by"| studio
+    lab <-->|"REST + WebSocket"| studio
 ```
+
+Every number flows one way: from the shared training loop into versioned artifacts, and from
+there into the paper and the web application. Neither the lab nor the Studio ever writes to
+`results/tables/`.
 
 ---
 
