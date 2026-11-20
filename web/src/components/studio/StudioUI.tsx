@@ -12,7 +12,7 @@ import {
 } from "recharts";
 import { C } from "../../lib/colors";
 import { Badge } from "../ui";
-import { useBackend } from "../../lib/api";
+import { IS_HOSTED, REPO_URL, useBackend } from "../../lib/api";
 import { NA } from "../../data/format";
 
 /* ---------------- badges ---------------- */
@@ -58,6 +58,23 @@ export function ValidationBadge({ v }: { v?: { status: string } | null }) {
 /* ---------------- backend gate ---------------- */
 export function BackendGate({ children, feature }: { children: ReactNode; feature: string }) {
   const { online } = useBackend(4000);
+  if (IS_HOSTED)
+    return (
+      <div className="error-box">
+        <div className="eb-title">This hosted version is read-only — {feature} needs the local Studio backend.</div>
+        <div className="small">
+          The Experimental Studio launches and inspects real PyTorch training runs on a GPU, so it runs on
+          your own machine. Clone the repository and follow the{" "}
+          <a className="linkish" href={`${REPO_URL}#quick-start`} target="_blank" rel="noreferrer">Quick start</a>{" "}
+          in the README to use it.
+        </div>
+        <div className="small muted mt2">
+          The experiment pages, the norm–plasticity, geometry and ablation analyses, the documentation, the
+          system architecture and the paper are fully available here; their values come from the released
+          result files.
+        </div>
+      </div>
+    );
   if (online === null) return <div className="studio-note">Connecting to the Studio backend…</div>;
   if (!online)
     return (

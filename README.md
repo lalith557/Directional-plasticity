@@ -4,6 +4,7 @@
 
 **A matched-step-size study of continual learning: research code, paper, and an interactive experiment lab**
 
+[![Live demo](https://img.shields.io/badge/Live%20demo-GitHub%20Pages-2ea44f?logo=github)](https://lalith557.github.io/Directional-plasticity/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](requirements.txt)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org)
@@ -11,6 +12,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-Studio%20backend-009688?logo=fastapi&logoColor=white)](studio)
 [![Paper](https://img.shields.io/badge/Paper-PDF-B31B1B)](Research%20Paper.pdf)
 
+[**Live demo**](https://lalith557.github.io/Directional-plasticity/) •
 [Overview](#overview) •
 [Key results](#key-results) •
 [Quick start](#quick-start) •
@@ -244,6 +246,11 @@ experiment, update-rule implementations, metric definitions) is documented in
     <td><sub><b>Paper Results.</b> Every value printed in the paper, recomputed from its artifact and checked at the paper's precision.</sub></td>
   </tr>
 </table>
+
+> **Live demo:** a read-only build of Plasticity Lab is deployed to GitHub Pages at
+> **https://lalith557.github.io/Directional-plasticity/** on every push to `main`
+> ([workflow](.github/workflows/deploy-pages.yml)). The Studio features need the local backend
+> and GPU, so they are available only when you run the project yourself.
 
 **Plasticity Lab** ([`web/`](web)) is a Vite + React 18 + TypeScript application:
 

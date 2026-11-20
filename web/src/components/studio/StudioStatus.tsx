@@ -1,13 +1,25 @@
 import { Link } from "react-router-dom";
 import { Card, CardHead } from "../ui";
 import { StatusBadge, ValidationBadge } from "./StudioUI";
-import { useApi, useBackend } from "../../lib/api";
+import { IS_HOSTED, REPO_URL, useApi, useBackend } from "../../lib/api";
 
 /** Overview strip: registry counts, GPU state and recent runs — all from the backend. */
 export function StudioStatus() {
   const { online } = useBackend(5000);
   const { data: s } = useApi<any>(online ? "/registry/summary" : null, 5000);
   const { data: gpu } = useApi<any>(online ? "/resources/gpu" : null, 5000);
+  if (IS_HOSTED)
+    return (
+      <Card pad className="mb4">
+        <CardHead title="Experimental Studio" sub="runs locally" />
+        <div className="small">
+          The Studio configures, launches and monitors real PyTorch training runs on a GPU, so it runs on
+          your own machine — see the{" "}
+          <a className="linkish" href={`${REPO_URL}#quick-start`} target="_blank" rel="noreferrer">Quick start</a>.
+          Everything below comes from the released result files.
+        </div>
+      </Card>
+    );
   if (online === false)
     return (
       <Card pad className="mb4">

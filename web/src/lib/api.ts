@@ -5,6 +5,15 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 export const API_BASE = "/api";
 
+export const REPO_URL = "https://github.com/lalith557/Directional-plasticity";
+
+/**
+ * True when the app is served as a static site (e.g. GitHub Pages) instead of from a local
+ * dev/preview server. There is no Studio backend in that case, so no request is attempted.
+ */
+export const IS_HOSTED =
+  typeof window !== "undefined" && !["localhost", "127.0.0.1", "[::1]"].includes(window.location.hostname);
+
 export class ApiError extends Error {
   status: number;
   detail: any;
@@ -15,7 +24,10 @@ export class ApiError extends Error {
   }
 }
 
+const HOSTED_ERROR = "The Studio backend is not part of the hosted site.";
+
 export async function api<T = any>(path: string, init?: RequestInit & { json?: any }): Promise<T> {
+  if (IS_HOSTED) throw new ApiError(503, HOSTED_ERROR);
   const { json, ...rest } = init ?? {};
   const res = await fetch(`${API_BASE}${path}`, {
     ...rest,
@@ -34,6 +46,7 @@ export async function api<T = any>(path: string, init?: RequestInit & { json?: a
 }
 
 export async function apiText(path: string, init?: RequestInit & { json?: any }): Promise<string> {
+  if (IS_HOSTED) throw new ApiError(503, HOSTED_ERROR);
   const { json, ...rest } = init ?? {};
   const res = await fetch(`${API_BASE}${path}`, {
     ...rest,
@@ -83,7 +96,8 @@ export function useApi<T = any>(path: string | null, pollMs?: number) {
 
 /** Backend reachability (polled). null = still checking. */
 export function useBackend(pollMs = 5000) {
-  const { data, error } = useApi<any>("/health", pollMs);
+  const { data, error } = useApi<any>(IS_HOSTED ? null : "/health", pollMs);
+  if (IS_HOSTED) return { online: false as boolean | null, health: null };
   return { online: data ? true : error ? false : null, health: data };
 }
 
