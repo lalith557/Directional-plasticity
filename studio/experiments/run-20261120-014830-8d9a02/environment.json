@@ -1,0 +1,41 @@
+{
+  "environment": {
+    "python": "3.13.12",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "numpy": "2.4.3",
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "cudnn_version": 91900,
+    "cudnn_deterministic": false,
+    "cudnn_benchmark": false,
+    "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_total_gb": 8.59
+  },
+  "code_sha256": {
+    "src/plasticity_stress.py": "33e7d865e435bc231cb71aa87f2010a4c2037d65889f9216153feca0549abc35",
+    "src/datasets.py": "999f459f56adf36d18aed223799a342407ae0b0651a98ef64bf7857574d023a7",
+    "src/device.py": "8e4114a5b4a272736a82207a2d18f02f5ff7613b08d0c0dbfc06a1ff79f98f02",
+    "studio/engine/config_loader.py": "71ed23190aa4caf979b88923ceedd0659589004bb5461ccdc432726612568bc5",
+    "studio/engine/training_service.py": "8986239ffb02f4c0a880e9bc46e742ac58d28ba9758d8e5534eb73615a64d344",
+    "studio/engine/metrics_collector.py": "3ab263b085cf6e02bbef3ab064d1b7809fd802b1dab6d4280da051f1a0074135"
+  },
+  "dataset_sha256": {
+    "train_images": {
+      "file": "train-images.idx3-ubyte",
+      "sha256": "ba891046e6505d7aadcbbe25680a0738ad16aec93bde7f9b65e87a2fc25776db"
+    },
+    "train_labels": {
+      "file": "train-labels.idx1-ubyte",
+      "sha256": "65a50cbbf4e906d70832878ad85ccda5333a97f0f4c3dd2ef09a8a9eef7101c5"
+    },
+    "test_images": {
+      "file": "t10k-images.idx3-ubyte",
+      "sha256": "0fa7898d509279e482958e8ce81c8e77db3f2f8254e26661ceb7762c4d494ce7"
+    },
+    "test_labels": {
+      "file": "t10k-labels.idx1-ubyte",
+      "sha256": "ff7bcfd416de33731a308c3f266cc351222c34898ecbeaf847f06e48f7ec33f2"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+[E12] device=cpu profile=cpu env={'torch': '2.11.0+cu128', 'cuda_available': True, 'cuda_runtime': '12.8', 'device_name': 'NVIDIA GeForce RTX 4070 Laptop GPU', 'gpu_free_gb': 7.396655104, 'hardware_profile': 'gpu'}
+
+=== E12 MNIST ===
+[E12-mnist] 18 total probes across 4 families
+[E12-mnist] probe permuted_0: align=+0.1296 beta=0.0019153146486681032 p=0.00019
+[E12-mnist] probe permuted_1: align=+0.1367 beta=0.0020867077424437603 p=2.5e-05
+[E12-mnist] probe permuted_2: align=-0.0081 beta=0.002075936188016246 p=5.34e-05
+[E12-mnist] probe permuted_3: align=-0.0836 beta=0.002261358299423382 p=8.82e-05
+[E12-mnist] probe permuted_4: align=+0.1054 beta=0.0021073573859275267 p=1.84e-05
+[E12-mnist] probe permuted_5: align=+0.2244 beta=0.0018791948975424772 p=4.23e-05
+[E12-mnist] probe novel_class_0: align=+0.9814 beta=0.10472621491232577 p=2.45e-07
+[E12-mnist] probe novel_class_1: align=+0.9859 beta=0.10416988648074786 p=2.94e-07
+[E12-mnist] probe novel_class_2: align=+0.9890 beta=0.10477003712853301 p=2.73e-07
+[E12-mnist] probe novel_class_3: align=+0.9843 beta=0.10462636280623212 p=2.19e-07
+[E12-mnist] probe novel_class_4: align=+0.9904 beta=0.10509400192878418 p=2.21e-07
+[E12-mnist] probe noise_augment_0: align=+0.1075 beta=0.005533758127954523 p=4.43e-05
+[E12-mnist] probe noise_augment_1: align=+0.2400 beta=0.005527207419919467 p=6.28e-05
+[E12-mnist] probe noise_augment_2: align=+0.2757 beta=0.0055215061038360845 p=2.34e-05
+[E12-mnist] probe noise_augment_3: align=+0.3449 beta=0.0051458260825876685 p=3.24e-05
+[E12-mnist] probe input_scale_0: align=+0.3847 beta=0.0030734531003639536 p=5.86e-05
+[E12-mnist] probe input_scale_1: align=+0.3036 beta=0.005819158300394122 p=4.52e-05
+[E12-mnist] probe input_scale_2: align=+0.3974 beta=0.008749962958966219 p=5.44e-05
+C:\Users\Lalith Gona\HTML\Deep Learning Project\experiments\e12_probe_geometry.py:538: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  br, _ = scistats.pearsonr(x_hold[b_idx], y_hold[b_idx])
+[E12-mnist] holdout_sign_accuracy=0.800 pearson_r=0.9765742432367808 overall_passes=False
+
+[E12] OVERALL VERDICT: NULL

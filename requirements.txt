@@ -1,0 +1,27 @@
+# Python 3.11+ recommended (developed on 3.13).
+#
+# For GPU: install torch first from https://pytorch.org/get-started/locally/
+#          matching your CUDA runtime (e.g. cu128 for CUDA 12.x),
+#          then `pip install -r requirements.txt` for everything else.
+
+# --- research code (src/, experiments/) ---
+torch>=2.10             # CPU or +cuXYZ build
+numpy>=2.0
+scipy>=1.14
+pandas>=2.2
+scikit-learn>=1.5
+statsmodels>=0.14
+matplotlib>=3.9
+Pillow>=10.0            # PNG reader for CIFAR (Phase 1)
+py7zr>=0.20             # extracts cifar-10/*.7z on first CIFAR run (Phase 1)
+
+# --- Experimental Studio backend (studio/) ---
+fastapi>=0.110
+uvicorn[standard]>=0.29 # includes WebSocket support
+PyYAML>=6.0             # YAML config export
+psutil>=5.9             # process / memory monitoring
+nvidia-ml-py>=12.0      # GPU utilization via NVML (optional; the Studio works without it)
+
+# --- tests ---
+pytest>=8.0
+httpx>=0.27             # FastAPI TestClient

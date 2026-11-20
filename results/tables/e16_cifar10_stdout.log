@@ -1,0 +1,36 @@
+[E16] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU
+
+=== E16 cifar10 ===
+[E16-cifar10 seed=20260824] built 29 probes
+[E16-cifar10 seed=20260824] probe structural_permute_f=0.05: align=+0.944 ||g_p||=35.0795 beta=+0.00074 p=0.0461
+[E16-cifar10 seed=20260824] probe structural_permute_f=0.19: align=+0.934 ||g_p||=32.8472 beta=+0.00060 p=0.0566
+[E16-cifar10 seed=20260824] probe structural_permute_f=0.32: align=+0.924 ||g_p||=36.4215 beta=+0.00052 p=0.0797
+[E16-cifar10 seed=20260824] probe structural_permute_f=0.46: align=+0.941 ||g_p||=32.7795 beta=+0.00086 p=0.0172
+[E16-cifar10 seed=20260824] probe structural_permute_f=0.59: align=+0.924 ||g_p||=35.4228 beta=+0.00086 p=0.0155
+[E16-cifar10 seed=20260824] probe structural_permute_f=0.73: align=+0.938 ||g_p||=35.6014 beta=+0.00101 p=0.00853
+[E16-cifar10 seed=20260824] probe structural_permute_f=0.86: align=+0.942 ||g_p||=34.2684 beta=+0.00112 p=0.00808
+[E16-cifar10 seed=20260824] probe structural_permute_f=1.00: align=+0.931 ||g_p||=35.6931 beta=+0.00147 p=0.00543
+[E16-cifar10 seed=20260824] probe semantic_novel_class_i=0: align=+1.000 ||g_p||=50.6446 beta=+0.03872 p=1.51e-05
+[E16-cifar10 seed=20260824] probe semantic_novel_class_i=1: align=+0.997 ||g_p||=49.1957 beta=+0.03827 p=2.81e-05
+[E16-cifar10 seed=20260824] probe semantic_novel_class_i=2: align=+0.999 ||g_p||=50.0846 beta=+0.03858 p=1.17e-05
+[E16-cifar10 seed=20260824] probe semantic_novel_class_i=3: align=+0.995 ||g_p||=49.9886 beta=+0.03983 p=5.54e-06
+[E16-cifar10 seed=20260824] probe noise_std=0.02: align=+0.926 ||g_p||=36.1731 beta=+0.00047 p=0.127
+[E16-cifar10 seed=20260824] probe noise_std=0.18: align=+0.934 ||g_p||=36.8420 beta=+0.00069 p=0.0549
+[E16-cifar10 seed=20260824] probe noise_std=0.34: align=+0.931 ||g_p||=38.3042 beta=+0.00074 p=0.0585
+[E16-cifar10 seed=20260824] probe noise_std=0.50: align=+0.921 ||g_p||=42.5462 beta=+0.00056 p=0.0771
+[E16-cifar10 seed=20260824] probe input_scale_s=0.50: align=+0.923 ||g_p||=21.2963 beta=+0.00080 p=0.0358
+[E16-cifar10 seed=20260824] probe input_scale_s=0.83: align=+0.932 ||g_p||=29.7235 beta=+0.00039 p=0.264
+[E16-cifar10 seed=20260824] probe input_scale_s=1.17: align=+0.928 ||g_p||=40.5220 beta=+0.00047 p=0.113
+[E16-cifar10 seed=20260824] probe input_scale_s=1.50: align=+0.936 ||g_p||=51.5509 beta=+0.00053 p=0.104
+[E16-cifar10 seed=20260824] probe label_shift_k=1: align=+0.950 ||g_p||=35.3744 beta=+0.00057 p=0.048
+[E16-cifar10 seed=20260824] probe label_shift_k=3: align=+0.945 ||g_p||=35.5245 beta=+0.00057 p=0.07
+[E16-cifar10 seed=20260824] probe label_shift_k=4: align=+0.931 ||g_p||=34.2163 beta=+0.00084 p=0.0176
+[E16-cifar10 seed=20260824] probe label_shift_k=6: align=+0.943 ||g_p||=33.4091 beta=+0.00093 p=0.00743
+[E16-cifar10 seed=20260824] probe label_shift_k=7: align=+0.947 ||g_p||=32.6456 beta=+0.00082 p=0.0123
+[E16-cifar10 seed=20260824] probe label_shift_k=9: align=+0.943 ||g_p||=33.0818 beta=+0.00080 p=0.0203
+[E16-cifar10 seed=20260824] probe anti_class_i=0: align=+0.831 ||g_p||=53.0611 beta=-0.00109 p=0.0951
+[E16-cifar10 seed=20260824] probe anti_class_i=1: align=+0.835 ||g_p||=54.1495 beta=-0.00127 p=0.0189
+[E16-cifar10 seed=20260824] probe anti_class_i=2: align=+0.832 ||g_p||=54.3017 beta=-0.00146 p=0.0186
+[E16-cifar10] verdict: {'sign_passes': True, 'slope_ci_passes': True, 'overall': True}
+
+[E16] OVERALL VERDICT: PASS_BOTH_DATASETS

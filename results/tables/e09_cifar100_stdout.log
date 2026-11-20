@@ -1,0 +1,46 @@
+[E09] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU env={'torch': '2.11.0+cu128', 'cuda_available': True, 'cuda_runtime': '12.8', 'device_name': 'NVIDIA GeForce RTX 4070 Laptop GPU', 'gpu_free_gb': 7.396655104, 'hardware_profile': 'gpu'}
+[E09-cifar100] loading CIFAR-100 ...
+[E09-cifar100] tasks: 10  head: 100-way  per=15  probe_steps=200
+[E09-cifar100] student params: 602884
+[E09-cifar100] warmup task 0: test_loss=4.538
+[E09-cifar100] warmup task 1: test_loss=4.478
+[E09-cifar100] warmup task 2: test_loss=4.420
+[E09-cifar100] warmup task 3: test_loss=3.695
+[E09-cifar100] warmup task 4: test_loss=2.298
+[E09-cifar100] warmup task 5: test_loss=2.240
+[E09-cifar100] warmup task 6: test_loss=2.280
+[E09-cifar100] warmup task 7: test_loss=2.271
+[E09-cifar100] warmup task 8: test_loss=2.271
+[E09-cifar100] generating updates (4 norms x 4 sources x 15)
+[E09-cifar100] total updates: 240
+[E09-cifar100] reference FTD: 4.6825
+[E09-cifar100] measured 20/240
+[E09-cifar100] measured 40/240
+[E09-cifar100] measured 60/240
+[E09-cifar100] measured 80/240
+[E09-cifar100] measured 100/240
+[E09-cifar100] measured 120/240
+[E09-cifar100] measured 140/240
+[E09-cifar100] measured 160/240
+[E09-cifar100] measured 180/240
+[E09-cifar100] measured 200/240
+[E09-cifar100] measured 220/240
+[E09-cifar100] measured 240/240
+
+[E09-cifar100] source summary:
+                  mag             ctb              ptd           d_dir             ftd        
+                 mean     std    mean     std     mean     std    mean     std    mean     std
+source                                                                                        
+convex_mix     0.1875  0.1352  2.4431  2.5043  -7.6869  7.3142 -0.3229  0.1915 -0.0077  0.0061
+orth_perturb   0.1875  0.1352  0.0003  0.0008   0.0010  0.0363 -0.0000  0.0001 -0.0000  0.0000
+random_sphere  0.1875  0.1352  0.0016  0.0122  -0.0086  0.0932 -0.0001  0.0012 -0.0000  0.0001
+sgd_seed       0.1875  0.1352  3.9929  2.8783 -12.1645  7.8855 -0.5278  0.0052 -0.0114  0.0056
+
+[E09-cifar100] VIF: {'mag': 1.7786053580911385, 'ctb': 266.4938412095854, 'ptd': 297.6898085475598, 'd_dir': 4.61279033404485}
+[E09-cifar100] full n=240 R^2=0.9982 beta_d_dir=0.00205 CI=[0.00172,0.00238] p=2.559e-34
+[E09-cifar100] bootstrap mean=0.00205 CI=[0.00174,0.00241] sign_flip=0.000
+[E09-cifar100] c=0.01: n=212 beta=0.00206 CI=[0.00173,0.00240] p=2.207e-33 excludes0=True wvb=0.000
+[E09-cifar100] c=0.02: n=209 beta=0.00211 CI=[0.00176,0.00246] p=2.469e-32 excludes0=True wvb=0.000
+[E09-cifar100] c=0.05: n=199 beta=0.00210 CI=[0.00176,0.00245] p=2.126e-33 excludes0=True wvb=0.000
+[E09-cifar100] VERDICT: PASS_with_vif_caveat
+[E09-cifar100] wrote C:\Users\Lalith Gona\HTML\Deep Learning Project\results\tables\e09_cifar100_summary.json

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "name": "permuted_mnist",
+    "n_tasks": 100,
+    "train_subset": 6000
+  },
+  "architecture": {
+    "name": "mlp",
+    "hidden": 16,
+    "depth": 2
+  },
+  "method": {
+    "name": "dir_control",
+    "params": {
+      "dir_coeff": 1.0
+    }
+  },
+  "optimization": {
+    "lr": 0.2,
+    "batch": 128,
+    "steps_per_task": 60
+  },
+  "evaluation": {
+    "diag_probe_size": 1000
+  },
+  "seed": 20260824,
+  "device": "auto",
+  "checkpoint_policy": "none",
+  "metadata": {
+    "name": "Reproduction of Orthogonal Steering — MLP h=16 · Permuted MNIST",
+    "hypothesis": "The Studio engine reproduces the original configuration's results.",
+    "notes": "reproduce_of=legacy.e20.dir_control_c1.0"
+  }
+}

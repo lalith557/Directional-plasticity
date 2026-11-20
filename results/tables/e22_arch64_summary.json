@@ -1,0 +1,120 @@
+{
+  "hardware": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_free_gb": 7.207911424,
+    "hardware_profile": "gpu"
+  },
+  "arch": "784-64-64-10",
+  "seeds": [
+    20260824,
+    20260825,
+    20260826,
+    20260827,
+    20260828
+  ],
+  "aggregate": {
+    "sgd": {
+      "mean_acc_mean": 0.838658179283142,
+      "decay_mean": 0.05234399557113652,
+      "final_wl2_mean": 27.410931015014647,
+      "final_dormant_mean": 0.3203125,
+      "final_eff_rank_mean": 3.7227687358856203,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.006861641081155219,
+      "decay_std": 0.014423191431369126,
+      "final_wl2_std": 0.12637695141267338,
+      "final_dormant_std": 0.05412658773652741,
+      "final_eff_rank_std": 0.37710656864392655,
+      "matched_max_dev_std": 0.0
+    },
+    "l2_init": {
+      "mean_acc_mean": 0.856048577785492,
+      "decay_mean": 0.02333800315856933,
+      "final_wl2_mean": 8.861932945251464,
+      "final_dormant_mean": 0.040625,
+      "final_eff_rank_mean": 3.7150010585784914,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.001596846000306638,
+      "decay_std": 0.00689033923966609,
+      "final_wl2_std": 0.02374347872497958,
+      "final_dormant_std": 0.0125,
+      "final_eff_rank_std": 0.24664216334529537,
+      "matched_max_dev_std": 0.0
+    },
+    "shrink_pert": {
+      "mean_acc_mean": 0.8250743794441224,
+      "decay_mean": 0.04129999518394469,
+      "final_wl2_mean": 5.108356380462647,
+      "final_dormant_mean": 0.0015625,
+      "final_eff_rank_mean": 3.2152148723602294,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.00815751214302171,
+      "decay_std": 0.014879048493773398,
+      "final_wl2_std": 0.035571550219220816,
+      "final_dormant_std": 0.0031250000000000006,
+      "final_eff_rank_std": 0.09760406310682217,
+      "matched_max_dev_std": 0.0
+    },
+    "cbp": {
+      "mean_acc_mean": 0.8364239784479143,
+      "decay_mean": 0.057478005886077876,
+      "final_wl2_mean": 27.3484806060791,
+      "final_dormant_mean": 0.3390625,
+      "final_eff_rank_mean": 3.706636095046997,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.0029173257645750293,
+      "decay_std": 0.005461680509304487,
+      "final_wl2_std": 0.3791018400676127,
+      "final_dormant_std": 0.027775607554111216,
+      "final_eff_rank_std": 0.42606983955023797,
+      "matched_max_dev_std": 0.0
+    },
+    "dir_control_c1.0": {
+      "mean_acc_mean": 0.8283931794166566,
+      "decay_mean": 0.06680799245834353,
+      "final_wl2_mean": 28.502055740356447,
+      "final_dormant_mean": 0.3390625,
+      "final_eff_rank_mean": 3.5453679084777834,
+      "matched_max_dev_mean": 2.1285413556493293e-07,
+      "mean_acc_std": 0.007591941942741814,
+      "decay_std": 0.020325130573953548,
+      "final_wl2_std": 0.31486955664843924,
+      "final_dormant_std": 0.03878023014372143,
+      "final_eff_rank_std": 0.6425100529459461,
+      "matched_max_dev_std": 1.3911729792209875e-08
+    },
+    "dir_inward_g0.6": {
+      "mean_acc_mean": 0.6184535852670668,
+      "decay_mean": 0.05767398834228514,
+      "final_wl2_mean": 2.705242872238159,
+      "final_dormant_mean": 0.075,
+      "final_eff_rank_mean": 2.5698635578155518,
+      "matched_max_dev_mean": 2.0404787778759707e-07,
+      "mean_acc_std": 0.0017735945107547084,
+      "decay_std": 0.009719633116476858,
+      "final_wl2_std": 0.026332998552969167,
+      "final_dormant_std": 0.013621559198564604,
+      "final_eff_rank_std": 0.04797475661230639,
+      "matched_max_dev_std": 1.6747388255749448e-08
+    },
+    "adaptive_norm_revive": {
+      "mean_acc_mean": 0.8292629797458648,
+      "decay_mean": 0.059352017641067525,
+      "final_wl2_mean": 9.974799537658692,
+      "final_dormant_mean": 0.003125,
+      "final_eff_rank_mean": 3.166039800643921,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.007296866821240694,
+      "decay_std": 0.030943843519498544,
+      "final_wl2_std": 0.5815105064614694,
+      "final_dormant_std": 0.003827327723098716,
+      "final_eff_rank_std": 0.17708865603368468,
+      "matched_max_dev_std": 0.0
+    }
+  },
+  "pearson_norm_decay_narms": 0.44864071600702055,
+  "n_arms": 7
+}

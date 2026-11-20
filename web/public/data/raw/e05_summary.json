@@ -1,0 +1,45 @@
+{
+  "arms": {
+    "A0_plain_sgd": {
+      "mean_final_acc": 0.3316311687231064,
+      "final_accs_all_tasks": [
+        0.4439716339111328,
+        0.18217433989048004,
+        0.31590181589126587,
+        0.3192346394062042,
+        0.396873414516449
+      ],
+      "BWT": -0.3135204575955868,
+      "final_probe_ftd": 2.2979444456100464
+    },
+    "A1_projection_fixed": {
+      "mean_final_acc": 0.3096715658903122,
+      "final_accs_all_tasks": [
+        0.4723404347896576,
+        0.16552399098873138,
+        0.22998933494091034,
+        0.18680764734745026,
+        0.4936964213848114
+      ],
+      "BWT": -0.34337760880589485,
+      "final_probe_ftd": 2.2980490465958914
+    },
+    "A2_projection_adaptive": {
+      "mean_final_acc": 0.10221292488276959,
+      "final_accs_all_tasks": [
+        0.01938534341752529,
+        0.0,
+        0.0,
+        0.0,
+        0.49167928099632263
+      ],
+      "BWT": -0.4810907975770533,
+      "final_probe_ftd": 2.301675287882487
+    }
+  },
+  "fairness": {
+    "note": "Per-step update magnitudes are equal by construction: projection_out(exact_renorm=True) preserves ||delta||. Kill #6 satisfied by design.",
+    "matched_magnitude_tolerance": 0.02
+  },
+  "u_bad_source": "aligned with +g_ref on task-4 (per E04 sign of beta_d_dir)"
+}

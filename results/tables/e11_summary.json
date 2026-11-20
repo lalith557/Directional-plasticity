@@ -1,0 +1,93 @@
+{
+  "hardware": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_free_gb": 7.396655104,
+    "hardware_profile": "gpu"
+  },
+  "per_seed": [
+    {
+      "seed": 11,
+      "beta_d_dir_fisher_top1": 0.00941358091527378,
+      "ci_low": 0.007491308534858223,
+      "ci_high": 0.011335853295689337,
+      "p": 8.138355407165585e-22,
+      "excludes_zero": true,
+      "u_fisher_vs_gref_cos": 0.31821948289871216,
+      "n_matched": 98
+    },
+    {
+      "seed": 23,
+      "beta_d_dir_fisher_top1": -0.015058532230761968,
+      "ci_low": -0.018421101222268883,
+      "ci_high": -0.011695963239255052,
+      "p": 1.6748839984552996e-18,
+      "excludes_zero": true,
+      "u_fisher_vs_gref_cos": -0.24503198266029358,
+      "n_matched": 96
+    },
+    {
+      "seed": 37,
+      "beta_d_dir_fisher_top1": 0.0073285546647828504,
+      "ci_low": 0.005748419663182688,
+      "ci_high": 0.008908689666383012,
+      "p": 9.88800541818614e-20,
+      "excludes_zero": true,
+      "u_fisher_vs_gref_cos": 0.3858135938644409,
+      "n_matched": 99
+    },
+    {
+      "seed": 47,
+      "beta_d_dir_fisher_top1": 0.011335161517917617,
+      "ci_low": 0.008881166526520263,
+      "ci_high": 0.01378915650931497,
+      "p": 1.3883822806423176e-19,
+      "excludes_zero": true,
+      "u_fisher_vs_gref_cos": 0.22942312061786652,
+      "n_matched": 99
+    },
+    {
+      "seed": 59,
+      "beta_d_dir_fisher_top1": 0.009583748807512034,
+      "ci_low": 0.0074613090019624295,
+      "ci_high": 0.011706188613061639,
+      "p": 8.744165793767649e-19,
+      "excludes_zero": true,
+      "u_fisher_vs_gref_cos": 0.2743229269981384,
+      "n_matched": 96
+    }
+  ],
+  "pairwise_u_fisher_cos": {
+    "11_vs_23": 0.010938012041151524,
+    "11_vs_37": 0.0387028306722641,
+    "11_vs_47": -0.05565724894404411,
+    "11_vs_59": -0.07275748997926712,
+    "23_vs_37": -0.34965255856513977,
+    "23_vs_47": -0.30084770917892456,
+    "23_vs_59": -0.34022057056427,
+    "37_vs_47": 0.3073032796382904,
+    "37_vs_59": 0.3400822877883911,
+    "47_vs_59": 0.33346208930015564
+  },
+  "pairwise_abs_cos": {
+    "11_vs_23": 0.010938012041151524,
+    "11_vs_37": 0.0387028306722641,
+    "11_vs_47": 0.05565724894404411,
+    "11_vs_59": 0.07275748997926712,
+    "23_vs_37": 0.34965255856513977,
+    "23_vs_47": 0.30084770917892456,
+    "23_vs_59": 0.34022057056427,
+    "37_vs_47": 0.3073032796382904,
+    "37_vs_59": 0.3400822877883911,
+    "47_vs_59": 0.33346208930015564
+  },
+  "mean_abs_pairwise": 0.21496240766718983,
+  "median_abs_pairwise": 0.3040754944086075,
+  "stable_axis_pre_registered_threshold": 0.5,
+  "stable_axis_achieved": false,
+  "beta_sign_consistent": false,
+  "all_seeds_significant": true,
+  "verdict": "NULL_ON_BOTH"
+}

@@ -1,0 +1,83 @@
+[E13] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU
+
+[E13:split_cifar10] tasks=5, arms=SGD+EWC+replay+CBP+controller×7
+[E13:split_cifar10] u_past estimated ||u_past||=1.0000
+
+[E13:split_cifar10] --- baseline: sgd ---
+[baseline:sgd] task 0 acc=0.625 probeFTD=2.543
+[baseline:sgd] task 1 acc=0.611 probeFTD=2.551
+[baseline:sgd] task 2 acc=0.507 probeFTD=2.553
+[baseline:sgd] task 3 acc=0.578 probeFTD=2.546
+[baseline:sgd] task 4 acc=0.564 probeFTD=2.514
+
+[E13:split_cifar10] --- baseline: ewc ---
+[baseline:ewc] task 0 acc=0.623 probeFTD=2.542
+[baseline:ewc] task 1 acc=0.613 probeFTD=2.562
+[baseline:ewc] task 2 acc=0.507 probeFTD=2.559
+[baseline:ewc] task 3 acc=0.000 probeFTD=nan
+[baseline:ewc] task 4 acc=0.000 probeFTD=nan
+
+[E13:split_cifar10] --- baseline: replay ---
+[baseline:replay] task 0 acc=0.624 probeFTD=2.542
+[baseline:replay] task 1 acc=0.582 probeFTD=2.557
+[baseline:replay] task 2 acc=0.488 probeFTD=2.494
+[baseline:replay] task 3 acc=0.624 probeFTD=2.422
+[baseline:replay] task 4 acc=0.625 probeFTD=2.303
+
+[E13:split_cifar10] --- baseline: cbp ---
+[baseline:cbp] task 0 acc=0.625 probeFTD=2.543
+[baseline:cbp] task 1 acc=0.611 probeFTD=2.551
+[baseline:cbp] task 2 acc=0.507 probeFTD=2.554
+[baseline:cbp] task 3 acc=0.579 probeFTD=2.545
+[baseline:cbp] task 4 acc=0.561 probeFTD=2.511
+
+[E13:split_cifar10] --- controller_c=-1.00 ---
+[baseline:past_axis_controller] task 0 acc=0.630 probeFTD=2.547
+[baseline:past_axis_controller] task 1 acc=0.607 probeFTD=2.555
+[baseline:past_axis_controller] task 2 acc=0.507 probeFTD=2.558
+[baseline:past_axis_controller] task 3 acc=0.578 probeFTD=2.552
+[baseline:past_axis_controller] task 4 acc=0.563 probeFTD=2.509
+
+[E13:split_cifar10] --- controller_c=-0.50 ---
+[baseline:past_axis_controller] task 0 acc=0.625 probeFTD=2.546
+[baseline:past_axis_controller] task 1 acc=0.611 probeFTD=2.554
+[baseline:past_axis_controller] task 2 acc=0.507 probeFTD=2.552
+[baseline:past_axis_controller] task 3 acc=0.574 probeFTD=2.545
+[baseline:past_axis_controller] task 4 acc=0.562 probeFTD=2.511
+
+[E13:split_cifar10] --- controller_c=-0.25 ---
+[baseline:past_axis_controller] task 0 acc=0.623 probeFTD=2.546
+[baseline:past_axis_controller] task 1 acc=0.610 probeFTD=2.553
+[baseline:past_axis_controller] task 2 acc=0.507 probeFTD=2.554
+[baseline:past_axis_controller] task 3 acc=0.578 probeFTD=2.546
+[baseline:past_axis_controller] task 4 acc=0.561 probeFTD=2.514
+
+[E13:split_cifar10] --- controller_c=+0.00 ---
+[baseline:past_axis_controller] task 0 acc=0.625 probeFTD=2.543
+[baseline:past_axis_controller] task 1 acc=0.609 probeFTD=2.551
+[baseline:past_axis_controller] task 2 acc=0.507 probeFTD=2.554
+[baseline:past_axis_controller] task 3 acc=0.578 probeFTD=2.545
+[baseline:past_axis_controller] task 4 acc=0.561 probeFTD=2.512
+
+[E13:split_cifar10] --- controller_c=+0.25 ---
+[baseline:past_axis_controller] task 0 acc=0.627 probeFTD=2.540
+[baseline:past_axis_controller] task 1 acc=0.614 probeFTD=2.555
+[baseline:past_axis_controller] task 2 acc=0.507 probeFTD=2.557
+[baseline:past_axis_controller] task 3 acc=0.580 probeFTD=2.547
+[baseline:past_axis_controller] task 4 acc=0.564 probeFTD=2.515
+
+[E13:split_cifar10] --- controller_c=+0.50 ---
+[baseline:past_axis_controller] task 0 acc=0.631 probeFTD=2.536
+[baseline:past_axis_controller] task 1 acc=0.613 probeFTD=2.550
+[baseline:past_axis_controller] task 2 acc=0.507 probeFTD=2.552
+[baseline:past_axis_controller] task 3 acc=0.578 probeFTD=2.545
+[baseline:past_axis_controller] task 4 acc=0.563 probeFTD=2.513
+
+[E13:split_cifar10] --- controller_c=+1.00 ---
+[baseline:past_axis_controller] task 0 acc=0.630 probeFTD=2.536
+[baseline:past_axis_controller] task 1 acc=0.613 probeFTD=2.548
+[baseline:past_axis_controller] task 2 acc=0.507 probeFTD=2.552
+[baseline:past_axis_controller] task 3 acc=0.579 probeFTD=2.544
+[baseline:past_axis_controller] task 4 acc=0.562 probeFTD=2.513
+
+[E13] OVERALL VERDICT: POSITIVE_WEAK

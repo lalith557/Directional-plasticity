@@ -1,0 +1,27 @@
+[E12] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU env={'torch': '2.11.0+cu128', 'cuda_available': True, 'cuda_runtime': '12.8', 'device_name': 'NVIDIA GeForce RTX 4070 Laptop GPU', 'gpu_free_gb': 7.396655104, 'hardware_profile': 'gpu'}
+
+=== E12 CIFAR-10 ===
+[E12-cifar10] 18 total probes
+[E12-cifar10] probe permuted_0: align=+0.9254 beta=0.0021301043669836707 p=0.0243
+[E12-cifar10] probe permuted_1: align=+0.9182 beta=0.0015850899453855518 p=0.0919
+[E12-cifar10] probe permuted_2: align=+0.9353 beta=0.0028516812088214606 p=0.00551
+[E12-cifar10] probe permuted_3: align=+0.9366 beta=0.002433855891628698 p=0.0247
+[E12-cifar10] probe permuted_4: align=+0.9282 beta=0.0017557094348677857 p=0.0488
+[E12-cifar10] probe permuted_5: align=+0.9331 beta=0.0030889339691762135 p=0.00736
+[E12-cifar10] probe novel_class_0: align=+0.9999 beta=0.03398921754793263 p=1.28e-05
+[E12-cifar10] probe novel_class_1: align=+0.9988 beta=0.033488877265250655 p=1.24e-05
+[E12-cifar10] probe novel_class_2: align=+0.9996 beta=0.03352941255173548 p=1.48e-05
+[E12-cifar10] probe novel_class_3: align=+0.9998 beta=0.034254520923580965 p=1.59e-05
+[E12-cifar10] probe novel_class_4: align=+0.9988 beta=0.034301403971823546 p=1.18e-05
+[E12-cifar10] probe noise_augment_0: align=+0.9236 beta=0.0008630824293240909 p=0.244
+[E12-cifar10] probe noise_augment_1: align=+0.9289 beta=0.0013438146016009785 p=0.0902
+[E12-cifar10] probe noise_augment_2: align=+0.9376 beta=0.0015071293053690858 p=0.0486
+[E12-cifar10] probe noise_augment_3: align=+0.9315 beta=0.0017185407838503429 p=0.0477
+[E12-cifar10] probe input_scale_0: align=+0.9288 beta=0.0016932865931798533 p=0.058
+[E12-cifar10] probe input_scale_1: align=+0.9375 beta=0.0018211766680524585 p=0.0691
+[E12-cifar10] probe input_scale_2: align=+0.9179 beta=0.0009324724297787705 p=0.0986
+C:\Users\Lalith Gona\HTML\Deep Learning Project\experiments\e12_probe_geometry.py:538: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  br, _ = scistats.pearsonr(x_hold[b_idx], y_hold[b_idx])
+[E12-cifar10] holdout_sign_accuracy=1.000 pearson_r=0.9967839564672255 overall_passes=True
+
+[E12] OVERALL VERDICT: PASS_BOTH_DATASETS

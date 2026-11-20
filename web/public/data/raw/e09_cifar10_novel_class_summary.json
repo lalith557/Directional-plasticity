@@ -1,0 +1,103 @@
+{
+  "dataset": "cifar10",
+  "probe_mode": "novel_class",
+  "hardware": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_free_gb": 7.103053824,
+    "hardware_profile": "gpu"
+  },
+  "n_updates": 240,
+  "sources": [
+    "convex_mix",
+    "orth_perturb",
+    "random_sphere",
+    "sgd_seed"
+  ],
+  "vif": {
+    "mag": 1.7788156823610262,
+    "ctb": 70.79856731262248,
+    "ptd": 87.03781009407642,
+    "d_dir": 4.794819866484031
+  },
+  "full_regression": {
+    "coefs": {
+      "const": -0.00016743002944559027,
+      "mag": -0.005075944921803151,
+      "ctb": 0.0102786278318446,
+      "ptd": 0.02349555061786872,
+      "d_dir": 0.032950459960732634
+    },
+    "ci_low": {
+      "const": -0.0007170589082621915,
+      "mag": -0.009014100125846889,
+      "ctb": 0.008502374686543655,
+      "ptd": 0.021471678001941844,
+      "d_dir": 0.028685119955555907
+    },
+    "ci_high": {
+      "const": 0.00038219884937101096,
+      "mag": -0.0011377897177594128,
+      "ctb": 0.012054880977145545,
+      "ptd": 0.025519423233795593,
+      "d_dir": 0.03721579996590936
+    },
+    "p": {
+      "const": 0.5504728988064194,
+      "mag": 0.011529535514770371,
+      "ctb": 8.153951504796496e-30,
+      "ptd": 1.3212782105047612e-114,
+      "d_dir": 8.681999354438495e-52
+    },
+    "r_squared": 0.9964261234690805
+  },
+  "bootstrap": {
+    "mean": 0.032926790791715815,
+    "ci_low": 0.028548815348752157,
+    "ci_high": 0.03704786775018878,
+    "sign_flip_fraction": 0.0
+  },
+  "control_c_sweep": [
+    {
+      "caliper": 0.01,
+      "n_matched": 205,
+      "beta_d_dir": 0.03278832995100672,
+      "ci_low": 0.028066274745691885,
+      "ci_high": 0.03751038515632156,
+      "p": 3.525231842444052e-42,
+      "within_over_total_var": 3.1473289102614147e-07,
+      "excludes_zero": true
+    },
+    {
+      "caliper": 0.02,
+      "n_matched": 187,
+      "beta_d_dir": 0.033991049340680014,
+      "ci_low": 0.027826585126138382,
+      "ci_high": 0.04015551355522164,
+      "p": 3.178785815376497e-27,
+      "within_over_total_var": 1.2252384875442035e-06,
+      "excludes_zero": true
+    },
+    {
+      "caliper": 0.05,
+      "n_matched": 187,
+      "beta_d_dir": 0.03437761103161817,
+      "ci_low": 0.028421178126461777,
+      "ci_high": 0.04033404393677456,
+      "p": 1.1451396032945998e-29,
+      "within_over_total_var": 6.086624703433506e-06,
+      "excludes_zero": true
+    }
+  ],
+  "sign_consistent_across_calipers": true,
+  "max_vif": 87.03781009407642,
+  "kill_conditions": {
+    "kill1_vif_passed": false,
+    "kill2_excludes_all": true,
+    "kill3_control_c_passed": true,
+    "kill4_sign_consistent": true
+  },
+  "verdict": "PASS_with_vif_caveat"
+}

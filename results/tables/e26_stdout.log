@@ -1,0 +1,41 @@
+  seed=20260824 sgd                  mean=0.726 last=0.722 slope=-0.0006 layers=[18.5, 7.1, 5.0]
+  seed=20260824 l2_init              mean=0.821 last=0.834 slope=+0.0005 layers=[4.9, 4.2, 3.8]
+  seed=20260824 shrink_pert          mean=0.790 last=0.841 slope=-0.0000 layers=[3.3, 2.5, 2.5]
+  seed=20260824 cbp                  mean=0.756 last=0.784 slope=-0.0005 layers=[18.1, 7.3, 4.8]
+  seed=20260824 dir_control          mean=0.682 last=0.719 slope=-0.0007 layers=[22.7, 7.3, 5.3]
+  seed=20260824 dir_inward           mean=0.437 last=0.475 slope=+0.0001 layers=[1.6, 1.6, 1.6]
+  seed=20260824 adaptive_norm_revive mean=0.748 last=0.739 slope=+0.0001 layers=[6.8, 3.9, 4.7]
+  seed=20260825 sgd                  mean=0.697 last=0.629 slope=-0.0014 layers=[18.0, 7.6, 4.7]
+  seed=20260825 l2_init              mean=0.807 last=0.837 slope=-0.0000 layers=[4.9, 4.2, 3.9]
+  seed=20260825 shrink_pert          mean=0.811 last=0.850 slope=+0.0005 layers=[3.4, 2.5, 2.6]
+  seed=20260825 cbp                  mean=0.745 last=0.777 slope=-0.0004 layers=[17.7, 7.0, 5.0]
+  seed=20260825 dir_control          mean=0.703 last=0.635 slope=-0.0011 layers=[22.7, 8.2, 5.4]
+  seed=20260825 dir_inward           mean=0.425 last=0.437 slope=+0.0001 layers=[1.6, 1.6, 1.6]
+  seed=20260825 adaptive_norm_revive mean=0.747 last=0.810 slope=-0.0003 layers=[7.4, 3.9, 4.9]
+  seed=20260826 sgd                  mean=0.751 last=0.715 slope=-0.0007 layers=[19.3, 7.4, 5.0]
+  seed=20260826 l2_init              mean=0.814 last=0.847 slope=+0.0002 layers=[4.9, 4.2, 3.9]
+  seed=20260826 shrink_pert          mean=0.800 last=0.809 slope=+0.0001 layers=[3.3, 2.5, 2.5]
+  seed=20260826 cbp                  mean=0.734 last=0.692 slope=-0.0012 layers=[17.9, 6.9, 5.0]
+  seed=20260826 dir_control          mean=0.717 last=0.656 slope=-0.0010 layers=[23.7, 8.1, 5.1]
+  seed=20260826 dir_inward           mean=0.424 last=0.373 slope=-0.0000 layers=[1.6, 1.6, 1.6]
+  seed=20260826 adaptive_norm_revive mean=0.727 last=0.731 slope=-0.0002 layers=[6.3, 3.7, 5.0]
+
+[E26] initial per-layer norms: [np.float64(2.3), np.float64(2.31), np.float64(1.82)]
+[E26] final per-layer norms (hidden1, hidden2, head):
+  sgd                  [18.6, 7.4, 4.9]
+  l2_init              [4.9, 4.2, 3.9]
+  shrink_pert          [3.3, 2.5, 2.5]
+  cbp                  [17.9, 7.1, 4.9]
+  dir_control          [23.0, 7.9, 5.3]
+  dir_inward           [1.6, 1.6, 1.6]
+  adaptive_norm_revive [6.8, 3.8, 4.9]
+
+[E26] alternative metrics (mean over 3 seeds):
+  arm                    decay  meanAcc  lastAcc     slope
+  l2_init               +0.040    0.814    0.840   +0.0002
+  shrink_pert           +0.046    0.800    0.833   +0.0002
+  cbp                   +0.133    0.745    0.751   -0.0007
+  adaptive_norm_revive  +0.097    0.740    0.760   -0.0002
+  sgd                   +0.151    0.725    0.689   -0.0009
+  dir_control           +0.158    0.701    0.670   -0.0009
+  dir_inward            +0.050    0.429    0.428   +0.0001

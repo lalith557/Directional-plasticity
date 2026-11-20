@@ -1,0 +1,124 @@
+[E22] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU
+
+=== A. Second architecture: 784-64-64-10 ===
+  [arch64] seed=20260824 sgd                    acc=0.839 decay=+0.042 wl2=27.4 (22s)
+  [arch64] seed=20260824 l2_init                acc=0.856 decay=+0.029 wl2=8.9 (35s)
+  [arch64] seed=20260824 shrink_pert            acc=0.812 decay=+0.058 wl2=5.1 (23s)
+  [arch64] seed=20260824 cbp                    acc=0.839 decay=+0.056 wl2=27.4 (28s)
+  [arch64] seed=20260824 dir_control_c1.0       acc=0.836 decay=+0.049 wl2=28.8 (26s)
+  [arch64] seed=20260824 dir_inward_g0.6        acc=0.621 decay=+0.069 wl2=2.7 (26s)
+  [arch64] seed=20260824 adaptive_norm_revive   acc=0.821 decay=+0.051 wl2=9.6 (24s)
+  [arch64] seed=20260825 sgd                    acc=0.843 decay=+0.046 wl2=27.3 (24s)
+  [arch64] seed=20260825 l2_init                acc=0.856 decay=+0.018 wl2=8.9 (38s)
+  [arch64] seed=20260825 shrink_pert            acc=0.833 decay=+0.045 wl2=5.1 (24s)
+  [arch64] seed=20260825 cbp                    acc=0.837 decay=+0.048 wl2=27.8 (28s)
+  [arch64] seed=20260825 dir_control_c1.0       acc=0.839 decay=+0.043 wl2=27.9 (26s)
+  [arch64] seed=20260825 dir_inward_g0.6        acc=0.618 decay=+0.044 wl2=2.7 (26s)
+  [arch64] seed=20260825 adaptive_norm_revive   acc=0.838 decay=+0.038 wl2=11.1 (23s)
+  [arch64] seed=20260826 sgd                    acc=0.845 decay=+0.038 wl2=27.5 (25s)
+  [arch64] seed=20260826 l2_init                acc=0.858 decay=+0.015 wl2=8.9 (38s)
+  [arch64] seed=20260826 shrink_pert            acc=0.832 decay=+0.019 wl2=5.1 (22s)
+  [arch64] seed=20260826 cbp                    acc=0.838 decay=+0.057 wl2=27.4 (27s)
+  [arch64] seed=20260826 dir_control_c1.0       acc=0.826 decay=+0.073 wl2=28.7 (24457s)
+  [arch64] seed=20260826 dir_inward_g0.6        acc=0.617 decay=+0.061 wl2=2.7 (20s)
+  [arch64] seed=20260826 adaptive_norm_revive   acc=0.831 decay=+0.039 wl2=9.6 (18s)
+  [arch64] seed=20260827 sgd                    acc=0.840 decay=+0.057 wl2=27.6 (18s)
+  [arch64] seed=20260827 l2_init                acc=0.853 decay=+0.020 wl2=8.9 (29s)
+  [arch64] seed=20260827 shrink_pert            acc=0.828 decay=+0.029 wl2=5.1 (20s)
+  [arch64] seed=20260827 cbp                    acc=0.837 decay=+0.063 wl2=27.5 (22s)
+  [arch64] seed=20260827 dir_control_c1.0       acc=0.819 decay=+0.101 wl2=28.6 (23s)
+  [arch64] seed=20260827 dir_inward_g0.6        acc=0.620 decay=+0.066 wl2=2.7 (24s)
+  [arch64] seed=20260827 adaptive_norm_revive   acc=0.835 decay=+0.048 wl2=10.1 (21s)
+  [arch64] seed=20260828 sgd                    acc=0.826 decay=+0.078 wl2=27.2 (21s)
+  [arch64] seed=20260828 l2_init                acc=0.858 decay=+0.033 wl2=8.8 (33s)
+  [arch64] seed=20260828 shrink_pert            acc=0.819 decay=+0.055 wl2=5.1 (21s)
+  [arch64] seed=20260828 cbp                    acc=0.831 decay=+0.063 wl2=26.7 (26s)
+  [arch64] seed=20260828 dir_control_c1.0       acc=0.823 decay=+0.068 wl2=28.5 (25s)
+  [arch64] seed=20260828 dir_inward_g0.6        acc=0.617 decay=+0.049 wl2=2.7 (25s)
+  [arch64] seed=20260828 adaptive_norm_revive   acc=0.820 decay=+0.120 wl2=9.6 (24s)
+[E22-A] Pearson(norm,decay) across arms = 0.449
+
+=== B. 5-seed norm-control-strength sweep ===
+  [lambda] seed=20260824 lam=0 acc=0.732 decay=+0.117 wl2=19.8
+  [lambda] seed=20260824 lam=0.001 acc=0.749 decay=+0.099 wl2=12.2
+  [lambda] seed=20260824 lam=0.003 acc=0.774 decay=+0.096 wl2=8.9
+  [lambda] seed=20260824 lam=0.01 acc=0.814 decay=+0.035 wl2=6.5
+  [lambda] seed=20260824 lam=0.03 acc=0.808 decay=+0.051 wl2=5.3
+  [lambda] seed=20260824 lam=0.1 acc=0.692 decay=+0.064 wl2=4.3
+  [lambda] seed=20260825 lam=0 acc=0.764 decay=+0.118 wl2=20.6
+  [lambda] seed=20260825 lam=0.001 acc=0.790 decay=+0.063 wl2=12.1
+  [lambda] seed=20260825 lam=0.003 acc=0.779 decay=+0.073 wl2=8.9
+  [lambda] seed=20260825 lam=0.01 acc=0.822 decay=+0.035 wl2=6.6
+  [lambda] seed=20260825 lam=0.03 acc=0.809 decay=+0.043 wl2=5.4
+  [lambda] seed=20260825 lam=0.1 acc=0.677 decay=+0.086 wl2=4.3
+  [lambda] seed=20260826 lam=0 acc=0.754 decay=+0.083 wl2=20.9
+  [lambda] seed=20260826 lam=0.001 acc=0.780 decay=+0.073 wl2=12.2
+  [lambda] seed=20260826 lam=0.003 acc=0.770 decay=+0.078 wl2=8.9
+  [lambda] seed=20260826 lam=0.01 acc=0.817 decay=+0.043 wl2=6.6
+  [lambda] seed=20260826 lam=0.03 acc=0.809 decay=+0.048 wl2=5.3
+  [lambda] seed=20260826 lam=0.1 acc=0.694 decay=+0.102 wl2=4.3
+  [lambda] seed=20260827 lam=0 acc=0.746 decay=+0.182 wl2=20.6
+  [lambda] seed=20260827 lam=0.001 acc=0.789 decay=+0.061 wl2=12.3
+  [lambda] seed=20260827 lam=0.003 acc=0.803 decay=+0.071 wl2=9.2
+  [lambda] seed=20260827 lam=0.01 acc=0.819 decay=+0.067 wl2=6.5
+  [lambda] seed=20260827 lam=0.03 acc=0.809 decay=+0.030 wl2=5.3
+  [lambda] seed=20260827 lam=0.1 acc=0.702 decay=+0.089 wl2=4.3
+  [lambda] seed=20260828 lam=0 acc=0.724 decay=+0.165 wl2=20.0
+  [lambda] seed=20260828 lam=0.001 acc=0.772 decay=+0.096 wl2=11.8
+  [lambda] seed=20260828 lam=0.003 acc=0.766 decay=+0.059 wl2=8.9
+  [lambda] seed=20260828 lam=0.01 acc=0.820 decay=+0.054 wl2=6.6
+  [lambda] seed=20260828 lam=0.03 acc=0.806 decay=+0.042 wl2=5.3
+  [lambda] seed=20260828 lam=0.1 acc=0.701 decay=+0.057 wl2=4.3
+
+=== C. ANR component ablation ===
+  [anr-abl] seed=20260824 sgd              acc=0.732 decay=+0.117 dorm=0.250
+  [anr-abl] seed=20260824 shrink_pert      acc=0.789 decay=+0.070 dorm=0.000
+  [anr-abl] seed=20260824 anr_shrink_only  acc=0.706 decay=+0.209 dorm=0.406
+  [anr-abl] seed=20260824 anr_revive_only  acc=0.763 decay=+0.073 dorm=0.000
+  [anr-abl] seed=20260824 anr_full         acc=0.735 decay=+0.063 dorm=0.031
+  [anr-abl] seed=20260825 sgd              acc=0.764 decay=+0.118 dorm=0.156
+  [anr-abl] seed=20260825 shrink_pert      acc=0.809 decay=+0.042 dorm=0.031
+  [anr-abl] seed=20260825 anr_shrink_only  acc=0.717 decay=+0.110 dorm=0.375
+  [anr-abl] seed=20260825 anr_revive_only  acc=0.762 decay=+0.048 dorm=0.000
+  [anr-abl] seed=20260825 anr_full         acc=0.726 decay=+0.081 dorm=0.000
+  [anr-abl] seed=20260826 sgd              acc=0.754 decay=+0.083 dorm=0.094
+  [anr-abl] seed=20260826 shrink_pert      acc=0.800 decay=+0.022 dorm=0.000
+  [anr-abl] seed=20260826 anr_shrink_only  acc=0.656 decay=+0.129 dorm=0.312
+  [anr-abl] seed=20260826 anr_revive_only  acc=0.764 decay=+0.043 dorm=0.000
+  [anr-abl] seed=20260826 anr_full         acc=0.736 decay=+0.063 dorm=0.000
+  [anr-abl] seed=20260827 sgd              acc=0.746 decay=+0.182 dorm=0.281
+  [anr-abl] seed=20260827 shrink_pert      acc=0.787 decay=+0.054 dorm=0.000
+  [anr-abl] seed=20260827 anr_shrink_only  acc=0.669 decay=+0.120 dorm=0.438
+  [anr-abl] seed=20260827 anr_revive_only  acc=0.764 decay=+0.078 dorm=0.000
+  [anr-abl] seed=20260827 anr_full         acc=0.752 decay=+0.131 dorm=0.000
+  [anr-abl] seed=20260828 sgd              acc=0.724 decay=+0.165 dorm=0.281
+  [anr-abl] seed=20260828 shrink_pert      acc=0.809 decay=+0.043 dorm=0.000
+  [anr-abl] seed=20260828 anr_shrink_only  acc=0.700 decay=+0.181 dorm=0.281
+  [anr-abl] seed=20260828 anr_revive_only  acc=0.750 decay=+0.118 dorm=0.000
+  [anr-abl] seed=20260828 anr_full         acc=0.723 decay=+0.114 dorm=0.000
+
+==================================================================
+[E22-A] second arch 784-64-64-10 leaderboard (acc desc):
+  l2_init                acc=0.856+-0.002 decay=+0.023 wl2=8.9
+  sgd                    acc=0.839+-0.007 decay=+0.052 wl2=27.4
+  cbp                    acc=0.836+-0.003 decay=+0.057 wl2=27.3
+  adaptive_norm_revive   acc=0.829+-0.007 decay=+0.059 wl2=10.0
+  dir_control_c1.0       acc=0.828+-0.008 decay=+0.067 wl2=28.5
+  shrink_pert            acc=0.825+-0.008 decay=+0.041 wl2=5.1
+  dir_inward_g0.6        acc=0.618+-0.002 decay=+0.058 wl2=2.7
+  Pearson(norm,decay) across 7 arms = 0.449
+
+[E22-B] lambda sweep (5 seeds):
+  lam=    0: wl2= 20.4 decay=+0.133+-0.036 acc=0.744+-0.015
+  lam=0.001: wl2= 12.1 decay=+0.078+-0.016 acc=0.776+-0.015
+  lam=0.003: wl2=  9.0 decay=+0.075+-0.012 acc=0.778+-0.013
+  lam= 0.01: wl2=  6.6 decay=+0.047+-0.012 acc=0.819+-0.003
+  lam= 0.03: wl2=  5.3 decay=+0.043+-0.007 acc=0.808+-0.001
+  lam=  0.1: wl2=  4.3 decay=+0.080+-0.017 acc=0.693+-0.009
+
+[E22-C] ANR ablation (5 seeds):
+  sgd              acc=0.744+-0.015 decay=+0.133 dorm=0.212
+  shrink_pert      acc=0.799+-0.010 decay=+0.046 dorm=0.006
+  anr_shrink_only  acc=0.690+-0.023 decay=+0.150 dorm=0.362
+  anr_revive_only  acc=0.761+-0.005 decay=+0.072 dorm=0.000
+  anr_full         acc=0.735+-0.010 decay=+0.090 dorm=0.006

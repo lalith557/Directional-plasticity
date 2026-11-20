@@ -1,0 +1,36 @@
+[E16] device=cpu profile=cpu
+
+=== E16 mnist ===
+[E16-mnist seed=20260824] built 29 probes across 6 families
+[E16-mnist seed=20260824] probe structural_permute_f=0.05: align=+0.019 ||g_p||=0.2696 beta=+0.00244 p=4.51e-05
+[E16-mnist seed=20260824] probe structural_permute_f=0.19: align=+0.221 ||g_p||=0.3264 beta=+0.00220 p=3.95e-05
+[E16-mnist seed=20260824] probe structural_permute_f=0.32: align=+0.329 ||g_p||=0.2877 beta=+0.00212 p=2.34e-05
+[E16-mnist seed=20260824] probe structural_permute_f=0.46: align=+0.422 ||g_p||=0.3091 beta=+0.00189 p=1.85e-05
+[E16-mnist seed=20260824] probe structural_permute_f=0.59: align=+0.203 ||g_p||=0.2701 beta=+0.00138 p=6.9e-05
+[E16-mnist seed=20260824] probe structural_permute_f=0.73: align=+0.086 ||g_p||=0.2511 beta=+0.00118 p=5.1e-06
+[E16-mnist seed=20260824] probe structural_permute_f=0.86: align=+0.075 ||g_p||=0.2490 beta=+0.00095 p=4.28e-05
+[E16-mnist seed=20260824] probe structural_permute_f=1.00: align=+0.190 ||g_p||=0.2808 beta=+0.00081 p=3.54e-05
+[E16-mnist seed=20260824] probe semantic_novel_class_i=0: align=+0.990 ||g_p||=1.3794 beta=+0.06168 p=2.44e-07
+[E16-mnist seed=20260824] probe semantic_novel_class_i=1: align=+0.985 ||g_p||=1.4143 beta=+0.06138 p=2.15e-07
+[E16-mnist seed=20260824] probe semantic_novel_class_i=2: align=+0.984 ||g_p||=1.3980 beta=+0.06112 p=2.62e-07
+[E16-mnist seed=20260824] probe semantic_novel_class_i=3: align=+0.990 ||g_p||=1.3853 beta=+0.06152 p=2.05e-07
+[E16-mnist seed=20260824] probe noise_std=0.02: align=+0.101 ||g_p||=0.3048 beta=+0.00243 p=5.25e-05
+[E16-mnist seed=20260824] probe noise_std=0.18: align=+0.335 ||g_p||=0.2998 beta=+0.00257 p=3.08e-05
+[E16-mnist seed=20260824] probe noise_std=0.34: align=+0.238 ||g_p||=0.3223 beta=+0.00234 p=3.13e-05
+[E16-mnist seed=20260824] probe noise_std=0.50: align=+0.267 ||g_p||=0.3564 beta=+0.00221 p=2.77e-05
+[E16-mnist seed=20260824] probe input_scale_s=0.50: align=+0.338 ||g_p||=0.1606 beta=+0.00144 p=6.99e-05
+[E16-mnist seed=20260824] probe input_scale_s=0.83: align=+0.084 ||g_p||=0.2331 beta=+0.00222 p=5.32e-05
+[E16-mnist seed=20260824] probe input_scale_s=1.17: align=+0.214 ||g_p||=0.3093 beta=+0.00297 p=4.93e-05
+[E16-mnist seed=20260824] probe input_scale_s=1.50: align=-0.004 ||g_p||=0.4417 beta=+0.00398 p=5.57e-05
+[E16-mnist seed=20260824] probe label_shift_k=1: align=+0.346 ||g_p||=0.3114 beta=+0.00194 p=7.42e-06
+[E16-mnist seed=20260824] probe label_shift_k=3: align=-0.055 ||g_p||=0.3537 beta=+0.00130 p=7.16e-05
+[E16-mnist seed=20260824] probe label_shift_k=4: align=+0.272 ||g_p||=0.2920 beta=+0.00124 p=4.15e-06
+[E16-mnist seed=20260824] probe label_shift_k=6: align=+0.304 ||g_p||=0.2854 beta=+0.00151 p=1.06e-05
+[E16-mnist seed=20260824] probe label_shift_k=7: align=+0.194 ||g_p||=0.3633 beta=+0.00116 p=1.9e-05
+[E16-mnist seed=20260824] probe label_shift_k=9: align=+0.249 ||g_p||=0.3088 beta=+0.00156 p=7.83e-05
+[E16-mnist seed=20260824] probe anti_class_i=0: align=+0.760 ||g_p||=1.6199 beta=+0.03016 p=1.01e-05
+[E16-mnist seed=20260824] probe anti_class_i=1: align=+0.729 ||g_p||=1.7059 beta=+0.02981 p=1.03e-05
+[E16-mnist seed=20260824] probe anti_class_i=2: align=+0.747 ||g_p||=1.6219 beta=+0.02942 p=1.56e-05
+[E16-mnist] verdict: {'sign_passes': False, 'slope_ci_passes': True, 'overall': False}
+
+[E16] OVERALL VERDICT: NULL

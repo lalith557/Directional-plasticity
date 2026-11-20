@@ -1,0 +1,128 @@
+{
+  "hardware": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_free_gb": 7.396655104,
+    "hardware_profile": "gpu"
+  },
+  "arms": {
+    "A0_sgd": {
+      "mean_final_acc": 0.3316311687231064,
+      "BWT": -0.3135204575955868,
+      "final_probe_ftd": 2.2979444456100464,
+      "per_task_probe_ftd": [
+        2.3063977336883545,
+        2.309410725831986,
+        2.309525140921275,
+        2.3010590505599975,
+        2.2979444456100464
+      ],
+      "per_task_acc": [
+        0.8666666746139526,
+        0.515670895576477,
+        0.4749199450016022,
+        0.6581067442893982,
+        0.396873414516449
+      ],
+      "final_accs_all_tasks": [
+        0.4439716339111328,
+        0.18217433989048004,
+        0.31590181589126587,
+        0.3192346394062042,
+        0.396873414516449
+      ]
+    },
+    "A_past_avoid": {
+      "mean_final_acc": 0.20055421434808524,
+      "BWT": -0.2083596047887113,
+      "final_probe_ftd": 2.3002813537915547,
+      "per_task_probe_ftd": [
+        2.3076257610321047,
+        2.3072687451044716,
+        2.3069302892684935,
+        2.3009987616539003,
+        2.3002813537915547
+      ],
+      "per_task_acc": [
+        0.6595744490623474,
+        0.36238980293273926,
+        0.18943436443805695,
+        0.0,
+        0.6248108744621277
+      ],
+      "final_accs_all_tasks": [
+        0.37635934352874756,
+        0.0,
+        0.001600853749550879,
+        0.0,
+        0.6248108744621277
+      ]
+    },
+    "A_past_toward": {
+      "mean_final_acc": 0.11447150772437453,
+      "BWT": -0.10448137589264661,
+      "final_probe_ftd": 2.3007246033350626,
+      "per_task_probe_ftd": [
+        2.3007554515202844,
+        2.3134509416421256,
+        2.307920799255371,
+        2.303665358622869,
+        2.3007246033350626
+      ],
+      "per_task_acc": [
+        0.7101655006408691,
+        0.28011754155158997,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "final_accs_all_tasks": [
+        0.5650117993354797,
+        0.007345739286392927,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "A_ewc": {
+      "mean_final_acc": 0.36931572258472445,
+      "BWT": -0.25383931398391724,
+      "final_probe_ftd": 2.297823431889216,
+      "per_task_probe_ftd": [
+        2.3045183300971988,
+        2.306336799065272,
+        2.307297679583231,
+        2.302764805157979,
+        2.297823431889216
+      ],
+      "per_task_acc": [
+        0.9040189385414124,
+        0.5636630654335022,
+        0.5213447213172913,
+        0.6737160086631775,
+        0.19919313490390778
+      ],
+      "final_accs_all_tasks": [
+        0.4449172616004944,
+        0.2056806981563568,
+        0.318036288022995,
+        0.6787512302398682,
+        0.19919313490390778
+      ]
+    }
+  },
+  "u_past_source": "mean across tasks 0..3 x n_samples of freshly-drawn past-task minibatch gradients, normalized",
+  "fairness": {
+    "note": "exact_renorm=True preserves ||delta|| for A_past_avoid and A_past_toward. EWC arm modifies gradients pre-step, then plain SGD step (same lr as A0). Kill #6 satisfied by construction for the projection arms; the EWC arm may differ in effective ||delta||.",
+    "matched_magnitude_tolerance": 0.02
+  },
+  "causal_intervention": {
+    "A0_final_probeFTD": 2.2979444456100464,
+    "A_past_avoid_final_probeFTD": 2.3002813537915547,
+    "A_past_toward_final_probeFTD": 2.3007246033350626,
+    "sign_inverted_intervention_supports_causation": false,
+    "same_direction_change_suggests_noncausal": true
+  }
+}

@@ -1,0 +1,56 @@
+C:\Users\Lalith Gona\HTML\Deep Learning Project\src\plasticity_stress.py:525: UserWarning: torch.linalg.svd: During SVD computation with the selected cusolver driver, batches 0 failed to converge. A more accurate method will be used to compute the SVD as a fallback. Check doc at https://pytorch.org/docs/stable/generated/torch.linalg.svd.html (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\cuda\linalg\BatchLinearAlgebraLib.cpp:698.)
+  s = torch.linalg.svdvals(Fc)
+C:\Users\Lalith Gona\HTML\Deep Learning Project\src\plasticity_stress.py:605: RuntimeWarning: invalid value encountered in subtract
+  md = (float(_np.max(_np.abs(_np.array(applied_norms) - _np.array(ref_norms)) / (_np.array(ref_norms) + 1e-12)))
+[E25] device=cuda gpu:NVIDIA GeForce RTX 4070 Laptop GPU
+  seed=20260824 sgd            acc=0.963 decay=+0.004 wl2=14.3 (27s)
+  seed=20260824 l2_init        acc=0.939 decay=+0.014 wl2=8.8 (51s)
+  seed=20260824 shrink_pert    acc=0.885 decay=+0.040 wl2=5.7 (36s)
+  seed=20260824 norm_project   acc=0.930 decay=+0.021 wl2=6.0 (42s)
+  seed=20260824 dir_control    acc=0.959 decay=+0.004 wl2=12.1 (40s)
+  seed=20260824 dir_inward     acc=0.488 decay=+0.089 wl2=1.9 (39s)
+  seed=20260824 random_dir     acc=0.122 decay=+0.086 wl2=nan (46s)
+  seed=20260825 sgd            acc=0.964 decay=+0.003 wl2=14.1 (36s)
+  seed=20260825 l2_init        acc=0.939 decay=+0.018 wl2=8.8 (59s)
+  seed=20260825 shrink_pert    acc=0.885 decay=+0.028 wl2=5.7 (36s)
+  seed=20260825 norm_project   acc=0.932 decay=+0.022 wl2=6.0 (36s)
+  seed=20260825 dir_control    acc=0.959 decay=+0.006 wl2=12.2 (34s)
+  seed=20260825 dir_inward     acc=0.458 decay=+0.128 wl2=1.8 (33s)
+  seed=20260825 random_dir     acc=0.109 decay=+0.078 wl2=152.0 (38s)
+  seed=20260826 sgd            acc=0.969 decay=+0.005 wl2=14.1 (30s)
+  seed=20260826 l2_init        acc=0.946 decay=+0.017 wl2=8.7 (48s)
+  seed=20260826 shrink_pert    acc=0.889 decay=+0.031 wl2=5.7 (30s)
+  seed=20260826 norm_project   acc=0.933 decay=+0.024 wl2=6.0 (35s)
+  seed=20260826 dir_control    acc=0.965 decay=+0.004 wl2=12.1 (34s)
+  seed=20260826 dir_inward     acc=0.451 decay=+0.165 wl2=1.8 (33s)
+  seed=20260826 random_dir     acc=0.107 decay=+0.072 wl2=nan (39s)
+  [angle] seed=20260824 cos=1 acc=0.963 wl2=14.3
+  [angle] seed=20260824 cos=0.75 acc=0.951 wl2=68.1
+  [angle] seed=20260824 cos=0.5 acc=0.924 wl2=129.7
+  [angle] seed=20260824 cos=0.25 acc=0.721 wl2=290.6
+  [angle] seed=20260824 cos=0.1 acc=0.439 wl2=533.3
+  [angle] seed=20260825 cos=1 acc=0.964 wl2=14.1
+  [angle] seed=20260825 cos=0.75 acc=0.949 wl2=68.7
+  [angle] seed=20260825 cos=0.5 acc=0.922 wl2=117.4
+  [angle] seed=20260825 cos=0.25 acc=0.718 wl2=235.6
+  [angle] seed=20260825 cos=0.1 acc=0.410 wl2=479.3
+  [angle] seed=20260826 cos=1 acc=0.969 wl2=14.1
+  [angle] seed=20260826 cos=0.75 acc=0.957 wl2=68.1
+  [angle] seed=20260826 cos=0.5 acc=0.935 wl2=119.7
+  [angle] seed=20260826 cos=0.25 acc=0.824 wl2=265.4
+  [angle] seed=20260826 cos=0.1 acc=0.428 wl2=591.9
+
+[E25] CNN Rotated-MNIST leaderboard (Pearson(norm,decay) over 6 arms = -0.821):
+  sgd            acc=0.965+-0.003 decay=+0.004 wl2=14.2 gA=+1.00
+  dir_control    acc=0.961+-0.003 decay=+0.004 wl2=12.1 gA=+1.00
+  l2_init        acc=0.941+-0.003 decay=+0.016 wl2=8.8 gA=+1.00
+  norm_project   acc=0.932+-0.001 decay=+0.022 wl2=6.0 gA=+1.00
+  shrink_pert    acc=0.886+-0.002 decay=+0.033 wl2=5.7 gA=+1.00
+  dir_inward     acc=0.466+-0.016 decay=+0.127 wl2=1.8 gA=+0.81
+  random_dir     acc=0.113+-0.007 decay=+0.079 wl2=nan gA=+nan
+[E25] CNN angle sweep:
+  cos=1: acc=0.965 wl2=14.2 gA=+1.00
+  cos=0.75: acc=0.952 wl2=68.3 gA=+0.75
+  cos=0.5: acc=0.927 wl2=122.3 gA=+0.50
+  cos=0.25: acc=0.754 wl2=263.9 gA=+0.25
+  cos=0.1: acc=0.426 wl2=534.9 gA=+0.10

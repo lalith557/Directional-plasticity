@@ -1,0 +1,80 @@
+{
+  "seeds": [
+    20260824,
+    20260825,
+    20260826,
+    20260827,
+    20260828
+  ],
+  "lambdas": [
+    0.0,
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "grid": "predetermined geometric",
+  "aggregate": {
+    "0": {
+      "mean_acc_mean": 0.744285581111908,
+      "decay_mean": 0.13291200160980227,
+      "final_wl2_mean": 20.39256057739258,
+      "final_dormant_mean": 0.2125,
+      "mean_acc_std": 0.014532081452045586,
+      "decay_std": 0.03563422166989663,
+      "final_wl2_std": 0.39798056201024273,
+      "final_dormant_std": 0.075
+    },
+    "0.001": {
+      "mean_acc_mean": 0.7759881793260573,
+      "decay_mean": 0.07816998720169066,
+      "final_wl2_mean": 12.110380554199219,
+      "final_dormant_mean": 0.20625,
+      "mean_acc_std": 0.014992481281934724,
+      "decay_std": 0.01599994189955159,
+      "final_wl2_std": 0.15911531044815538,
+      "final_dormant_std": 0.054486236794258416
+    },
+    "0.003": {
+      "mean_acc_mean": 0.7783425801396369,
+      "decay_mean": 0.07547799706459044,
+      "final_wl2_mean": 8.96107006072998,
+      "final_dormant_mean": 0.19375,
+      "mean_acc_std": 0.01292696134837376,
+      "decay_std": 0.012047524644970078,
+      "final_wl2_std": 0.11112583547089512,
+      "final_dormant_std": 0.04592793267718459
+    },
+    "0.01": {
+      "mean_acc_mean": 0.8185329788923263,
+      "decay_mean": 0.04680599808692933,
+      "final_wl2_mean": 6.573753833770752,
+      "final_dormant_mean": 0.1125,
+      "mean_acc_std": 0.002929080765076185,
+      "decay_std": 0.01229254285605664,
+      "final_wl2_std": 0.05497422665737179,
+      "final_dormant_std": 0.03186887195995491
+    },
+    "0.03": {
+      "mean_acc_mean": 0.8084913796186447,
+      "decay_mean": 0.04272998213768007,
+      "final_wl2_mean": 5.326723957061768,
+      "final_dormant_mean": 0.03125,
+      "mean_acc_std": 0.0011476301629870472,
+      "decay_std": 0.00691621200650821,
+      "final_wl2_std": 0.052883964012173656,
+      "final_dormant_std": 0.01976423537605237
+    },
+    "0.1": {
+      "mean_acc_mean": 0.6931643818020821,
+      "decay_mean": 0.07980400443077089,
+      "final_wl2_mean": 4.2851485252380375,
+      "final_dormant_mean": 0.05,
+      "mean_acc_std": 0.009051601080084874,
+      "decay_std": 0.0167130669015741,
+      "final_wl2_std": 0.036846515870479955,
+      "final_dormant_std": 0.03186887195995491
+    }
+  }
+}

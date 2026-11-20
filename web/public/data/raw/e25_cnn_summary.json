@@ -1,0 +1,182 @@
+{
+  "hardware": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_free_gb": 7.063207936,
+    "hardware_profile": "gpu"
+  },
+  "arch": "SmallCNN(16,32,fc64)",
+  "benchmark": "rotated_mnist",
+  "seeds": [
+    20260824,
+    20260825,
+    20260826
+  ],
+  "arm_aggregate": {
+    "sgd": {
+      "mean_acc_mean": 0.9650717136263847,
+      "decay_mean": 0.004016671578089381,
+      "final_wl2_mean": 14.169313748677572,
+      "final_dormant_mean": 0.03125,
+      "final_eff_rank_mean": 4.902653535207112,
+      "grad_align_mean": 1.0000000188847382,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.0026604569352072995,
+      "decay_std": 0.0004921592766231376,
+      "final_wl2_std": 0.07857764044642945,
+      "final_dormant_std": 0.01275775907699572,
+      "final_eff_rank_std": 0.15926749152574865,
+      "grad_align_std": 1.0793336327563983e-09,
+      "matched_max_dev_std": 0.0
+    },
+    "l2_init": {
+      "mean_acc_mean": 0.9410933778683344,
+      "decay_mean": 0.015883340438206977,
+      "final_wl2_mean": 8.780351956685385,
+      "final_dormant_mean": 0.036458333333333336,
+      "final_eff_rank_mean": 3.7984699408213296,
+      "grad_align_mean": 1.0000000213252174,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.0034697768833500814,
+      "decay_std": 0.0016903483065121056,
+      "final_wl2_std": 0.05778295073043679,
+      "final_dormant_std": 0.02655739329996242,
+      "final_eff_rank_std": 0.18120265950378361,
+      "grad_align_std": 1.8713836495021962e-09,
+      "matched_max_dev_std": 0.0
+    },
+    "shrink_pert": {
+      "mean_acc_mean": 0.8862650426725547,
+      "decay_mean": 0.03293333252271017,
+      "final_wl2_mean": 5.730889797210693,
+      "final_dormant_mean": 0.015625,
+      "final_eff_rank_mean": 3.739281256993612,
+      "grad_align_mean": 1.0000000170899763,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.0021527461819221953,
+      "decay_std": 0.005294074831009324,
+      "final_wl2_std": 0.003102180371251729,
+      "final_dormant_std": 0.0,
+      "final_eff_rank_std": 0.3223627100366745,
+      "grad_align_std": 3.75603260436889e-10,
+      "matched_max_dev_std": 0.0
+    },
+    "norm_project": {
+      "mean_acc_mean": 0.9317750429113706,
+      "decay_mean": 0.02244999408721926,
+      "final_wl2_mean": 5.9999996821085615,
+      "final_dormant_mean": 0.234375,
+      "final_eff_rank_mean": 3.7767416636149087,
+      "grad_align_mean": 1.0000000169773895,
+      "matched_max_dev_mean": 0.0,
+      "mean_acc_std": 0.0011938671007594305,
+      "decay_std": 0.0013490656657628136,
+      "final_wl2_std": 2.247831920581015e-07,
+      "final_dormant_std": 0.06629126073623882,
+      "final_eff_rank_std": 0.23671541485483905,
+      "grad_align_std": 1.1762027648824518e-09,
+      "matched_max_dev_std": 0.0
+    },
+    "dir_control": {
+      "mean_acc_mean": 0.9611517145236332,
+      "decay_mean": 0.004483324289321892,
+      "final_wl2_mean": 12.141247431437174,
+      "final_dormant_mean": 0.026041666666666668,
+      "final_eff_rank_mean": 5.290971279144287,
+      "grad_align_mean": 0.9994497687386142,
+      "matched_max_dev_mean": 2.22097231189372e-07,
+      "mean_acc_std": 0.0029213343388168884,
+      "decay_std": 0.0007420072046535919,
+      "final_wl2_std": 0.02932691666056721,
+      "final_dormant_std": 0.01473139127471974,
+      "final_eff_rank_std": 0.2198328385121971,
+      "grad_align_std": 2.576099786833233e-05,
+      "matched_max_dev_std": 1.317961055486883e-08
+    },
+    "dir_inward": {
+      "mean_acc_mean": 0.465658355653286,
+      "decay_mean": 0.12713333467642468,
+      "final_wl2_mean": 1.8480579455693562,
+      "final_dormant_mean": 0.7447916666666666,
+      "final_eff_rank_mean": 1.9084293842315674,
+      "grad_align_mean": 0.8105157239304649,
+      "matched_max_dev_mean": 1.9304303174054619e-07,
+      "mean_acc_std": 0.01622750669078466,
+      "decay_std": 0.03095442357910609,
+      "final_wl2_std": 0.07284193089824849,
+      "final_dormant_std": 0.04830009633070679,
+      "final_eff_rank_std": 0.17685352039760968,
+      "grad_align_std": 0.00010553776037510641,
+      "matched_max_dev_std": 1.1646050303429727e-08
+    },
+    "random_dir": {
+      "mean_acc_mean": 0.11264167202015718,
+      "decay_mean": 0.0788833369811376,
+      "final_wl2_mean": NaN,
+      "final_dormant_mean": 0.08854166666666667,
+      "final_eff_rank_mean": NaN,
+      "grad_align_mean": NaN,
+      "matched_max_dev_mean": NaN,
+      "mean_acc_std": 0.006745766086391851,
+      "decay_std": 0.0058275709510645195,
+      "final_wl2_std": NaN,
+      "final_dormant_std": 0.12521682583511778,
+      "final_eff_rank_std": NaN,
+      "grad_align_std": NaN,
+      "matched_max_dev_std": NaN
+    }
+  },
+  "pearson_norm_decay_narms": -0.8210726099599591,
+  "n_arms": 6,
+  "angle_cos": [
+    1.0,
+    0.75,
+    0.5,
+    0.25,
+    0.1
+  ],
+  "angle_aggregate": {
+    "1": {
+      "mean_acc_mean": 0.9652333820859592,
+      "final_wl2_mean": 14.156039873758951,
+      "grad_align_mean": 1.0000000193748209,
+      "mean_acc_std": 0.0025950983350655457,
+      "final_wl2_std": 0.10252864182893821,
+      "grad_align_std": 2.1010004072016265e-09
+    },
+    "0.75": {
+      "mean_acc_mean": 0.9523267115155857,
+      "final_wl2_mean": 68.32019805908203,
+      "grad_align_mean": 0.7500000129375194,
+      "mean_acc_std": 0.003327517448691453,
+      "final_wl2_std": 0.3027135598297198,
+      "grad_align_std": 2.5551239310562963e-10
+    },
+    "0.5": {
+      "mean_acc_mean": 0.9269633760054906,
+      "final_wl2_mean": 122.26797993977864,
+      "grad_align_mean": 0.50000001608332,
+      "mean_acc_std": 0.005534877705785131,
+      "final_wl2_std": 5.326417446552765,
+      "grad_align_std": 1.033553061602437e-09
+    },
+    "0.25": {
+      "mean_acc_mean": 0.7541183684269588,
+      "final_wl2_mean": 263.8658498128255,
+      "grad_align_mean": 0.24999999879714516,
+      "mean_acc_std": 0.04920439759458319,
+      "final_wl2_std": 22.469301921829203,
+      "grad_align_std": 4.726203782160494e-10
+    },
+    "0.1": {
+      "mean_acc_mean": 0.4258500216404597,
+      "final_wl2_mean": 534.8542175292969,
+      "grad_align_mean": 0.10000000300548144,
+      "mean_acc_std": 0.011839038627071344,
+      "final_wl2_std": 45.981078481539285,
+      "grad_align_std": 1.0224941363072382e-10
+    }
+  }
+}

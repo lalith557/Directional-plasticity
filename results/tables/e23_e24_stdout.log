@@ -1,0 +1,194 @@
+C:\Users\Lalith Gona\HTML\Deep Learning Project\src\plasticity_stress.py:198: UserWarning: torch.linalg.svd: During SVD computation with the selected cusolver driver, batches 0 failed to converge. A more accurate method will be used to compute the SVD as a fallback. Check doc at https://pytorch.org/docs/stable/generated/torch.linalg.svd.html (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\cuda\linalg\BatchLinearAlgebraLib.cpp:698.)
+  s = torch.linalg.svdvals(F_)
+C:\Users\Lalith Gona\HTML\Deep Learning Project\src\plasticity_stress.py:461: RuntimeWarning: invalid value encountered in subtract
+  max_dev = (float(np.max(np.abs(np.array(applied_norms) - np.array(ref_norms))
+[E23] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU
+  seed=20260824 sgd                  acc=0.732 decay=+0.117 gA=+1.00 rA=+0.01 wl2=19.8 (23s)
+  seed=20260824 l2_init              acc=0.814 decay=+0.035 gA=+1.00 rA=-0.01 wl2=6.5 (33s)
+  seed=20260824 shrink_pert          acc=0.789 decay=+0.070 gA=+1.00 rA=+0.10 wl2=4.1 (22s)
+  seed=20260824 cbp                  acc=0.734 decay=+0.123 gA=+1.00 rA=+0.01 wl2=19.3 (26s)
+  seed=20260824 dir_control_c1.0     acc=0.706 decay=+0.183 gA=+1.00 rA=-0.00 wl2=25.2 (26s)
+  seed=20260824 dir_inward_g0.6      acc=0.437 decay=+0.041 gA=+0.81 rA=-0.00 wl2=2.3 (26s)
+  seed=20260824 adaptive_norm_revive acc=0.735 decay=+0.063 gA=+1.00 rA=+0.03 wl2=8.0 (23s)
+  seed=20260824 random_dir           acc=0.099 decay=+0.039 gA=+nan rA=+nan wl2=nan (28s)
+  seed=20260824 norm_project_t6      acc=0.741 decay=+0.159 gA=+1.00 rA=+0.10 wl2=5.0 (27s)
+  seed=20260824 angle_c=+1.00        acc=0.736 decay=+0.154 gA=+1.00 rA=+0.01 wl2=20.1 (28s)
+  seed=20260824 angle_c=+0.90        acc=0.512 decay=+0.531 gA=+0.90 rA=+0.05 wl2=77.9 (30s)
+  seed=20260824 angle_c=+0.75        acc=0.451 decay=+0.588 gA=+0.75 rA=+0.08 wl2=135.7 (30s)
+  seed=20260824 angle_c=+0.50        acc=0.371 decay=+0.633 gA=+0.50 rA=+0.10 wl2=163.5 (30s)
+  seed=20260824 angle_c=+0.25        acc=0.281 decay=+0.581 gA=+0.25 rA=+0.11 wl2=225.5 (29s)
+  seed=20260824 angle_c=+0.10        acc=0.206 decay=+0.331 gA=+0.10 rA=+0.12 wl2=840.3 (31s)
+  seed=20260824 angle_c=+0.00        acc=0.100 decay=+0.048 gA=+nan rA=+nan wl2=nan (33s)
+  seed=20260825 sgd                  acc=0.764 decay=+0.118 gA=+1.00 rA=+0.01 wl2=20.6 (26s)
+  seed=20260825 l2_init              acc=0.822 decay=+0.035 gA=+1.00 rA=-0.01 wl2=6.6 (38s)
+  seed=20260825 shrink_pert          acc=0.809 decay=+0.042 gA=+1.00 rA=+0.10 wl2=4.2 (25s)
+  seed=20260825 cbp                  acc=0.727 decay=+0.171 gA=+1.00 rA=+0.01 wl2=19.0 (30s)
+  seed=20260825 dir_control_c1.0     acc=0.701 decay=+0.174 gA=+1.00 rA=-0.00 wl2=24.9 (28s)
+  seed=20260825 dir_inward_g0.6      acc=0.425 decay=+0.057 gA=+0.81 rA=-0.01 wl2=2.3 (28s)
+  seed=20260825 adaptive_norm_revive acc=0.726 decay=+0.081 gA=+1.00 rA=+0.03 wl2=7.9 (25s)
+  seed=20260825 random_dir           acc=0.095 decay=+0.035 gA=+nan rA=+nan wl2=nan (31s)
+  seed=20260825 norm_project_t6      acc=0.782 decay=+0.083 gA=+1.00 rA=+0.11 wl2=5.1 (29s)
+  seed=20260825 angle_c=+1.00        acc=0.751 decay=+0.115 gA=+1.00 rA=+0.01 wl2=21.1 (30s)
+  seed=20260825 angle_c=+0.90        acc=0.549 decay=+0.431 gA=+0.90 rA=+0.05 wl2=85.3 (29s)
+  seed=20260825 angle_c=+0.75        acc=0.415 decay=+0.588 gA=+0.75 rA=+0.07 wl2=127.1 (30s)
+  seed=20260825 angle_c=+0.50        acc=0.398 decay=+0.657 gA=+0.50 rA=+0.10 wl2=196.2 (29s)
+  seed=20260825 angle_c=+0.25        acc=0.296 decay=+0.601 gA=+0.25 rA=+0.11 wl2=351.4 (28s)
+  seed=20260825 angle_c=+0.10        acc=0.197 decay=+0.336 gA=+0.10 rA=+0.11 wl2=585.1 (28s)
+  seed=20260825 angle_c=+0.00        acc=0.096 decay=+0.043 gA=+nan rA=+nan wl2=nan (30s)
+  seed=20260826 sgd                  acc=0.754 decay=+0.083 gA=+1.00 rA=+0.01 wl2=20.9 (24s)
+  seed=20260826 l2_init              acc=0.817 decay=+0.043 gA=+1.00 rA=-0.01 wl2=6.6 (37s)
+  seed=20260826 shrink_pert          acc=0.800 decay=+0.022 gA=+1.00 rA=+0.10 wl2=4.2 (25s)
+  seed=20260826 cbp                  acc=0.739 decay=+0.160 gA=+1.00 rA=+0.01 wl2=18.9 (29s)
+  seed=20260826 dir_control_c1.0     acc=0.691 decay=+0.257 gA=+1.00 rA=-0.00 wl2=24.9 (27s)
+  seed=20260826 dir_inward_g0.6      acc=0.424 decay=+0.054 gA=+0.81 rA=-0.00 wl2=2.3 (27s)
+  seed=20260826 adaptive_norm_revive acc=0.736 decay=+0.063 gA=+1.00 rA=+0.03 wl2=7.6 (24s)
+  seed=20260826 random_dir           acc=0.096 decay=+0.031 gA=+nan rA=+nan wl2=nan (30s)
+  seed=20260826 norm_project_t6      acc=0.764 decay=+0.084 gA=+1.00 rA=+0.11 wl2=5.1 (29s)
+  seed=20260826 angle_c=+1.00        acc=0.747 decay=+0.090 gA=+1.00 rA=+0.01 wl2=20.8 (29s)
+  seed=20260826 angle_c=+0.90        acc=0.536 decay=+0.468 gA=+0.90 rA=+0.05 wl2=85.6 (29s)
+  seed=20260826 angle_c=+0.75        acc=0.448 decay=+0.611 gA=+0.75 rA=+0.07 wl2=127.1 (29s)
+  seed=20260826 angle_c=+0.50        acc=0.376 decay=+0.633 gA=+0.50 rA=+0.10 wl2=178.5 (29s)
+  seed=20260826 angle_c=+0.25        acc=0.287 decay=+0.599 gA=+0.25 rA=+0.11 wl2=207.9 (29s)
+  seed=20260826 angle_c=+0.10        acc=0.212 decay=+0.344 gA=+0.10 rA=+0.11 wl2=569.6 (29s)
+  seed=20260826 angle_c=+0.00        acc=0.098 decay=+0.059 gA=+nan rA=+nan wl2=nan (31s)
+  seed=20260827 sgd                  acc=0.746 decay=+0.182 gA=+1.00 rA=+0.01 wl2=20.6 (24s)
+  seed=20260827 l2_init              acc=0.819 decay=+0.067 gA=+1.00 rA=-0.01 wl2=6.5 (36s)
+  seed=20260827 shrink_pert          acc=0.787 decay=+0.054 gA=+1.00 rA=+0.10 wl2=4.1 (24s)
+  seed=20260827 cbp                  acc=0.710 decay=+0.154 gA=+1.00 rA=+0.01 wl2=19.2 (28s)
+  seed=20260827 dir_control_c1.0     acc=0.705 decay=+0.156 gA=+1.00 rA=-0.00 wl2=25.2 (27s)
+  seed=20260827 dir_inward_g0.6      acc=0.429 decay=+0.054 gA=+0.81 rA=-0.00 wl2=2.3 (26s)
+  seed=20260827 adaptive_norm_revive acc=0.752 decay=+0.131 gA=+1.00 rA=+0.03 wl2=8.6 (24s)
+  seed=20260827 random_dir           acc=0.099 decay=+0.034 gA=+nan rA=+nan wl2=nan (30s)
+  seed=20260827 norm_project_t6      acc=0.806 decay=+0.024 gA=+1.00 rA=+0.13 wl2=5.1 (28s)
+  seed=20260827 angle_c=+1.00        acc=0.751 decay=+0.116 gA=+1.00 rA=+0.01 wl2=20.6 (28s)
+  seed=20260827 angle_c=+0.90        acc=0.541 decay=+0.483 gA=+0.90 rA=+0.05 wl2=77.1 (28s)
+  seed=20260827 angle_c=+0.75        acc=0.419 decay=+0.664 gA=+0.75 rA=+0.08 wl2=120.3 (28s)
+  seed=20260827 angle_c=+0.50        acc=0.350 decay=+0.662 gA=+0.50 rA=+0.10 wl2=166.9 (28s)
+  seed=20260827 angle_c=+0.25        acc=0.281 decay=+0.581 gA=+0.25 rA=+0.11 wl2=247.3 (29s)
+  seed=20260827 angle_c=+0.10        acc=0.204 decay=+0.347 gA=+0.10 rA=+0.11 wl2=612.0 (29s)
+  seed=20260827 angle_c=+0.00        acc=0.099 decay=+0.048 gA=+nan rA=+nan wl2=nan (31s)
+  seed=20260828 sgd                  acc=0.724 decay=+0.165 gA=+1.00 rA=+0.01 wl2=20.0 (24s)
+  seed=20260828 l2_init              acc=0.820 decay=+0.054 gA=+1.00 rA=-0.01 wl2=6.6 (37s)
+  seed=20260828 shrink_pert          acc=0.809 decay=+0.043 gA=+1.00 rA=+0.10 wl2=4.2 (25s)
+  seed=20260828 cbp                  acc=0.730 decay=+0.127 gA=+1.00 rA=+0.01 wl2=19.0 (29s)
+  seed=20260828 dir_control_c1.0     acc=0.714 decay=+0.143 gA=+1.00 rA=+0.00 wl2=25.3 (28s)
+  seed=20260828 dir_inward_g0.6      acc=0.427 decay=+0.050 gA=+0.81 rA=-0.00 wl2=2.3 (28s)
+  seed=20260828 adaptive_norm_revive acc=0.723 decay=+0.114 gA=+1.00 rA=+0.03 wl2=7.5 (26s)
+  seed=20260828 random_dir           acc=0.105 decay=+0.076 gA=+nan rA=+nan wl2=nan (31s)
+  seed=20260828 norm_project_t6      acc=0.778 decay=+0.078 gA=+1.00 rA=+0.11 wl2=5.1 (30s)
+  seed=20260828 angle_c=+1.00        acc=0.706 decay=+0.158 gA=+1.00 rA=+0.01 wl2=19.9 (29s)
+  seed=20260828 angle_c=+0.90        acc=0.526 decay=+0.452 gA=+0.90 rA=+0.05 wl2=82.5 (30s)
+  seed=20260828 angle_c=+0.75        acc=0.435 decay=+0.665 gA=+0.75 rA=+0.08 wl2=117.2 (30s)
+  seed=20260828 angle_c=+0.50        acc=0.393 decay=+0.629 gA=+0.50 rA=+0.10 wl2=179.4 (30s)
+  seed=20260828 angle_c=+0.25        acc=0.286 decay=+0.612 gA=+0.25 rA=+0.11 wl2=234.5 (31s)
+  seed=20260828 angle_c=+0.10        acc=0.213 decay=+0.371 gA=+0.10 rA=+0.11 wl2=1014.4 (30s)
+  seed=20260828 angle_c=+0.00        acc=0.105 decay=+0.076 gA=+nan rA=+nan wl2=nan (32s)
+
+[E23] angle sweep (cos -> acc, decay):
+  cos=+1.00: acc=0.738+-0.017 decay=+0.126 wl2=20.5 rA=+0.01
+  cos=+0.90: acc=0.533+-0.013 decay=+0.473 wl2=81.7 rA=+0.05
+  cos=+0.75: acc=0.434+-0.015 decay=+0.623 wl2=125.5 rA=+0.08
+  cos=+0.50: acc=0.377+-0.017 decay=+0.643 wl2=176.9 rA=+0.10
+  cos=+0.25: acc=0.286+-0.005 decay=+0.595 wl2=253.3 rA=+0.11
+  cos=+0.10: acc=0.206+-0.006 decay=+0.346 wl2=724.3 rA=+0.11
+  cos=+0.00: acc=0.100+-0.003 decay=+0.055 wl2=nan rA=+nan
+
+[E23] random_dir: acc=0.099 decay=+0.043 wl2=nan gA=+nan
+[E23] norm_project_t6: acc=0.774 decay=+0.086 wl2=5.1
+[E23] dir_inward grad_align=+0.81 (vs sgd +1.00)
+[E23] Pearson(grad_align,decay)=nan Pearson(radial_align,norm)=nan
+C:\Users\Lalith Gona\HTML\Deep Learning Project\src\plasticity_stress.py:198: UserWarning: torch.linalg.svd: During SVD computation with the selected cusolver driver, batches 0 failed to converge. A more accurate method will be used to compute the SVD as a fallback. Check doc at https://pytorch.org/docs/stable/generated/torch.linalg.svd.html (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\cuda\linalg\BatchLinearAlgebraLib.cpp:698.)
+  s = torch.linalg.svdvals(F_)
+[E24] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU
+
+=== A. Rotated MNIST (width 16) ===
+  [rotmnist] seed=20260824 sgd                    acc=0.900 decay=+0.017 wl2=14.2 (27s)
+  [rotmnist] seed=20260824 l2_init                acc=0.869 decay=+0.040 wl2=6.4 (38s)
+  [rotmnist] seed=20260824 shrink_pert            acc=0.812 decay=+0.057 wl2=3.9 (26s)
+  [rotmnist] seed=20260824 cbp                    acc=0.895 decay=+0.017 wl2=13.8 (29s)
+  [rotmnist] seed=20260824 dir_control_c1.0       acc=0.887 decay=+0.018 wl2=16.9 (29s)
+  [rotmnist] seed=20260824 dir_inward_g0.6        acc=0.453 decay=+0.051 wl2=2.3 (30s)
+  [rotmnist] seed=20260824 adaptive_norm_revive   acc=0.896 decay=+0.016 wl2=13.6 (27s)
+  [rotmnist] seed=20260825 sgd                    acc=0.889 decay=+0.016 wl2=13.8 (26s)
+  [rotmnist] seed=20260825 l2_init                acc=0.853 decay=+0.023 wl2=6.4 (38s)
+  [rotmnist] seed=20260825 shrink_pert            acc=0.804 decay=+0.032 wl2=4.0 (26s)
+  [rotmnist] seed=20260825 cbp                    acc=0.886 decay=+0.017 wl2=13.7 (30s)
+  [rotmnist] seed=20260825 dir_control_c1.0       acc=0.868 decay=+0.021 wl2=17.9 (30s)
+  [rotmnist] seed=20260825 dir_inward_g0.6        acc=0.433 decay=+0.068 wl2=2.2 (29s)
+  [rotmnist] seed=20260825 adaptive_norm_revive   acc=0.886 decay=+0.016 wl2=13.5 (27s)
+  [rotmnist] seed=20260826 sgd                    acc=0.887 decay=+0.015 wl2=14.0 (27s)
+  [rotmnist] seed=20260826 l2_init                acc=0.849 decay=+0.025 wl2=6.3 (39s)
+  [rotmnist] seed=20260826 shrink_pert            acc=0.788 decay=+0.035 wl2=4.0 (26s)
+  [rotmnist] seed=20260826 cbp                    acc=0.885 decay=+0.022 wl2=13.7 (30s)
+  [rotmnist] seed=20260826 dir_control_c1.0       acc=0.872 decay=+0.013 wl2=16.9 (30s)
+  [rotmnist] seed=20260826 dir_inward_g0.6        acc=0.435 decay=+0.053 wl2=2.2 (30s)
+  [rotmnist] seed=20260826 adaptive_norm_revive   acc=0.885 decay=+0.021 wl2=13.4 (27s)
+  [rotmnist] seed=20260827 sgd                    acc=0.891 decay=+0.028 wl2=14.2 (27s)
+  [rotmnist] seed=20260827 l2_init                acc=0.850 decay=+0.057 wl2=6.2 (39s)
+  [rotmnist] seed=20260827 shrink_pert            acc=0.803 decay=+0.100 wl2=3.9 (27s)
+  [rotmnist] seed=20260827 cbp                    acc=0.888 decay=+0.035 wl2=14.0 (31s)
+  [rotmnist] seed=20260827 dir_control_c1.0       acc=0.880 decay=+0.032 wl2=17.5 (30s)
+  [rotmnist] seed=20260827 dir_inward_g0.6        acc=0.432 decay=+0.045 wl2=2.3 (30s)
+  [rotmnist] seed=20260827 adaptive_norm_revive   acc=0.892 decay=+0.022 wl2=13.7 (27s)
+  [rotmnist] seed=20260828 sgd                    acc=0.901 decay=+0.027 wl2=14.0 (27s)
+  [rotmnist] seed=20260828 l2_init                acc=0.862 decay=+0.035 wl2=6.3 (39s)
+  [rotmnist] seed=20260828 shrink_pert            acc=0.809 decay=+0.065 wl2=3.8 (27s)
+  [rotmnist] seed=20260828 cbp                    acc=0.894 decay=+0.028 wl2=13.7 (31s)
+  [rotmnist] seed=20260828 dir_control_c1.0       acc=0.881 decay=+0.025 wl2=16.9 (31s)
+  [rotmnist] seed=20260828 dir_inward_g0.6        acc=0.451 decay=+0.054 wl2=2.2 (31s)
+  [rotmnist] seed=20260828 adaptive_norm_revive   acc=0.896 decay=+0.027 wl2=13.6 (29s)
+
+=== B. Wider architecture 784-128-128-10 (permuted MNIST) ===
+  [arch128] seed=20260824 sgd                    acc=0.865 decay=+0.036 wl2=30.7 (30s)
+  [arch128] seed=20260824 l2_init                acc=0.865 decay=+0.026 wl2=11.1 (42s)
+  [arch128] seed=20260824 shrink_pert            acc=0.831 decay=+0.048 wl2=6.2 (28s)
+  [arch128] seed=20260824 cbp                    acc=0.863 decay=+0.037 wl2=30.6 (31s)
+  [arch128] seed=20260824 dir_control_c1.0       acc=0.858 decay=+0.037 wl2=30.0 (30s)
+  [arch128] seed=20260824 dir_inward_g0.6        acc=0.622 decay=+0.068 wl2=2.7 (39s)
+  [arch128] seed=20260824 adaptive_norm_revive   acc=0.845 decay=+0.047 wl2=11.2 (28s)
+  [arch128] seed=20260825 sgd                    acc=0.868 decay=+0.025 wl2=30.8 (27s)
+  [arch128] seed=20260825 l2_init                acc=0.866 decay=+0.026 wl2=11.0 (40s)
+  [arch128] seed=20260825 shrink_pert            acc=0.814 decay=+0.038 wl2=6.2 (27s)
+  [arch128] seed=20260825 cbp                    acc=0.867 decay=+0.031 wl2=30.5 (30s)
+  [arch128] seed=20260825 dir_control_c1.0       acc=0.867 decay=+0.031 wl2=30.0 (30s)
+  [arch128] seed=20260825 dir_inward_g0.6        acc=0.619 decay=+0.055 wl2=2.7 (40s)
+  [arch128] seed=20260825 adaptive_norm_revive   acc=0.864 decay=+0.028 wl2=11.0 (27s)
+  [arch128] seed=20260826 sgd                    acc=0.866 decay=+0.033 wl2=30.6 (27s)
+  [arch128] seed=20260826 l2_init                acc=0.866 decay=+0.018 wl2=11.0 (40s)
+  [arch128] seed=20260826 shrink_pert            acc=0.830 decay=+0.018 wl2=6.2 (28s)
+  [arch128] seed=20260826 cbp                    acc=0.863 decay=+0.030 wl2=30.7 (31s)
+  [arch128] seed=20260826 dir_control_c1.0       acc=0.865 decay=+0.027 wl2=29.3 (29s)
+  [arch128] seed=20260826 dir_inward_g0.6        acc=0.617 decay=+0.087 wl2=2.7 (39s)
+  [arch128] seed=20260826 adaptive_norm_revive   acc=0.860 decay=+0.023 wl2=11.6 (27s)
+  [arch128] seed=20260827 sgd                    acc=0.867 decay=+0.026 wl2=30.6 (28s)
+  [arch128] seed=20260827 l2_init                acc=0.860 decay=+0.022 wl2=11.0 (41s)
+  [arch128] seed=20260827 shrink_pert            acc=0.828 decay=+0.034 wl2=6.2 (27s)
+  [arch128] seed=20260827 cbp                    acc=0.863 decay=+0.026 wl2=30.5 (30s)
+  [arch128] seed=20260827 dir_control_c1.0       acc=0.862 decay=+0.042 wl2=30.1 (29s)
+  [arch128] seed=20260827 dir_inward_g0.6        acc=0.621 decay=+0.075 wl2=2.7 (40s)
+  [arch128] seed=20260827 adaptive_norm_revive   acc=0.853 decay=+0.044 wl2=11.8 (28s)
+  [arch128] seed=20260828 sgd                    acc=0.866 decay=+0.041 wl2=30.7 (27s)
+  [arch128] seed=20260828 l2_init                acc=0.866 decay=+0.028 wl2=11.0 (41s)
+  [arch128] seed=20260828 shrink_pert            acc=0.831 decay=+0.043 wl2=6.2 (27s)
+  [arch128] seed=20260828 cbp                    acc=0.871 decay=+0.031 wl2=30.8 (30s)
+  [arch128] seed=20260828 dir_control_c1.0       acc=0.863 decay=+0.042 wl2=29.6 (29s)
+  [arch128] seed=20260828 dir_inward_g0.6        acc=0.617 decay=+0.048 wl2=2.7 (40s)
+  [arch128] seed=20260828 adaptive_norm_revive   acc=0.854 decay=+0.062 wl2=11.4 (27s)
+
+[E24-rotmnist] leaderboard (acc desc), Pearson(norm,decay)=-0.94:
+  sgd                    acc=0.894+-0.006 decay=+0.021 wl2=14.1
+  adaptive_norm_revive   acc=0.891+-0.005 decay=+0.020 wl2=13.6
+  cbp                    acc=0.890+-0.004 decay=+0.024 wl2=13.8
+  dir_control_c1.0       acc=0.878+-0.007 decay=+0.022 wl2=17.2
+  l2_init                acc=0.857+-0.008 decay=+0.036 wl2=6.3
+  shrink_pert            acc=0.803+-0.008 decay=+0.058 wl2=3.9
+  dir_inward_g0.6        acc=0.441+-0.009 decay=+0.054 wl2=2.3
+
+[E24-arch128] leaderboard (acc desc), Pearson(norm,decay)=-0.52:
+  sgd                    acc=0.867+-0.001 decay=+0.032 wl2=30.7
+  cbp                    acc=0.865+-0.003 decay=+0.031 wl2=30.6
+  l2_init                acc=0.865+-0.002 decay=+0.024 wl2=11.0
+  dir_control_c1.0       acc=0.863+-0.003 decay=+0.036 wl2=29.8
+  adaptive_norm_revive   acc=0.855+-0.006 decay=+0.041 wl2=11.4
+  shrink_pert            acc=0.827+-0.006 decay=+0.036 wl2=6.2
+  dir_inward_g0.6        acc=0.619+-0.002 decay=+0.067 wl2=2.7

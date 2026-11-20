@@ -1,0 +1,84 @@
+{
+  "hardware": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_free_gb": 7.212105728,
+    "hardware_profile": "gpu"
+  },
+  "regime": {
+    "hidden": 16,
+    "depth": 2,
+    "lr": 0.2,
+    "epochs": 1,
+    "batch": 128,
+    "steps_per_task": 60,
+    "n_tasks": 100,
+    "train_subset": 6000
+  },
+  "seeds": [
+    20260824,
+    20260825,
+    20260826
+  ],
+  "lambdas": [
+    0.0,
+    0.001,
+    0.003,
+    0.01,
+    0.03
+  ],
+  "aggregate": {
+    "0": {
+      "mean_acc_mean": 0.7502636474370957,
+      "decay_mean": 0.10609334309895835,
+      "final_wl2_mean": 20.44305674235026,
+      "final_dormant_mean": 0.16666666666666666,
+      "mean_acc_std": 0.013437528786451883,
+      "decay_std": 0.016426649025064598,
+      "final_wl2_std": 0.4572806259341936,
+      "final_dormant_std": 0.06421264586426018
+    },
+    "0.001": {
+      "mean_acc_mean": 0.772990979552269,
+      "decay_mean": 0.07815331816673277,
+      "final_wl2_mean": 12.165289243062338,
+      "final_dormant_mean": 0.19791666666666666,
+      "mean_acc_std": 0.01738566693942313,
+      "decay_std": 0.014928046532090495,
+      "final_wl2_std": 0.01654680118013278,
+      "final_dormant_std": 0.06421264586426018
+    },
+    "0.003": {
+      "mean_acc_mean": 0.7742869805296261,
+      "decay_mean": 0.08224666515986123,
+      "final_wl2_mean": 8.915570576985678,
+      "final_dormant_mean": 0.20833333333333334,
+      "mean_acc_std": 0.0036099165177874946,
+      "decay_std": 0.01016107673863866,
+      "final_wl2_std": 0.012624831163380886,
+      "final_dormant_std": 0.03897559777889522
+    },
+    "0.01": {
+      "mean_acc_mean": 0.817871978878975,
+      "decay_mean": 0.03769332965215048,
+      "final_wl2_mean": 6.5844035148620605,
+      "final_dormant_mean": 0.13541666666666666,
+      "mean_acc_std": 0.003602112841930305,
+      "decay_std": 0.004099752217452332,
+      "final_wl2_std": 0.06573907737649896,
+      "final_dormant_std": 0.01473139127471974
+    },
+    "0.03": {
+      "mean_acc_mean": 0.8088843129078547,
+      "decay_mean": 0.04701998233795168,
+      "final_wl2_mean": 5.361786524454753,
+      "final_dormant_mean": 0.020833333333333332,
+      "mean_acc_std": 0.0006473103561226933,
+      "decay_std": 0.0032952885698130678,
+      "final_wl2_std": 0.038290384199722166,
+      "final_dormant_std": 0.01473139127471974
+    }
+  }
+}

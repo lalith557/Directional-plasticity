@@ -1,0 +1,109 @@
+{
+  "regime": {
+    "hidden": 16,
+    "depth": 2,
+    "lr": 0.2,
+    "epochs": 1,
+    "batch": 128,
+    "steps_per_task": 60,
+    "n_tasks": 100,
+    "train_subset": 6000
+  },
+  "seeds": [
+    20260824,
+    20260825,
+    20260826,
+    20260827,
+    20260828
+  ],
+  "hardware": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_free_gb": 7.212105728,
+    "hardware_profile": "gpu"
+  },
+  "per_seed": [
+    {
+      "seed": 20260824,
+      "theta0_norm": 3.8155396273290774,
+      "thetaT_norm": 25.88449183442243,
+      "theta0_sq": 14.558342647718515,
+      "thetaT_sq": 670.0069175262815,
+      "endpoint_delta": 655.448574878563,
+      "sum_eta_sq": 655.4486056656008,
+      "abs_err": 3.078703775827307e-05,
+      "rel_err": 4.697094316510961e-08,
+      "radial_align_mean": -1.0549163860535995e-10,
+      "matched_max_dev": 2.2757840644961344e-07,
+      "backbone_norm_final": 25.15082359313965,
+      "mean_acc": 0.7060479819774628
+    },
+    {
+      "seed": 20260825,
+      "theta0_norm": 3.8427766348758214,
+      "thetaT_norm": 25.696076328563226,
+      "theta0_sq": 14.766932265547544,
+      "thetaT_sq": 660.2883386833473,
+      "endpoint_delta": 645.5214064177998,
+      "sum_eta_sq": 645.5214492024994,
+      "abs_err": 4.27846996444714e-05,
+      "rel_err": 6.627928867904953e-08,
+      "radial_align_mean": -1.926592429653262e-10,
+      "matched_max_dev": 2.0632795456917145e-07,
+      "backbone_norm_final": 24.91375732421875,
+      "mean_acc": 0.7012699803709984
+    },
+    {
+      "seed": 20260826,
+      "theta0_norm": 3.791120971935421,
+      "thetaT_norm": 25.75279999285949,
+      "theta0_sq": 14.37259822384857,
+      "thetaT_sq": 663.2067074722238,
+      "endpoint_delta": 648.8341092483752,
+      "sum_eta_sq": 648.8341103794709,
+      "abs_err": 1.1310957006571698e-06,
+      "rel_err": 1.7432741043276191e-09,
+      "radial_align_mean": -4.971676209319468e-11,
+      "matched_max_dev": 2.2927373989058222e-07,
+      "backbone_norm_final": 24.894775390625,
+      "mean_acc": 0.6912399795651436
+    },
+    {
+      "seed": 20260827,
+      "theta0_norm": 3.797831078069037,
+      "thetaT_norm": 25.772045320743658,
+      "theta0_sq": 14.423520897547025,
+      "thetaT_sq": 664.198320014465,
+      "endpoint_delta": 649.774799116918,
+      "sum_eta_sq": 649.7748188054874,
+      "abs_err": 1.9688569409481715e-05,
+      "rel_err": 3.030060481914601e-08,
+      "radial_align_mean": -3.274626853821035e-11,
+      "matched_max_dev": 2.1748557961784984e-07,
+      "backbone_norm_final": 25.2001953125,
+      "mean_acc": 0.7051419818401337
+    },
+    {
+      "seed": 20260828,
+      "theta0_norm": 3.7344801786683606,
+      "thetaT_norm": 26.06169917869575,
+      "theta0_sq": 13.94634220486687,
+      "thetaT_sq": 679.2121640808307,
+      "endpoint_delta": 665.2658218759639,
+      "sum_eta_sq": 665.2658162628175,
+      "abs_err": 5.613146413452341e-06,
+      "rel_err": 8.437448954801242e-09,
+      "radial_align_mean": 5.589908244676515e-11,
+      "matched_max_dev": 2.2787395197833944e-07,
+      "backbone_norm_final": 25.271575927734375,
+      "mean_acc": 0.7135769835114479
+    }
+  ],
+  "endpoint_delta_mean": 652.968942307524,
+  "sum_eta_sq_mean": 652.9689600631752,
+  "rel_err_mean": 3.0746311944486794e-08,
+  "rel_err_max": 6.627928867904953e-08,
+  "radial_align_mean_over_seeds": -6.49429659510652e-11
+}

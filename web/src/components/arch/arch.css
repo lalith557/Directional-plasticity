@@ -1,0 +1,254 @@
+/* ============================================================
+   System Architecture — view switch, 2D diagram, guided tour
+   (the 3D view's styles live with the other .a3-* rules in index.css)
+   ============================================================ */
+
+/* ---- view switch ---- */
+.arch-bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.arch-bar .seg-btn { height: 32px; padding: 0 14px; font-size: 12.5px; }
+
+/* ---- 2D diagram ---- */
+.a2 {
+  position: relative; display: grid; padding: 24px 20px 16px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: radial-gradient(120% 70% at 50% 0%, color-mix(in oklab, #4a6fa5 7%, var(--surface)), var(--surface));
+}
+.a2.compact { padding: 24px 14px 12px; }
+.a2-title { text-align: center; margin-bottom: 24px; }
+.a2-title h3 { margin: 0 0 2px; font-size: 21px; letter-spacing: -0.01em; color: var(--ink); }
+.a2-title span { font-size: 12.5px; color: var(--ink-3); }
+
+.a2-top { position: relative; display: grid; grid-template-columns: 150px minmax(0, 1fr); column-gap: 60px; }
+.a2-top > .a2-user { grid-row: 1; grid-column: 1; align-self: center; }
+.a2-top > .a2-fe { grid-row: 1; grid-column: 2; }
+.a2-top > .a2-vc:not(.a2-user-vc) { grid-row: 2; grid-column: 2; }
+.a2-top > .a2-be { grid-row: 3; grid-column: 2; }
+.a2-user-vc { display: none !important; }
+.a2-overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.a2-overlay path { fill: none; stroke-width: 3.2; stroke-linecap: round; stroke-dasharray: 0.1 9; animation: a2-dash 0.9s linear infinite; transition: opacity 0.25s; }
+.a2-overlay path.base { stroke-width: 1.6; stroke-dasharray: none; animation: none; opacity: 0.45; }
+.a2-overlay marker path { stroke: none; }
+.a2-overlay path.is-off { opacity: 0.15; }
+.a2-overlay path.is-on { stroke-width: 4; animation-duration: 0.5s; }
+@keyframes a2-dash { to { stroke-dashoffset: -9.1; } }
+
+/* bands (one per tier) */
+.a2-band {
+  position: relative; min-width: 0; padding: 30px 14px 14px; border-radius: 16px;
+  border: 1.5px solid color-mix(in oklab, var(--c) 42%, var(--border));
+  background: color-mix(in oklab, var(--c) 7%, var(--surface));
+  box-shadow: 0 6px 22px rgba(20, 30, 50, 0.06);
+  transition: box-shadow 0.25s, opacity 0.25s, border-color 0.25s;
+}
+.a2-band.is-on { border-color: var(--c); box-shadow: 0 0 0 3px color-mix(in oklab, var(--c) 24%, transparent), 0 12px 30px rgba(20, 30, 50, 0.12); }
+.a2-band.is-dim { opacity: 0.6; }
+.a2-band-head {
+  position: absolute; top: -14px; left: 16px; display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px; border-radius: 10px;
+  border: none; background: var(--c); color: #fff; font-family: inherit; font-size: 13px; font-weight: 600; line-height: 1; cursor: pointer;
+  box-shadow: 0 4px 12px color-mix(in oklab, var(--c) 35%, transparent);
+}
+.a2-band-head span { font-weight: 400; opacity: 0.85; }
+.a2-band-head:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.a2-grid-fe { display: grid; grid-template-columns: repeat(auto-fit, minmax(98px, 1fr)); gap: 10px; }
+.a2-grid-be { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+.a2-stack { display: grid; gap: 9px; }
+.a2-storage { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+
+/* tiles (one per component) */
+.a2-tile {
+  --tile-bg: var(--surface);
+  display: flex; align-items: center; gap: 10px; min-width: 0; padding: 10px 12px; border-radius: 12px;
+  border: 1px solid var(--border); background: var(--tile-bg); color: var(--ink); text-align: left; cursor: pointer; font: inherit;
+  box-shadow: 0 2px 0 color-mix(in oklab, var(--c) 18%, var(--border)), 0 4px 12px rgba(20, 30, 50, 0.05);
+  transition: transform 0.18s, box-shadow 0.18s, opacity 0.25s, border-color 0.18s;
+}
+.a2-tile:hover, .a2-tile:focus-visible {
+  transform: translateY(-2px); outline: none; border-color: color-mix(in oklab, var(--c) 60%, var(--border));
+  box-shadow: 0 8px 20px color-mix(in oklab, var(--c) 22%, transparent);
+}
+.a2-tile[aria-pressed="true"] { border-color: var(--c); box-shadow: 0 0 0 2px color-mix(in oklab, var(--c) 45%, transparent); }
+.a2-tile.col, .a2-tile.stage { flex-direction: column; justify-content: center; text-align: center; gap: 6px; padding: 12px 6px; min-height: 94px; }
+.a2-tile.stage { --tile-bg: color-mix(in oklab, var(--c) 10%, var(--surface)); flex: 1 1 0; min-height: 96px; }
+.a2-ico {
+  display: inline-grid; place-items: center; flex: none; width: 36px; height: 36px; border-radius: 10px; color: var(--c);
+  background: color-mix(in oklab, var(--c) 13%, var(--surface));
+}
+.a2-tile.col .a2-ico, .a2-tile.stage .a2-ico { width: 42px; height: 42px; border-radius: 12px; }
+.a2-txt { display: grid; gap: 2px; min-width: 0; }
+.a2-txt b { font-size: 13px; font-weight: 600; line-height: 1.2; }
+.a2-txt small { font-size: 11px; color: var(--ink-3); line-height: 1.25; }
+.a2-tile.is-on, .a2-chip.is-on, .a2-methods-head.is-on, .a2-user.is-on {
+  border-color: var(--c); box-shadow: 0 0 0 3px color-mix(in oklab, var(--c) 32%, transparent); opacity: 1;
+}
+.a2-tile.is-dim, .a2-chip.is-dim, .a2-methods-head.is-dim, .a2-user.is-dim { opacity: 0.38; }
+
+/* researcher */
+.a2-user {
+  --c: #3b6fd6; display: grid; justify-items: center; gap: 3px; padding: 14px 10px 12px; border-radius: 18px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--ink); font: inherit; cursor: pointer; box-shadow: 0 8px 22px rgba(20, 30, 50, 0.08);
+  transition: transform 0.18s, box-shadow 0.18s, opacity 0.25s;
+}
+.a2-user:hover, .a2-user:focus-visible { transform: translateY(-2px); outline: none; box-shadow: 0 10px 26px rgba(59, 111, 214, 0.25); }
+.a2-avatar {
+  display: grid; place-items: center; width: 58px; height: 58px; margin-bottom: 4px; border-radius: 50%; color: #fff;
+  background: radial-gradient(circle at 35% 30%, #7aa2ea, #3b6fd6); box-shadow: 0 6px 16px rgba(59, 111, 214, 0.35);
+}
+.a2-user b { font-size: 13.5px; }
+.a2-user small { font-size: 11px; color: var(--ink-3); }
+
+/* connectors — the moving dots show which way data goes */
+.a2-vc { display: flex; justify-content: center; align-items: stretch; gap: 14px; height: 58px; padding: 4px 0; transition: opacity 0.25s; }
+.a2-lanes { display: flex; gap: 6px; }
+.a2-conn-label {
+  align-self: center; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
+  color: var(--ink-2); font-size: 11.5px; white-space: nowrap; transition: color 0.25s, border-color 0.25s;
+}
+.a2-vc.is-off, .a2-hc.is-off, .a2-arrow.is-off, .a2-loop.is-off { opacity: 0.2; }
+.a2-vc.is-on .a2-conn-label, .a2-hc.is-on .a2-conn-label { color: var(--ink); border-color: var(--ink-3); font-weight: 600; }
+.a2-lane { --lc: color-mix(in oklab, var(--c) 35%, transparent); position: relative; display: block; flex: none; }
+.a2-lane.v { width: 10px; height: 100%; background: linear-gradient(var(--lc), var(--lc)) center / 2px 100% no-repeat; }
+.a2-lane.v::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 8px;
+  background: radial-gradient(circle, var(--c) 0 2.6px, transparent 3.3px) 50% 0 / 10px 16px repeat-y;
+  animation: a2-v 0.9s linear infinite;
+}
+.a2-lane.v.up::before { top: 8px; bottom: 0; animation-direction: reverse; }
+.a2-lane.v::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); border-left: 5px solid transparent; border-right: 5px solid transparent; }
+.a2-lane.v.down::after { bottom: 0; border-top: 7px solid var(--c); }
+.a2-lane.v.up::after { top: 0; border-bottom: 7px solid var(--c); }
+@keyframes a2-v { to { background-position: 50% 16px; } }
+.a2-lane.h { height: 10px; width: 100%; background: linear-gradient(var(--lc), var(--lc)) center / 100% 2px no-repeat; }
+.a2-lane.h::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 8px;
+  background: radial-gradient(circle, var(--c) 0 2.6px, transparent 3.3px) 0 50% / 16px 10px repeat-x;
+  animation: a2-h 0.9s linear infinite;
+}
+.a2-lane.h.left::before { left: 8px; right: 0; animation-direction: reverse; }
+.a2-lane.h::after { content: ""; position: absolute; top: 50%; transform: translateY(-50%); border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.a2-lane.h.right::after { right: 0; border-left: 7px solid var(--c); }
+.a2-lane.h.left::after { left: 0; border-right: 7px solid var(--c); }
+@keyframes a2-h { to { background-position: 16px 50%; } }
+.is-on > .a2-lane::before, .is-on > .a2-lanes > .a2-lane::before { animation-duration: 0.45s; }
+
+/* middle row: datasets → engine → metrics */
+.a2-mid { display: grid; grid-template-columns: minmax(180px, 1fr) 70px minmax(0, 2.6fr) 70px minmax(200px, 1fr); align-items: center; margin-top: 14px; }
+.a2-hc { display: flex; flex-direction: column; align-items: stretch; justify-content: center; gap: 6px; min-width: 0; padding: 0 4px; transition: opacity 0.25s; }
+.a2-hc .a2-conn-label { align-self: center; white-space: normal; text-align: center; font-size: 10.5px; line-height: 1.25; padding: 2px 7px; }
+.a2-hc .a2-lane.v { display: none; height: 40px; align-self: center; }
+
+/* training pipeline */
+.a2-pipe { display: flex; align-items: center; }
+.a2-arrow { flex: 0 0 26px; display: flex; align-items: center; transition: opacity 0.25s; }
+.a2-net { width: 88px; height: 52px; }
+.a2-net line { stroke: color-mix(in oklab, #3b82f6 40%, transparent); stroke-width: 0.8; }
+.a2-net circle { animation: a2-pulse 2.4s ease-in-out infinite; }
+.a2-net .n0 { fill: #b9b3aa; }
+.a2-net .n1, .a2-net .n2 { fill: #3b82f6; }
+.a2-net .n3 { fill: #a855f7; }
+.a2-net .n1 { animation-delay: 0.3s; }
+.a2-net .n2 { animation-delay: 0.6s; }
+.a2-net .n3 { animation-delay: 0.9s; }
+@keyframes a2-pulse { 0%, 100% { opacity: 0.5; } 40% { opacity: 1; } }
+.a2-loop { position: relative; height: 28px; margin: 2px 7% 12px; color: #8b5cf6; transition: opacity 0.25s; }
+.a2-loop svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.a2-loop path { fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 0.1 8; animation: a2-loopdash 0.9s linear infinite; }
+.a2-loop::before {
+  content: ""; position: absolute; left: calc(3% - 5px); top: -7px;
+  border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid currentColor;
+}
+.a2-loop.is-on path { animation-duration: 0.45s; stroke-width: 3.4; }
+@keyframes a2-loopdash { to { stroke-dashoffset: -8.1; } }
+.a2-loop span {
+  position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); padding: 1px 9px; border-radius: 999px; background: var(--surface);
+  border: 1px solid color-mix(in oklab, currentColor 40%, var(--border)); color: var(--ink-2); font-size: 10.5px; white-space: nowrap;
+}
+
+/* update methods */
+.a2-methods {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px; border-radius: 12px;
+  border: 1px dashed color-mix(in oklab, #7c5cbf 45%, var(--border)); background: color-mix(in oklab, #7c5cbf 7%, var(--surface));
+  transition: box-shadow 0.25s;
+}
+.a2-methods.is-on { box-shadow: 0 0 0 3px color-mix(in oklab, #7c5cbf 26%, transparent); }
+.a2-methods-head {
+  --c: #7c5cbf; display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 10px; border: 1px solid transparent;
+  background: transparent; color: #7c5cbf; font: inherit; text-align: left; cursor: pointer; transition: opacity 0.25s;
+}
+.a2-methods-head span { display: grid; }
+.a2-methods-head b { font-size: 12.5px; color: var(--ink); }
+.a2-methods-head small { font-size: 10.5px; color: var(--ink-3); }
+.a2-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.a2-chip {
+  --c: #7c5cbf; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+  font: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s, opacity 0.25s, border-color 0.18s;
+}
+.a2-chip:hover, .a2-chip:focus-visible { transform: translateY(-1px); outline: none; border-color: #7c5cbf; box-shadow: 0 4px 12px rgba(124, 92, 191, 0.22); }
+.a2-chip.accent { background: color-mix(in oklab, #a78bfa 28%, var(--surface)); border-color: #a78bfa; }
+.a2-chip[aria-pressed="true"] { border-color: #7c5cbf; box-shadow: 0 0 0 2px rgba(124, 92, 191, 0.35); }
+
+.a2-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin-top: 16px; font-size: 11.5px; color: var(--ink-2); }
+.a2-pop { width: 360px; }
+
+@media (max-width: 1150px) {
+  .a2-mid { grid-template-columns: minmax(0, 1fr); }
+  .a2-hc { flex-direction: row; gap: 12px; height: 54px; }
+  .a2-hc .a2-lane.h { display: none; }
+  .a2-hc .a2-lane.v { display: block; }
+  .a2-hc .a2-conn-label { white-space: nowrap; }
+}
+@media (max-width: 760px) {
+  .a2-top { grid-template-columns: minmax(0, 1fr); }
+  .a2-top > * { grid-column: 1 !important; grid-row: auto !important; }
+  .a2-top > .a2-user { justify-self: center; }
+  .a2-user-vc { display: flex !important; }
+  .a2-pipe { flex-wrap: wrap; gap: 8px; }
+  .a2-pipe .a2-arrow { display: none; }
+  .a2-pipe .a2-tile.stage { flex: 1 1 40%; }
+  .a2-loop { display: none; }
+  .a2-conn-label { white-space: normal; text-align: center; }
+}
+
+/* ---- guided tour ---- */
+.tour { margin-top: 16px; padding: 16px 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.tour.is-active { border-color: color-mix(in oklab, var(--blue) 45%, var(--border)); }
+.tour-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.tour-title { font-size: 15px; font-weight: 600; color: var(--ink); }
+.tour-sub { font-size: 12.5px; color: var(--ink-3); max-width: 62ch; }
+.tour-ctrl { display: flex; gap: 6px; flex-wrap: wrap; }
+.tour-steps { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 6px; margin: 14px 0 0; padding: 0; }
+.tour-step {
+  display: flex; align-items: center; gap: 7px; width: 100%; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--surface-2); color: var(--ink-2); font: inherit; font-size: 12px; text-align: left; cursor: pointer;
+  transition: border-color 0.18s, background 0.18s, color 0.18s;
+}
+.tour-step span {
+  display: inline-grid; place-items: center; flex: none; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--border); color: var(--ink-2); font-size: 11px; font-weight: 600;
+}
+.tour-step:hover { border-color: var(--ink-3); color: var(--ink); }
+.tour-step.done span { background: color-mix(in oklab, var(--blue) 30%, var(--surface)); color: var(--blue); }
+.tour-step.on { border-color: var(--blue); background: var(--blue-soft); color: var(--ink); font-weight: 600; }
+.tour-step.on span { background: var(--blue); color: #fff; }
+.tour-body {
+  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 16px 22px; margin-top: 14px; padding-top: 14px;
+  border-top: 1px solid var(--border); animation: a3-in 0.3s ease-out;
+}
+.tour-kicker { font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.tour-text h4 { margin: 3px 0 6px; font-size: 17px; color: var(--ink); }
+.tour-text p { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--ink-2); }
+.tour-progress { height: 3px; margin-top: 12px; border-radius: 2px; background: var(--surface-2); overflow: hidden; }
+.tour-progress span { display: block; height: 100%; background: var(--blue); transform-origin: left; animation: tour-fill linear forwards; }
+@keyframes tour-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.tour-flows { list-style: none; display: grid; gap: 8px; margin: 0; padding: 0; align-content: start; }
+.tour-flows li { display: flex; gap: 8px; align-items: flex-start; }
+.tour-flows .a3-dot { margin-top: 5px; flex: none; }
+.tour-flows div { display: grid; min-width: 0; }
+.tour-flows code { font-family: var(--mono); font-size: 11.5px; color: var(--ink); overflow-wrap: anywhere; }
+.tour-flows small { font-size: 11px; color: var(--ink-3); }
+@media (max-width: 760px) { .tour-body { grid-template-columns: minmax(0, 1fr); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .a2 *, .a2 *::before, .a2 *::after { animation: none !important; }
+  .tour-progress span { animation: none !important; transform: none; }
+}

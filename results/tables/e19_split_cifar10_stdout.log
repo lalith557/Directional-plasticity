@@ -1,0 +1,116 @@
+[E19] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU
+
+====================================================================
+[E19] dataset=split_cifar10 seed=20260824 device=cuda
+====================================================================
+
+[E19:split_cifar10 seed=20260824] --- baseline: sgd ---
+  [sgd] task 0 acc=0.542 probeFTD=0.693
+  [sgd] task 1 acc=0.578 probeFTD=0.693
+  [sgd] task 2 acc=0.547 probeFTD=0.693
+  [sgd] task 3 acc=0.558 probeFTD=0.693
+  [sgd] task 4 acc=0.708 probeFTD=0.693
+[E19:split_cifar10] sgd: mean_final_acc=0.572 BWT=-0.019 probeFTD_final=0.6931 max_dev=0.0000  (33.2s)
+
+[E19:split_cifar10 seed=20260824] --- baseline: ewc ---
+  [ewc] task 0 acc=0.542 probeFTD=0.694
+  [ewc] task 1 acc=0.578 probeFTD=0.693
+  [ewc] task 2 acc=0.550 probeFTD=0.693
+  [ewc] task 3 acc=0.558 probeFTD=0.693
+  [ewc] task 4 acc=0.709 probeFTD=0.693
+[E19:split_cifar10] ewc: mean_final_acc=0.549 BWT=-0.048 probeFTD_final=0.6931 max_dev=0.0000  (45.1s)
+
+[E19:split_cifar10 seed=20260824] --- baseline: replay ---
+  [replay] task 0 acc=0.542 probeFTD=0.693
+  [replay] task 1 acc=0.569 probeFTD=0.693
+  [replay] task 2 acc=0.584 probeFTD=0.690
+  [replay] task 3 acc=0.646 probeFTD=0.690
+  [replay] task 4 acc=0.781 probeFTD=0.686
+[E19:split_cifar10] replay: mean_final_acc=0.726 BWT=0.126 probeFTD_final=0.6863 max_dev=0.0000  (48.3s)
+
+[E19:split_cifar10 seed=20260824] --- baseline: cbp ---
+  [cbp] task 0 acc=0.543 probeFTD=0.693
+  [cbp] task 1 acc=0.580 probeFTD=0.693
+  [cbp] task 2 acc=0.546 probeFTD=0.693
+  [cbp] task 3 acc=0.560 probeFTD=0.693
+  [cbp] task 4 acc=0.709 probeFTD=0.693
+[E19:split_cifar10] cbp: mean_final_acc=0.581 BWT=-0.008 probeFTD_final=0.6929 max_dev=0.0000  (42.9s)
+
+[E19:split_cifar10] SGD sanity gate: {'mean_final_acc': 0.571683269739151, 'min_mean_acc': 0.35, 'n_tasks_above_chance': 2, 'min_tasks_above_chance': 3, 'task_chance': 0.55, 'passes': False}
+[E19:split_cifar10] REGIME FAIL — SGD did not learn. Skipping controller.
+[E19:split_cifar10] sanity gate FAILED but --force_controller set — running sweep with a caveat.
+
+[E19:split_cifar10 seed=20260824] --- controller_c=-1.00 ---
+  [controller] task 0 acc=0.542 probeFTD=0.693
+  [controller] task 1 acc=0.578 probeFTD=0.693
+  [controller] task 2 acc=0.549 probeFTD=0.693
+  [controller] task 3 acc=0.553 probeFTD=0.693
+  [controller] task 4 acc=0.708 probeFTD=0.693
+[E19:split_cifar10] controller_c=-1.00: mean_final_acc=0.579 BWT=-0.009 probeFTD_final=0.6932 max_dev=0.0000  (45.4s)
+
+[E19:split_cifar10 seed=20260824] --- controller_c=-0.75 ---
+  [controller] task 0 acc=0.542 probeFTD=0.693
+  [controller] task 1 acc=0.578 probeFTD=0.693
+  [controller] task 2 acc=0.550 probeFTD=0.693
+  [controller] task 3 acc=0.558 probeFTD=0.693
+  [controller] task 4 acc=0.708 probeFTD=0.693
+[E19:split_cifar10] controller_c=-0.75: mean_final_acc=0.580 BWT=-0.009 probeFTD_final=0.6930 max_dev=0.0000  (46.6s)
+
+[E19:split_cifar10 seed=20260824] --- controller_c=-0.50 ---
+  [controller] task 0 acc=0.542 probeFTD=0.693
+  [controller] task 1 acc=0.580 probeFTD=0.693
+  [controller] task 2 acc=0.550 probeFTD=0.693
+  [controller] task 3 acc=0.558 probeFTD=0.693
+  [controller] task 4 acc=0.708 probeFTD=0.693
+[E19:split_cifar10] controller_c=-0.50: mean_final_acc=0.578 BWT=-0.011 probeFTD_final=0.6927 max_dev=0.0000  (47.4s)
+
+[E19:split_cifar10 seed=20260824] --- controller_c=-0.25 ---
+  [controller] task 0 acc=0.542 probeFTD=0.693
+  [controller] task 1 acc=0.578 probeFTD=0.693
+  [controller] task 2 acc=0.547 probeFTD=0.693
+  [controller] task 3 acc=0.558 probeFTD=0.693
+  [controller] task 4 acc=0.710 probeFTD=0.693
+[E19:split_cifar10] controller_c=-0.25: mean_final_acc=0.575 BWT=-0.015 probeFTD_final=0.6926 max_dev=0.0000  (46.3s)
+
+[E19:split_cifar10 seed=20260824] --- controller_c=+0.00 ---
+  [controller] task 0 acc=0.542 probeFTD=0.693
+  [controller] task 1 acc=0.579 probeFTD=0.693
+  [controller] task 2 acc=0.547 probeFTD=0.693
+  [controller] task 3 acc=0.558 probeFTD=0.693
+  [controller] task 4 acc=0.708 probeFTD=0.693
+[E19:split_cifar10] controller_c=+0.00: mean_final_acc=0.572 BWT=-0.018 probeFTD_final=0.6929 max_dev=0.0000  (43.2s)
+
+[E19:split_cifar10 seed=20260824] --- controller_c=+0.25 ---
+  [controller] task 0 acc=0.542 probeFTD=0.693
+  [controller] task 1 acc=0.577 probeFTD=0.693
+  [controller] task 2 acc=0.547 probeFTD=0.693
+  [controller] task 3 acc=0.558 probeFTD=0.693
+  [controller] task 4 acc=0.708 probeFTD=0.693
+[E19:split_cifar10] controller_c=+0.25: mean_final_acc=0.573 BWT=-0.017 probeFTD_final=0.6932 max_dev=0.0000  (47.3s)
+
+[E19:split_cifar10 seed=20260824] --- controller_c=+0.50 ---
+  [controller] task 0 acc=0.543 probeFTD=0.693
+  [controller] task 1 acc=0.579 probeFTD=0.693
+  [controller] task 2 acc=0.546 probeFTD=0.693
+  [controller] task 3 acc=0.558 probeFTD=0.693
+  [controller] task 4 acc=0.709 probeFTD=0.693
+[E19:split_cifar10] controller_c=+0.50: mean_final_acc=0.573 BWT=-0.017 probeFTD_final=0.6928 max_dev=0.0000  (49.2s)
+
+[E19:split_cifar10 seed=20260824] --- controller_c=+0.75 ---
+  [controller] task 0 acc=0.542 probeFTD=0.693
+  [controller] task 1 acc=0.577 probeFTD=0.693
+  [controller] task 2 acc=0.549 probeFTD=0.693
+  [controller] task 3 acc=0.557 probeFTD=0.693
+  [controller] task 4 acc=0.709 probeFTD=0.693
+[E19:split_cifar10] controller_c=+0.75: mean_final_acc=0.572 BWT=-0.019 probeFTD_final=0.6930 max_dev=0.0000  (47.6s)
+
+[E19:split_cifar10 seed=20260824] --- controller_c=+1.00 ---
+  [controller] task 0 acc=0.539 probeFTD=0.693
+  [controller] task 1 acc=0.579 probeFTD=0.693
+  [controller] task 2 acc=0.550 probeFTD=0.693
+  [controller] task 3 acc=0.554 probeFTD=0.693
+  [controller] task 4 acc=0.712 probeFTD=0.693
+[E19:split_cifar10] controller_c=+1.00: mean_final_acc=0.572 BWT=-0.019 probeFTD_final=0.6931 max_dev=0.0000  (46.7s)
+
+[E19] OVERALL VERDICT: POSITIVE_MAIN_TRACK
+  split_cifar10: POSITIVE  (Pivot1_beats_EWC=True  Pivot2_FTD_reduces=False)

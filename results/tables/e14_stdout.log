@@ -1,0 +1,67 @@
+[E14] env={'torch': '2.11.0+cu128', 'cuda_available': True, 'cuda_runtime': '12.8', 'device_name': 'NVIDIA GeForce RTX 4070 Laptop GPU', 'gpu_free_gb': 7.396655104, 'hardware_profile': 'gpu'}
+
+[E14] --- seed=11 ---
+[E14 seed=11] computing hessian_joint_lanczos ...
+[E14 seed=11] computing kfac_natural_gradient ...
+C:\Users\Lalith Gona\HTML\Deep Learning Project\experiments\e14_curvature_axes.py:138: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[E14 seed=11] computing jacobian_svd_top1 ...
+[E14 seed=11] computing update_covariance_svd_top1 ...
+[E14 seed=11] axis=hessian_joint_lanczos beta=+0.00474 CI=[+0.00378,+0.00570] p=4.42e-22
+[E14 seed=11] axis=kfac_natural_gradient beta=+0.02065 CI=[+0.01642,+0.02487] p=9.52e-22
+[E14 seed=11] axis=jacobian_svd_top1 beta=-0.00939 CI=[-0.01131,-0.00747] p=9.63e-22
+[E14 seed=11] axis=update_covariance_svd_top1 beta=+0.00228 CI=[+0.00182,+0.00274] p=3.74e-22
+
+[E14] --- seed=23 ---
+[E14 seed=23] computing hessian_joint_lanczos ...
+[E14 seed=23] computing kfac_natural_gradient ...
+C:\Users\Lalith Gona\HTML\Deep Learning Project\experiments\e14_curvature_axes.py:138: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[E14 seed=23] computing jacobian_svd_top1 ...
+[E14 seed=23] computing update_covariance_svd_top1 ...
+[E14 seed=23] axis=hessian_joint_lanczos beta=-0.00567 CI=[-0.00691,-0.00443] p=2.8e-19
+[E14 seed=23] axis=kfac_natural_gradient beta=+0.01990 CI=[+0.01575,+0.02406] p=6.22e-21
+[E14 seed=23] axis=jacobian_svd_top1 beta=-0.01295 CI=[-0.01583,-0.01007] p=1.12e-18
+[E14 seed=23] axis=update_covariance_svd_top1 beta=+0.00254 CI=[+0.00199,+0.00309] p=1.41e-19
+
+[E14] --- seed=37 ---
+[E14 seed=37] computing hessian_joint_lanczos ...
+[E14 seed=37] computing kfac_natural_gradient ...
+C:\Users\Lalith Gona\HTML\Deep Learning Project\experiments\e14_curvature_axes.py:138: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[E14 seed=37] computing jacobian_svd_top1 ...
+[E14 seed=37] computing update_covariance_svd_top1 ...
+[E14 seed=37] axis=hessian_joint_lanczos beta=-0.00384 CI=[-0.00466,-0.00301] p=9.31e-20
+[E14 seed=37] axis=kfac_natural_gradient beta=+0.02160 CI=[+0.01693,+0.02626] p=1.09e-19
+[E14 seed=37] axis=jacobian_svd_top1 beta=-0.00794 CI=[-0.00965,-0.00624] p=7.72e-20
+[E14 seed=37] axis=update_covariance_svd_top1 beta=+0.00245 CI=[+0.00192,+0.00298] p=1.12e-19
+
+[E14] --- seed=47 ---
+[E14 seed=47] computing hessian_joint_lanczos ...
+[E14 seed=47] computing kfac_natural_gradient ...
+C:\Users\Lalith Gona\HTML\Deep Learning Project\experiments\e14_curvature_axes.py:138: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[E14 seed=47] computing jacobian_svd_top1 ...
+[E14 seed=47] computing update_covariance_svd_top1 ...
+[E14 seed=47] axis=hessian_joint_lanczos beta=-0.00595 CI=[-0.00724,-0.00466] p=1.43e-19
+[E14 seed=47] axis=kfac_natural_gradient beta=+0.01972 CI=[+0.01546,+0.02399] p=1.25e-19
+[E14 seed=47] axis=jacobian_svd_top1 beta=-0.00995 CI=[-0.01210,-0.00780] p=1.18e-19
+[E14 seed=47] axis=update_covariance_svd_top1 beta=+0.00222 CI=[+0.00174,+0.00271] p=1.56e-19
+
+[E14] --- seed=59 ---
+[E14 seed=59] computing hessian_joint_lanczos ...
+[E14 seed=59] computing kfac_natural_gradient ...
+C:\Users\Lalith Gona\HTML\Deep Learning Project\experiments\e14_curvature_axes.py:138: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[E14 seed=59] computing jacobian_svd_top1 ...
+[E14 seed=59] computing update_covariance_svd_top1 ...
+[E14 seed=59] axis=hessian_joint_lanczos beta=-0.00326 CI=[-0.00398,-0.00254] p=4.68e-19
+[E14 seed=59] axis=kfac_natural_gradient beta=+0.01784 CI=[+0.01392,+0.02175] p=4.24e-19
+[E14 seed=59] axis=jacobian_svd_top1 beta=-0.00765 CI=[-0.00934,-0.00596] p=6.61e-19
+[E14 seed=59] axis=update_covariance_svd_top1 beta=+0.00202 CI=[+0.00158,+0.00246] p=4.03e-19
+[E14] axis=hessian_joint_lanczos mean|cos|=0.154 stable_axis=False beta_sig=False
+[E14] axis=kfac_natural_gradient mean|cos|=0.070 stable_axis=False beta_sig=True
+[E14] axis=jacobian_svd_top1 mean|cos|=0.200 stable_axis=False beta_sig=True
+[E14] axis=update_covariance_svd_top1 mean|cos|=0.403 stable_axis=False beta_sig=True
+
+[E14] OVERALL VERDICT: NULL_ALL_AXES_FAIL

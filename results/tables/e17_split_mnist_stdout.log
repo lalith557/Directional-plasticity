@@ -1,0 +1,213 @@
+[E17] device=cpu profile=cpu
+
+[E17:split_mnist seed=20260824] fixed regime: lr=0.001 epochs=5 batch=128
+
+[E17:split_mnist] --- baseline sgd ---
+[baseline:sgd] task 0 acc=0.995 probeFTD=2.321
+[baseline:sgd] task 1 acc=0.662 probeFTD=2.354
+[baseline:sgd] task 2 acc=0.540 probeFTD=2.362
+[baseline:sgd] task 3 acc=0.482 probeFTD=2.338
+[baseline:sgd] task 4 acc=0.491 probeFTD=2.317
+
+[E17:split_mnist] --- baseline ewc ---
+[baseline:ewc] task 0 acc=0.995 probeFTD=2.321
+[baseline:ewc] task 1 acc=0.640 probeFTD=2.353
+[baseline:ewc] task 2 acc=0.526 probeFTD=2.356
+[baseline:ewc] task 3 acc=0.482 probeFTD=2.323
+[baseline:ewc] task 4 acc=0.673 probeFTD=2.305
+
+[E17:split_mnist] --- baseline replay ---
+[baseline:replay] task 0 acc=0.995 probeFTD=2.321
+[baseline:replay] task 1 acc=0.201 probeFTD=2.334
+[baseline:replay] task 2 acc=0.128 probeFTD=2.325
+[baseline:replay] task 3 acc=0.272 probeFTD=2.299
+[baseline:replay] task 4 acc=0.023 probeFTD=2.286
+
+[E17:split_mnist] --- baseline cbp ---
+[baseline:cbp] task 0 acc=0.995 probeFTD=2.321
+[baseline:cbp] task 1 acc=0.675 probeFTD=2.354
+[baseline:cbp] task 2 acc=0.540 probeFTD=2.363
+[baseline:cbp] task 3 acc=0.482 probeFTD=2.338
+[baseline:cbp] task 4 acc=0.491 probeFTD=2.318
+
+[E17:split_mnist] --- adaptive_alpha=0.00 ---
+[E17:adaptive alpha=0.0] task 0 acc=0.995 probeFTD=2.321
+[E17:adaptive alpha=0.0] task 1 acc=0.662 probeFTD=2.354
+[E17:adaptive alpha=0.0] task 2 acc=0.540 probeFTD=2.362
+[E17:adaptive alpha=0.0] task 3 acc=0.482 probeFTD=2.338
+[E17:adaptive alpha=0.0] task 4 acc=0.491 probeFTD=2.317
+
+[E17:split_mnist] --- adaptive_alpha=0.25 ---
+[E17:adaptive alpha=0.25] task 0 acc=0.995 probeFTD=2.320
+[E17:adaptive alpha=0.25] task 1 acc=0.725 probeFTD=2.357
+[E17:adaptive alpha=0.25] task 2 acc=0.617 probeFTD=2.384
+[E17:adaptive alpha=0.25] task 3 acc=0.508 probeFTD=2.383
+[E17:adaptive alpha=0.25] task 4 acc=0.491 probeFTD=2.319
+
+[E17:split_mnist] --- adaptive_alpha=0.50 ---
+[E17:adaptive alpha=0.5] task 0 acc=0.996 probeFTD=2.318
+[E17:adaptive alpha=0.5] task 1 acc=0.781 probeFTD=2.359
+[E17:adaptive alpha=0.5] task 2 acc=0.782 probeFTD=2.411
+[E17:adaptive alpha=0.5] task 3 acc=0.915 probeFTD=2.451
+[E17:adaptive alpha=0.5] task 4 acc=0.491 probeFTD=2.314
+
+[E17:split_mnist] --- adaptive_alpha=0.75 ---
+[E17:adaptive alpha=0.75] task 0 acc=0.996 probeFTD=2.316
+[E17:adaptive alpha=0.75] task 1 acc=0.827 probeFTD=2.360
+[E17:adaptive alpha=0.75] task 2 acc=0.893 probeFTD=2.449
+[E17:adaptive alpha=0.75] task 3 acc=0.988 probeFTD=2.574
+[E17:adaptive alpha=0.75] task 4 acc=0.533 probeFTD=2.357
+
+[E17:split_mnist] --- adaptive_alpha=1.00 ---
+[E17:adaptive alpha=1.0] task 0 acc=0.995 probeFTD=2.315
+[E17:adaptive alpha=1.0] task 1 acc=0.859 probeFTD=2.361
+[E17:adaptive alpha=1.0] task 2 acc=0.938 probeFTD=2.523
+[E17:adaptive alpha=1.0] task 3 acc=0.988 probeFTD=2.890
+[E17:adaptive alpha=1.0] task 4 acc=0.373 probeFTD=3.000
+[E17:split_mnist] SGD mean_final_acc=0.098 (regime_ok=False)
+
+[E17:split_mnist seed=20260825] fixed regime: lr=0.001 epochs=5 batch=128
+
+[E17:split_mnist] --- baseline sgd ---
+[baseline:sgd] task 0 acc=0.987 probeFTD=2.320
+[baseline:sgd] task 1 acc=0.737 probeFTD=2.353
+[baseline:sgd] task 2 acc=0.756 probeFTD=2.336
+[baseline:sgd] task 3 acc=0.902 probeFTD=2.342
+[baseline:sgd] task 4 acc=0.882 probeFTD=2.344
+
+[E17:split_mnist] --- baseline ewc ---
+[baseline:ewc] task 0 acc=0.987 probeFTD=2.320
+[baseline:ewc] task 1 acc=0.744 probeFTD=2.350
+[baseline:ewc] task 2 acc=0.144 probeFTD=2.334
+[baseline:ewc] task 3 acc=0.954 probeFTD=2.331
+[baseline:ewc] task 4 acc=0.914 probeFTD=2.334
+
+[E17:split_mnist] --- baseline replay ---
+[baseline:replay] task 0 acc=0.987 probeFTD=2.320
+[baseline:replay] task 1 acc=0.009 probeFTD=2.339
+[baseline:replay] task 2 acc=0.000 probeFTD=2.322
+[baseline:replay] task 3 acc=0.375 probeFTD=2.307
+[baseline:replay] task 4 acc=0.313 probeFTD=2.296
+
+[E17:split_mnist] --- baseline cbp ---
+[baseline:cbp] task 0 acc=0.987 probeFTD=2.320
+[baseline:cbp] task 1 acc=0.737 probeFTD=2.353
+[baseline:cbp] task 2 acc=0.756 probeFTD=2.336
+[baseline:cbp] task 3 acc=0.902 probeFTD=2.342
+[baseline:cbp] task 4 acc=0.882 probeFTD=2.344
+
+[E17:split_mnist] --- adaptive_alpha=0.00 ---
+[E17:adaptive alpha=0.0] task 0 acc=0.987 probeFTD=2.320
+[E17:adaptive alpha=0.0] task 1 acc=0.737 probeFTD=2.353
+[E17:adaptive alpha=0.0] task 2 acc=0.756 probeFTD=2.336
+[E17:adaptive alpha=0.0] task 3 acc=0.902 probeFTD=2.342
+[E17:adaptive alpha=0.0] task 4 acc=0.882 probeFTD=2.344
+
+[E17:split_mnist] --- adaptive_alpha=0.25 ---
+[E17:adaptive alpha=0.25] task 0 acc=0.987 probeFTD=2.320
+[E17:adaptive alpha=0.25] task 1 acc=0.776 probeFTD=2.356
+[E17:adaptive alpha=0.25] task 2 acc=0.755 probeFTD=2.356
+[E17:adaptive alpha=0.25] task 3 acc=0.869 probeFTD=2.386
+[E17:adaptive alpha=0.25] task 4 acc=0.518 probeFTD=2.341
+
+[E17:split_mnist] --- adaptive_alpha=0.50 ---
+[E17:adaptive alpha=0.5] task 0 acc=0.987 probeFTD=2.319
+[E17:adaptive alpha=0.5] task 1 acc=0.811 probeFTD=2.360
+[E17:adaptive alpha=0.5] task 2 acc=0.789 probeFTD=2.384
+[E17:adaptive alpha=0.5] task 3 acc=0.938 probeFTD=2.444
+[E17:adaptive alpha=0.5] task 4 acc=0.491 probeFTD=2.326
+
+[E17:split_mnist] --- adaptive_alpha=0.75 ---
+[E17:adaptive alpha=0.75] task 0 acc=0.988 probeFTD=2.318
+[E17:adaptive alpha=0.75] task 1 acc=0.837 probeFTD=2.362
+[E17:adaptive alpha=0.75] task 2 acc=0.845 probeFTD=2.423
+[E17:adaptive alpha=0.75] task 3 acc=0.965 probeFTD=2.545
+[E17:adaptive alpha=0.75] task 4 acc=0.490 probeFTD=2.356
+
+[E17:split_mnist] --- adaptive_alpha=1.00 ---
+[E17:adaptive alpha=1.0] task 0 acc=0.989 probeFTD=2.318
+[E17:adaptive alpha=1.0] task 1 acc=0.852 probeFTD=2.364
+[E17:adaptive alpha=1.0] task 2 acc=0.886 probeFTD=2.489
+[E17:adaptive alpha=1.0] task 3 acc=0.971 probeFTD=2.801
+[E17:adaptive alpha=1.0] task 4 acc=0.404 probeFTD=3.007
+[E17:split_mnist] SGD mean_final_acc=0.176 (regime_ok=False)
+
+[E17:split_mnist seed=20260826] fixed regime: lr=0.001 epochs=5 batch=128
+
+[E17:split_mnist] --- baseline sgd ---
+[baseline:sgd] task 0 acc=0.994 probeFTD=2.323
+[baseline:sgd] task 1 acc=0.868 probeFTD=2.334
+[baseline:sgd] task 2 acc=0.859 probeFTD=2.357
+[baseline:sgd] task 3 acc=0.492 probeFTD=2.363
+[baseline:sgd] task 4 acc=0.491 probeFTD=2.345
+
+[E17:split_mnist] --- baseline ewc ---
+[baseline:ewc] task 0 acc=0.994 probeFTD=2.323
+[baseline:ewc] task 1 acc=0.870 probeFTD=2.333
+[baseline:ewc] task 2 acc=0.869 probeFTD=2.351
+[baseline:ewc] task 3 acc=0.482 probeFTD=2.352
+[baseline:ewc] task 4 acc=0.491 probeFTD=2.337
+
+[E17:split_mnist] --- baseline replay ---
+[baseline:replay] task 0 acc=0.994 probeFTD=2.323
+[baseline:replay] task 1 acc=0.000 probeFTD=2.327
+[baseline:replay] task 2 acc=0.144 probeFTD=2.322
+[baseline:replay] task 3 acc=0.482 probeFTD=2.306
+[baseline:replay] task 4 acc=0.403 probeFTD=2.287
+
+[E17:split_mnist] --- baseline cbp ---
+[baseline:cbp] task 0 acc=0.994 probeFTD=2.323
+[baseline:cbp] task 1 acc=0.868 probeFTD=2.334
+[baseline:cbp] task 2 acc=0.859 probeFTD=2.357
+[baseline:cbp] task 3 acc=0.492 probeFTD=2.363
+[baseline:cbp] task 4 acc=0.491 probeFTD=2.345
+
+[E17:split_mnist] --- adaptive_alpha=0.00 ---
+[E17:adaptive alpha=0.0] task 0 acc=0.994 probeFTD=2.323
+[E17:adaptive alpha=0.0] task 1 acc=0.868 probeFTD=2.334
+[E17:adaptive alpha=0.0] task 2 acc=0.859 probeFTD=2.357
+[E17:adaptive alpha=0.0] task 3 acc=0.492 probeFTD=2.363
+[E17:adaptive alpha=0.0] task 4 acc=0.491 probeFTD=2.345
+
+[E17:split_mnist] --- adaptive_alpha=0.25 ---
+[E17:adaptive alpha=0.25] task 0 acc=0.996 probeFTD=2.322
+[E17:adaptive alpha=0.25] task 1 acc=0.880 probeFTD=2.339
+[E17:adaptive alpha=0.25] task 2 acc=0.833 probeFTD=2.380
+[E17:adaptive alpha=0.25] task 3 acc=0.818 probeFTD=2.404
+[E17:adaptive alpha=0.25] task 4 acc=0.491 probeFTD=2.338
+
+[E17:split_mnist] --- adaptive_alpha=0.50 ---
+[E17:adaptive alpha=0.5] task 0 acc=0.996 probeFTD=2.321
+[E17:adaptive alpha=0.5] task 1 acc=0.887 probeFTD=2.344
+[E17:adaptive alpha=0.5] task 2 acc=0.838 probeFTD=2.406
+[E17:adaptive alpha=0.5] task 3 acc=0.957 probeFTD=2.462
+[E17:adaptive alpha=0.5] task 4 acc=0.492 probeFTD=2.325
+
+[E17:split_mnist] --- adaptive_alpha=0.75 ---
+[E17:adaptive alpha=0.75] task 0 acc=0.997 probeFTD=2.321
+[E17:adaptive alpha=0.75] task 1 acc=0.892 probeFTD=2.348
+[E17:adaptive alpha=0.75] task 2 acc=0.859 probeFTD=2.438
+[E17:adaptive alpha=0.75] task 3 acc=0.976 probeFTD=2.574
+[E17:adaptive alpha=0.75] task 4 acc=0.485 probeFTD=2.371
+
+[E17:split_mnist] --- adaptive_alpha=1.00 ---
+[E17:adaptive alpha=1.0] task 0 acc=0.997 probeFTD=2.320
+[E17:adaptive alpha=1.0] task 1 acc=0.892 probeFTD=2.353
+[E17:adaptive alpha=1.0] task 2 acc=0.882 probeFTD=2.492
+[E17:adaptive alpha=1.0] task 3 acc=0.982 probeFTD=2.849
+[E17:adaptive alpha=1.0] task 4 acc=0.423 probeFTD=3.208
+[E17:split_mnist] SGD mean_final_acc=0.098 (regime_ok=False)
+
+[E17-agg split_mnist] adaptive winners across seeds: []
+[E17-agg split_mnist] sgd pf_mean=2.3354
+  sgd: pf=2.3354±0.0128  acc=0.124±0.037
+  ewc: pf=2.3255±0.0142  acc=0.169±0.053
+  replay: pf=2.2899±0.0046  acc=0.320±0.029
+  cbp: pf=2.3355±0.0127  acc=0.124±0.037
+  adaptive_alpha=0.00: pf=2.3354±0.0128  acc=0.124±0.037
+  adaptive_alpha=0.25: pf=2.3328±0.0099  acc=0.100±0.003
+  adaptive_alpha=0.50: pf=2.3221±0.0054  acc=0.098±0.000
+  adaptive_alpha=0.75: pf=2.3613±0.0071  acc=0.120±0.010
+  adaptive_alpha=1.00: pf=3.0714±0.0965  acc=0.207±0.016
+
+[E17] OVERALL VERDICT: DEFINITIVE_NULL

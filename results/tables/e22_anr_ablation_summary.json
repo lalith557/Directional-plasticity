@@ -1,0 +1,61 @@
+{
+  "seeds": [
+    20260824,
+    20260825,
+    20260826,
+    20260827,
+    20260828
+  ],
+  "aggregate": {
+    "sgd": {
+      "mean_acc_mean": 0.744285581111908,
+      "decay_mean": 0.13291200160980227,
+      "final_wl2_mean": 20.39256057739258,
+      "final_dormant_mean": 0.2125,
+      "mean_acc_std": 0.014532081452045586,
+      "decay_std": 0.03563422166989663,
+      "final_wl2_std": 0.39798056201024273,
+      "final_dormant_std": 0.075
+    },
+    "shrink_pert": {
+      "mean_acc_mean": 0.7987627810239791,
+      "decay_mean": 0.04599000334739685,
+      "final_wl2_mean": 4.166140842437744,
+      "final_dormant_mean": 0.00625,
+      "mean_acc_std": 0.009693897063805497,
+      "decay_std": 0.015601936100423179,
+      "final_wl2_std": 0.02869096784106042,
+      "final_dormant_std": 0.012500000000000002
+    },
+    "anr_shrink_only": {
+      "mean_acc_mean": 0.689828982204199,
+      "decay_mean": 0.1498760098218918,
+      "final_wl2_mean": 14.595154953002929,
+      "final_dormant_mean": 0.3625,
+      "mean_acc_std": 0.02313805032440712,
+      "decay_std": 0.03843819826177407,
+      "final_wl2_std": 0.38666191895684415,
+      "final_dormant_std": 0.05796011559684815
+    },
+    "anr_revive_only": {
+      "mean_acc_mean": 0.7606653801798821,
+      "decay_mean": 0.07181800365447999,
+      "final_wl2_mean": 14.436362075805665,
+      "final_dormant_mean": 0.0,
+      "mean_acc_std": 0.005342721517128889,
+      "decay_std": 0.02667936791455509,
+      "final_wl2_std": 0.8850001104139358,
+      "final_dormant_std": 0.0
+    },
+    "anr_full": {
+      "mean_acc_mean": 0.7346767809689044,
+      "decay_mean": 0.09020599842071535,
+      "final_wl2_mean": 7.943358707427978,
+      "final_dormant_mean": 0.00625,
+      "mean_acc_std": 0.010259545145283133,
+      "decay_std": 0.027440899076533194,
+      "final_wl2_std": 0.39831849878943676,
+      "final_dormant_std": 0.012500000000000002
+    }
+  }
+}

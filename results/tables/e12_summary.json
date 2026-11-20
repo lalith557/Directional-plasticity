@@ -1,0 +1,461 @@
+{
+  "hardware": {
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_free_gb": 7.396655104,
+    "hardware_profile": "gpu"
+  },
+  "mnist": {
+    "per_probe": [
+      {
+        "probe_id": "permuted_0",
+        "family": "permuted",
+        "probe_grad_align": 0.1296115517616272,
+        "beta_d_dir": 0.0019153146486681,
+        "ci_low": 0.0009092641687189,
+        "ci_high": 0.0029213651286172,
+        "p": 0.000190440412694,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "permuted_1",
+        "family": "permuted",
+        "probe_grad_align": 0.136690080165863,
+        "beta_d_dir": 0.0020867077424437,
+        "ci_low": 0.0011163881509593,
+        "ci_high": 0.0030570273339282,
+        "p": 2.4980677071321333e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "permuted_2",
+        "family": "permuted",
+        "probe_grad_align": -0.0080982046201825,
+        "beta_d_dir": 0.0020759361880162,
+        "ci_low": 0.0010688642043215,
+        "ci_high": 0.0030830081717109,
+        "p": 5.3408367671468304e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "permuted_3",
+        "family": "permuted",
+        "probe_grad_align": -0.0836448892951011,
+        "beta_d_dir": 0.0022613582994233,
+        "ci_low": 0.0011309855474348,
+        "ci_high": 0.0033917310514118,
+        "p": 8.818573952111515e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "permuted_4",
+        "family": "permuted",
+        "probe_grad_align": 0.1054132655262947,
+        "beta_d_dir": 0.0021073573859275,
+        "ci_low": 0.0011430114445783,
+        "ci_high": 0.0030717033272767,
+        "p": 1.843464081175902e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "permuted_5",
+        "family": "permuted",
+        "probe_grad_align": 0.2244037091732025,
+        "beta_d_dir": 0.0018791948975424,
+        "ci_low": 0.0009797157435603,
+        "ci_high": 0.0027786740515245,
+        "p": 4.225997251301586e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "novel_class_0",
+        "family": "novel_class",
+        "probe_grad_align": 0.9813839197158812,
+        "beta_d_dir": 0.1047262149123257,
+        "ci_low": 0.0649609652742538,
+        "ci_high": 0.1444914645503976,
+        "p": 2.4460809216664884e-07,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "novel_class_1",
+        "family": "novel_class",
+        "probe_grad_align": 0.9858673214912416,
+        "beta_d_dir": 0.1041698864807478,
+        "ci_low": 0.0643512099292816,
+        "ci_high": 0.143988563032214,
+        "p": 2.936556348352759e-07,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "novel_class_2",
+        "family": "novel_class",
+        "probe_grad_align": 0.9890339374542236,
+        "beta_d_dir": 0.104770037128533,
+        "ci_low": 0.0648285124391575,
+        "ci_high": 0.1447115618179084,
+        "p": 2.730572148524726e-07,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "novel_class_3",
+        "family": "novel_class",
+        "probe_grad_align": 0.9843005537986756,
+        "beta_d_dir": 0.1046263628062321,
+        "ci_low": 0.0650596547989647,
+        "ci_high": 0.1441930708134995,
+        "p": 2.1865143853409966e-07,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "novel_class_4",
+        "family": "novel_class",
+        "probe_grad_align": 0.9903820753097534,
+        "beta_d_dir": 0.1050940019287841,
+        "ci_low": 0.0653330126253951,
+        "ci_high": 0.1448549912321731,
+        "p": 2.213321035133127e-07,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "noise_augment_0",
+        "family": "noise_augment",
+        "probe_grad_align": 0.1075106188654899,
+        "beta_d_dir": 0.0055337581279545,
+        "ci_low": 0.0028779654524248,
+        "ci_high": 0.0081895508034842,
+        "p": 4.428789530048799e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "noise_augment_1",
+        "family": "noise_augment",
+        "probe_grad_align": 0.2399659156799316,
+        "beta_d_dir": 0.0055272074199194,
+        "ci_low": 0.0028203796173899,
+        "ci_high": 0.008234035222449,
+        "p": 6.276981605703891e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "noise_augment_2",
+        "family": "noise_augment",
+        "probe_grad_align": 0.2756954729557037,
+        "beta_d_dir": 0.005521506103836,
+        "ci_low": 0.0029626556638263,
+        "ci_high": 0.0080803565438458,
+        "p": 2.344981970109092e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "noise_augment_3",
+        "family": "noise_augment",
+        "probe_grad_align": 0.3448746800422668,
+        "beta_d_dir": 0.0051458260825876,
+        "ci_low": 0.0027188095136122,
+        "ci_high": 0.007572842651563,
+        "p": 3.244795971355263e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "input_scale_0",
+        "family": "input_scale",
+        "probe_grad_align": 0.384730190038681,
+        "beta_d_dir": 0.0030734531003639,
+        "ci_low": 0.0015743596903413,
+        "ci_high": 0.0045725465103865,
+        "p": 5.861118347275096e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "input_scale_1",
+        "family": "input_scale",
+        "probe_grad_align": 0.3035768270492553,
+        "beta_d_dir": 0.0058191583003941,
+        "ci_low": 0.0030230501365037,
+        "ci_high": 0.0086152664642844,
+        "p": 4.522875936055603e-05,
+        "sign": 1,
+        "n_matched": 34
+      },
+      {
+        "probe_id": "input_scale_2",
+        "family": "input_scale",
+        "probe_grad_align": 0.3973762989044189,
+        "beta_d_dir": 0.0087499629589662,
+        "ci_low": 0.0045007105735298,
+        "ci_high": 0.0129992153444025,
+        "p": 5.439040667135208e-05,
+        "sign": 1,
+        "n_matched": 34
+      }
+    ],
+    "predictive": {
+      "dataset": "mnist",
+      "n_valid": 18,
+      "n_holdout": 5,
+      "train_fit": {
+        "intercept": -0.013815706343688127,
+        "slope": 0.1125934049272501
+      },
+      "holdout_sign_accuracy": 0.8,
+      "holdout_pearson_r": 0.9765742432367808,
+      "holdout_pearson_p": 0.004288864691005768,
+      "holdout_pearson_r_ci_bootstrap": [
+        -0.9999999999999999,
+        1.0
+      ],
+      "acceptance": {
+        "sign_accuracy_threshold": 0.8,
+        "correlation_threshold": 0.6,
+        "sign_passes": true,
+        "r_passes": true,
+        "overall": true
+      }
+    }
+  },
+  "cifar10": {
+    "per_probe": [
+      {
+        "probe_id": "permuted_0",
+        "family": "permuted",
+        "probe_grad_align": 0.9254188537597656,
+        "beta_d_dir": 0.0021301043669836,
+        "ci_low": 0.0002766451669299,
+        "ci_high": 0.0039835635670373,
+        "p": 0.0242903182835327,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "permuted_1",
+        "family": "permuted",
+        "probe_grad_align": 0.9182310104370116,
+        "beta_d_dir": 0.0015850899453855,
+        "ci_low": -0.000258397981467,
+        "ci_high": 0.0034285778722381,
+        "p": 0.0919423172089974,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "permuted_2",
+        "family": "permuted",
+        "probe_grad_align": 0.9352537393569946,
+        "beta_d_dir": 0.0028516812088214,
+        "ci_low": 0.0008379104264911,
+        "ci_high": 0.0048654519911517,
+        "p": 0.0055119284906525,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "permuted_3",
+        "family": "permuted",
+        "probe_grad_align": 0.936594009399414,
+        "beta_d_dir": 0.0024338558916286,
+        "ci_low": 0.0003102041538069,
+        "ci_high": 0.0045575076294504,
+        "p": 0.0246874814985744,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "permuted_4",
+        "family": "permuted",
+        "probe_grad_align": 0.9281534552574158,
+        "beta_d_dir": 0.0017557094348677,
+        "ci_low": 9.24642183739127e-06,
+        "ci_high": 0.0035021724478981,
+        "p": 0.0487993300374197,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "permuted_5",
+        "family": "permuted",
+        "probe_grad_align": 0.9331282377243042,
+        "beta_d_dir": 0.0030889339691762,
+        "ci_low": 0.0008299265715087,
+        "ci_high": 0.0053479413668436,
+        "p": 0.0073616366987176,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "novel_class_0",
+        "family": "novel_class",
+        "probe_grad_align": 0.9999054074287416,
+        "beta_d_dir": 0.0339892175479326,
+        "ci_low": 0.0187249953405755,
+        "ci_high": 0.0492534397552896,
+        "p": 1.2753056803991762e-05,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "novel_class_1",
+        "family": "novel_class",
+        "probe_grad_align": 0.998834490776062,
+        "beta_d_dir": 0.0334888772652506,
+        "ci_low": 0.0184702266539532,
+        "ci_high": 0.048507527876548,
+        "p": 1.2403870691220132e-05,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "novel_class_2",
+        "family": "novel_class",
+        "probe_grad_align": 0.999600112438202,
+        "beta_d_dir": 0.0335294125517354,
+        "ci_low": 0.0183599449491309,
+        "ci_high": 0.0486988801543399,
+        "p": 1.47658869078598e-05,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "novel_class_3",
+        "family": "novel_class",
+        "probe_grad_align": 0.9997952580451964,
+        "beta_d_dir": 0.0342545209235809,
+        "ci_low": 0.0186966147946564,
+        "ci_high": 0.0498124270525054,
+        "p": 1.5935870637249472e-05,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "novel_class_4",
+        "family": "novel_class",
+        "probe_grad_align": 0.998801589012146,
+        "beta_d_dir": 0.0343014039718235,
+        "ci_low": 0.0189550304202441,
+        "ci_high": 0.0496477775234029,
+        "p": 1.18240013364866e-05,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "noise_augment_0",
+        "family": "noise_augment",
+        "probe_grad_align": 0.9235699772834778,
+        "beta_d_dir": 0.000863082429324,
+        "ci_low": -0.0005890111628792,
+        "ci_high": 0.0023151760215274,
+        "p": 0.2440408921529502,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "noise_augment_1",
+        "family": "noise_augment",
+        "probe_grad_align": 0.9288919568061828,
+        "beta_d_dir": 0.0013438146016009,
+        "ci_low": -0.0002104369823043,
+        "ci_high": 0.0028980661855062,
+        "p": 0.0901521225628174,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "noise_augment_2",
+        "family": "noise_augment",
+        "probe_grad_align": 0.9375523924827576,
+        "beta_d_dir": 0.001507129305369,
+        "ci_low": 9.42258542345237e-06,
+        "ci_high": 0.0030048360253147,
+        "p": 0.0485759642118273,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "noise_augment_3",
+        "family": "noise_augment",
+        "probe_grad_align": 0.9315001964569092,
+        "beta_d_dir": 0.0017185407838503,
+        "ci_low": 1.7568313776898485e-05,
+        "ci_high": 0.0034195132539237,
+        "p": 0.0476802438962188,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "input_scale_0",
+        "family": "input_scale",
+        "probe_grad_align": 0.9287903308868408,
+        "beta_d_dir": 0.0016932865931798,
+        "ci_low": -5.750119644084379e-05,
+        "ci_high": 0.0034440743828005,
+        "p": 0.0580139093354778,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "input_scale_1",
+        "family": "input_scale",
+        "probe_grad_align": 0.9374871253967284,
+        "beta_d_dir": 0.0018211766680524,
+        "ci_low": -0.0001421420514362,
+        "ci_high": 0.0037844953875411,
+        "p": 0.0690542273771768,
+        "sign": 1,
+        "n_matched": 59
+      },
+      {
+        "probe_id": "input_scale_2",
+        "family": "input_scale",
+        "probe_grad_align": 0.917917788028717,
+        "beta_d_dir": 0.0009324724297787,
+        "ci_low": -0.0001739062813205,
+        "ci_high": 0.0020388511408781,
+        "p": 0.0985576312519339,
+        "sign": 1,
+        "n_matched": 59
+      }
+    ],
+    "predictive": {
+      "dataset": "cifar10",
+      "n_valid": 18,
+      "n_holdout": 5,
+      "train_fit": {
+        "intercept": -0.4026407981982377,
+        "slope": 0.43595547877260254
+      },
+      "holdout_sign_accuracy": 1.0,
+      "holdout_pearson_r": 0.9967839564672253,
+      "holdout_pearson_p": 0.00021883012997853314,
+      "holdout_pearson_r_ci_bootstrap": [
+        0.8191463771499143,
+        1.0
+      ],
+      "acceptance": {
+        "sign_accuracy_threshold": 0.8,
+        "correlation_threshold": 0.6,
+        "sign_passes": true,
+        "r_passes": true,
+        "overall": true
+      }
+    }
+  },
+  "verdict": "PASS_BOTH_DATASETS"
+}

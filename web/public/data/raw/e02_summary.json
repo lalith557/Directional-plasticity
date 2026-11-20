@@ -1,0 +1,18 @@
+{
+  "n_updates": 300,
+  "sources": [
+    "sgd_seed",
+    "orth_perturb",
+    "random_sphere"
+  ],
+  "vif": {
+    "mag": 1.32458992662355,
+    "ctb": 1.0107644767559083,
+    "ptd": 4.810384876042947,
+    "d_dir": 4.509015839729409
+  },
+  "max_vif": 4.810384876042947,
+  "passed": true,
+  "vif_threshold": 5.0,
+  "corr_ftd_d_dir": 0.765
+}

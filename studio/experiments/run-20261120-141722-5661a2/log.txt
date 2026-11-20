@@ -1,0 +1,3 @@
+[2026-11-20T14:17:22] initializing run-20261120-141722-5661a2: SGD · MLP h=16 · Permuted MNIST · seed 20260824
+[2026-11-20T14:17:24] running on NVIDIA GeForce RTX 4070 Laptop GPU
+[2026-11-20T14:17:52] completed: mean_acc=0.7322 decay=0.1169 final_norm=19.835439682006836 validation=reproduced_exact

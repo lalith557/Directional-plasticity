@@ -1,0 +1,334 @@
+[E19] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU
+
+====================================================================
+[E19] dataset=split_mnist seed=20260824 device=cpu
+====================================================================
+
+[E19:split_mnist seed=20260824] --- baseline: sgd ---
+  [sgd] task 0 acc=0.996 probeFTD=0.679
+  [sgd] task 1 acc=0.931 probeFTD=0.682
+  [sgd] task 2 acc=0.939 probeFTD=0.679
+  [sgd] task 3 acc=0.988 probeFTD=0.672
+  [sgd] task 4 acc=0.934 probeFTD=0.672
+[E19:split_mnist] sgd: mean_final_acc=0.910 BWT=-0.059 probeFTD_final=0.6719 max_dev=0.0000  (6.8s)
+
+[E19:split_mnist seed=20260824] --- baseline: ewc ---
+  [ewc] task 0 acc=0.996 probeFTD=0.684
+  [ewc] task 1 acc=0.931 probeFTD=0.681
+  [ewc] task 2 acc=0.939 probeFTD=0.681
+  [ewc] task 3 acc=0.988 probeFTD=0.679
+  [ewc] task 4 acc=0.934 probeFTD=0.674
+[E19:split_mnist] ewc: mean_final_acc=0.949 BWT=-0.011 probeFTD_final=0.6738 max_dev=0.0000  (8.4s)
+
+[E19:split_mnist seed=20260824] --- baseline: replay ---
+  [replay] task 0 acc=0.996 probeFTD=0.681
+  [replay] task 1 acc=0.926 probeFTD=0.678
+  [replay] task 2 acc=0.939 probeFTD=0.674
+  [replay] task 3 acc=0.988 probeFTD=0.670
+  [replay] task 4 acc=0.942 probeFTD=0.671
+[E19:split_mnist] replay: mean_final_acc=0.969 BWT=0.014 probeFTD_final=0.6708 max_dev=0.0000  (8.7s)
+
+[E19:split_mnist seed=20260824] --- baseline: cbp ---
+  [cbp] task 0 acc=0.996 probeFTD=0.684
+  [cbp] task 1 acc=0.932 probeFTD=0.682
+  [cbp] task 2 acc=0.940 probeFTD=0.672
+  [cbp] task 3 acc=0.988 probeFTD=0.681
+  [cbp] task 4 acc=0.935 probeFTD=0.674
+[E19:split_mnist] cbp: mean_final_acc=0.907 BWT=-0.064 probeFTD_final=0.6739 max_dev=0.0000  (8.0s)
+
+[E19:split_mnist] SGD sanity gate: {'mean_final_acc': 0.9102492213249207, 'min_mean_acc': 0.6, 'n_tasks_above_chance': 5, 'min_tasks_above_chance': 3, 'task_chance': 0.55, 'passes': True}
+
+[E19:split_mnist seed=20260824] --- controller_c=-1.00 ---
+  [controller] task 0 acc=0.996 probeFTD=0.680
+  [controller] task 1 acc=0.932 probeFTD=0.676
+  [controller] task 2 acc=0.939 probeFTD=0.677
+  [controller] task 3 acc=0.988 probeFTD=0.680
+  [controller] task 4 acc=0.935 probeFTD=0.670
+[E19:split_mnist] controller_c=-1.00: mean_final_acc=0.910 BWT=-0.060 probeFTD_final=0.6699 max_dev=0.0000  (9.1s)
+
+[E19:split_mnist seed=20260824] --- controller_c=-0.75 ---
+  [controller] task 0 acc=0.996 probeFTD=0.685
+  [controller] task 1 acc=0.931 probeFTD=0.679
+  [controller] task 2 acc=0.939 probeFTD=0.679
+  [controller] task 3 acc=0.988 probeFTD=0.674
+  [controller] task 4 acc=0.934 probeFTD=0.670
+[E19:split_mnist] controller_c=-0.75: mean_final_acc=0.910 BWT=-0.060 probeFTD_final=0.6704 max_dev=0.0000  (12.1s)
+
+[E19:split_mnist seed=20260824] --- controller_c=-0.50 ---
+  [controller] task 0 acc=0.996 probeFTD=0.681
+  [controller] task 1 acc=0.931 probeFTD=0.680
+  [controller] task 2 acc=0.939 probeFTD=0.670
+  [controller] task 3 acc=0.988 probeFTD=0.678
+  [controller] task 4 acc=0.934 probeFTD=0.672
+[E19:split_mnist] controller_c=-0.50: mean_final_acc=0.910 BWT=-0.059 probeFTD_final=0.6723 max_dev=0.0000  (7.8s)
+
+[E19:split_mnist seed=20260824] --- controller_c=-0.25 ---
+  [controller] task 0 acc=0.996 probeFTD=0.681
+  [controller] task 1 acc=0.931 probeFTD=0.677
+  [controller] task 2 acc=0.939 probeFTD=0.675
+  [controller] task 3 acc=0.988 probeFTD=0.677
+  [controller] task 4 acc=0.934 probeFTD=0.673
+[E19:split_mnist] controller_c=-0.25: mean_final_acc=0.910 BWT=-0.060 probeFTD_final=0.6731 max_dev=0.0000  (7.7s)
+
+[E19:split_mnist seed=20260824] --- controller_c=+0.00 ---
+  [controller] task 0 acc=0.996 probeFTD=0.681
+  [controller] task 1 acc=0.931 probeFTD=0.676
+  [controller] task 2 acc=0.939 probeFTD=0.684
+  [controller] task 3 acc=0.988 probeFTD=0.673
+  [controller] task 4 acc=0.934 probeFTD=0.675
+[E19:split_mnist] controller_c=+0.00: mean_final_acc=0.910 BWT=-0.059 probeFTD_final=0.6752 max_dev=0.0000  (7.7s)
+
+[E19:split_mnist seed=20260824] --- controller_c=+0.25 ---
+  [controller] task 0 acc=0.996 probeFTD=0.682
+  [controller] task 1 acc=0.931 probeFTD=0.681
+  [controller] task 2 acc=0.939 probeFTD=0.678
+  [controller] task 3 acc=0.988 probeFTD=0.682
+  [controller] task 4 acc=0.934 probeFTD=0.674
+[E19:split_mnist] controller_c=+0.25: mean_final_acc=0.910 BWT=-0.060 probeFTD_final=0.6742 max_dev=0.0000  (8.1s)
+
+[E19:split_mnist seed=20260824] --- controller_c=+0.50 ---
+  [controller] task 0 acc=0.996 probeFTD=0.682
+  [controller] task 1 acc=0.931 probeFTD=0.679
+  [controller] task 2 acc=0.939 probeFTD=0.679
+  [controller] task 3 acc=0.988 probeFTD=0.681
+  [controller] task 4 acc=0.934 probeFTD=0.677
+[E19:split_mnist] controller_c=+0.50: mean_final_acc=0.910 BWT=-0.059 probeFTD_final=0.6771 max_dev=0.0000  (7.8s)
+
+[E19:split_mnist seed=20260824] --- controller_c=+0.75 ---
+  [controller] task 0 acc=0.996 probeFTD=0.681
+  [controller] task 1 acc=0.931 probeFTD=0.679
+  [controller] task 2 acc=0.939 probeFTD=0.682
+  [controller] task 3 acc=0.988 probeFTD=0.682
+  [controller] task 4 acc=0.934 probeFTD=0.674
+[E19:split_mnist] controller_c=+0.75: mean_final_acc=0.910 BWT=-0.060 probeFTD_final=0.6739 max_dev=0.0000  (8.4s)
+
+[E19:split_mnist seed=20260824] --- controller_c=+1.00 ---
+  [controller] task 0 acc=0.996 probeFTD=0.684
+  [controller] task 1 acc=0.931 probeFTD=0.685
+  [controller] task 2 acc=0.939 probeFTD=0.672
+  [controller] task 3 acc=0.988 probeFTD=0.670
+  [controller] task 4 acc=0.934 probeFTD=0.671
+[E19:split_mnist] controller_c=+1.00: mean_final_acc=0.910 BWT=-0.059 probeFTD_final=0.6712 max_dev=0.0000  (8.1s)
+
+====================================================================
+[E19] dataset=split_mnist seed=20260825 device=cpu
+====================================================================
+
+[E19:split_mnist seed=20260825] --- baseline: sgd ---
+  [sgd] task 0 acc=0.997 probeFTD=0.671
+  [sgd] task 1 acc=0.948 probeFTD=0.672
+  [sgd] task 2 acc=0.931 probeFTD=0.674
+  [sgd] task 3 acc=0.986 probeFTD=0.672
+  [sgd] task 4 acc=0.942 probeFTD=0.671
+[E19:split_mnist] sgd: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6710 max_dev=0.0000  (7.3s)
+
+[E19:split_mnist seed=20260825] --- baseline: ewc ---
+  [ewc] task 0 acc=0.997 probeFTD=0.676
+  [ewc] task 1 acc=0.948 probeFTD=0.677
+  [ewc] task 2 acc=0.931 probeFTD=0.675
+  [ewc] task 3 acc=0.986 probeFTD=0.666
+  [ewc] task 4 acc=0.942 probeFTD=0.672
+[E19:split_mnist] ewc: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6722 max_dev=0.0000  (8.8s)
+
+[E19:split_mnist seed=20260825] --- baseline: replay ---
+  [replay] task 0 acc=0.997 probeFTD=0.679
+  [replay] task 1 acc=0.946 probeFTD=0.673
+  [replay] task 2 acc=0.919 probeFTD=0.671
+  [replay] task 3 acc=0.986 probeFTD=0.671
+  [replay] task 4 acc=0.948 probeFTD=0.660
+[E19:split_mnist] replay: mean_final_acc=0.967 BWT=0.010 probeFTD_final=0.6603 max_dev=0.0000  (9.3s)
+
+[E19:split_mnist seed=20260825] --- baseline: cbp ---
+  [cbp] task 0 acc=0.997 probeFTD=0.677
+  [cbp] task 1 acc=0.948 probeFTD=0.673
+  [cbp] task 2 acc=0.931 probeFTD=0.674
+  [cbp] task 3 acc=0.986 probeFTD=0.663
+  [cbp] task 4 acc=0.942 probeFTD=0.661
+[E19:split_mnist] cbp: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6612 max_dev=0.0000  (8.0s)
+
+[E19:split_mnist] SGD sanity gate: {'mean_final_acc': 0.9132901906967164, 'min_mean_acc': 0.6, 'n_tasks_above_chance': 5, 'min_tasks_above_chance': 3, 'task_chance': 0.55, 'passes': True}
+
+[E19:split_mnist seed=20260825] --- controller_c=-1.00 ---
+  [controller] task 0 acc=0.997 probeFTD=0.680
+  [controller] task 1 acc=0.948 probeFTD=0.676
+  [controller] task 2 acc=0.930 probeFTD=0.676
+  [controller] task 3 acc=0.986 probeFTD=0.670
+  [controller] task 4 acc=0.942 probeFTD=0.670
+[E19:split_mnist] controller_c=-1.00: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6703 max_dev=0.0000  (7.7s)
+
+[E19:split_mnist seed=20260825] --- controller_c=-0.75 ---
+  [controller] task 0 acc=0.997 probeFTD=0.684
+  [controller] task 1 acc=0.948 probeFTD=0.680
+  [controller] task 2 acc=0.930 probeFTD=0.678
+  [controller] task 3 acc=0.986 probeFTD=0.670
+  [controller] task 4 acc=0.942 probeFTD=0.671
+[E19:split_mnist] controller_c=-0.75: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6713 max_dev=0.0000  (7.9s)
+
+[E19:split_mnist seed=20260825] --- controller_c=-0.50 ---
+  [controller] task 0 acc=0.997 probeFTD=0.677
+  [controller] task 1 acc=0.948 probeFTD=0.668
+  [controller] task 2 acc=0.930 probeFTD=0.676
+  [controller] task 3 acc=0.986 probeFTD=0.669
+  [controller] task 4 acc=0.942 probeFTD=0.665
+[E19:split_mnist] controller_c=-0.50: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6646 max_dev=0.0000  (8.0s)
+
+[E19:split_mnist seed=20260825] --- controller_c=-0.25 ---
+  [controller] task 0 acc=0.997 probeFTD=0.677
+  [controller] task 1 acc=0.948 probeFTD=0.676
+  [controller] task 2 acc=0.930 probeFTD=0.675
+  [controller] task 3 acc=0.986 probeFTD=0.668
+  [controller] task 4 acc=0.942 probeFTD=0.674
+[E19:split_mnist] controller_c=-0.25: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6741 max_dev=0.0000  (7.7s)
+
+[E19:split_mnist seed=20260825] --- controller_c=+0.00 ---
+  [controller] task 0 acc=0.997 probeFTD=0.676
+  [controller] task 1 acc=0.948 probeFTD=0.674
+  [controller] task 2 acc=0.931 probeFTD=0.671
+  [controller] task 3 acc=0.986 probeFTD=0.671
+  [controller] task 4 acc=0.942 probeFTD=0.670
+[E19:split_mnist] controller_c=+0.00: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6697 max_dev=0.0000  (7.7s)
+
+[E19:split_mnist seed=20260825] --- controller_c=+0.25 ---
+  [controller] task 0 acc=0.997 probeFTD=0.675
+  [controller] task 1 acc=0.948 probeFTD=0.676
+  [controller] task 2 acc=0.931 probeFTD=0.674
+  [controller] task 3 acc=0.986 probeFTD=0.673
+  [controller] task 4 acc=0.942 probeFTD=0.664
+[E19:split_mnist] controller_c=+0.25: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6638 max_dev=0.0000  (7.8s)
+
+[E19:split_mnist seed=20260825] --- controller_c=+0.50 ---
+  [controller] task 0 acc=0.997 probeFTD=0.679
+  [controller] task 1 acc=0.948 probeFTD=0.678
+  [controller] task 2 acc=0.931 probeFTD=0.680
+  [controller] task 3 acc=0.986 probeFTD=0.672
+  [controller] task 4 acc=0.942 probeFTD=0.667
+[E19:split_mnist] controller_c=+0.50: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6675 max_dev=0.0000  (7.8s)
+
+[E19:split_mnist seed=20260825] --- controller_c=+0.75 ---
+  [controller] task 0 acc=0.997 probeFTD=0.683
+  [controller] task 1 acc=0.948 probeFTD=0.671
+  [controller] task 2 acc=0.930 probeFTD=0.668
+  [controller] task 3 acc=0.986 probeFTD=0.667
+  [controller] task 4 acc=0.942 probeFTD=0.666
+[E19:split_mnist] controller_c=+0.75: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6664 max_dev=0.0000  (7.9s)
+
+[E19:split_mnist seed=20260825] --- controller_c=+1.00 ---
+  [controller] task 0 acc=0.997 probeFTD=0.676
+  [controller] task 1 acc=0.948 probeFTD=0.677
+  [controller] task 2 acc=0.931 probeFTD=0.672
+  [controller] task 3 acc=0.986 probeFTD=0.674
+  [controller] task 4 acc=0.942 probeFTD=0.671
+[E19:split_mnist] controller_c=+1.00: mean_final_acc=0.913 BWT=-0.059 probeFTD_final=0.6710 max_dev=0.0000  (8.4s)
+
+====================================================================
+[E19] dataset=split_mnist seed=20260826 device=cpu
+====================================================================
+
+[E19:split_mnist seed=20260826] --- baseline: sgd ---
+  [sgd] task 0 acc=0.998 probeFTD=0.680
+  [sgd] task 1 acc=0.933 probeFTD=0.682
+  [sgd] task 2 acc=0.949 probeFTD=0.677
+  [sgd] task 3 acc=0.988 probeFTD=0.678
+  [sgd] task 4 acc=0.940 probeFTD=0.671
+[E19:split_mnist] sgd: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6706 max_dev=0.0000  (7.4s)
+
+[E19:split_mnist seed=20260826] --- baseline: ewc ---
+  [ewc] task 0 acc=0.998 probeFTD=0.676
+  [ewc] task 1 acc=0.933 probeFTD=0.680
+  [ewc] task 2 acc=0.949 probeFTD=0.677
+  [ewc] task 3 acc=0.988 probeFTD=0.675
+  [ewc] task 4 acc=0.940 probeFTD=0.675
+[E19:split_mnist] ewc: mean_final_acc=0.948 BWT=-0.017 probeFTD_final=0.6747 max_dev=0.0000  (9.1s)
+
+[E19:split_mnist seed=20260826] --- baseline: replay ---
+  [replay] task 0 acc=0.998 probeFTD=0.681
+  [replay] task 1 acc=0.935 probeFTD=0.676
+  [replay] task 2 acc=0.946 probeFTD=0.673
+  [replay] task 3 acc=0.988 probeFTD=0.672
+  [replay] task 4 acc=0.942 probeFTD=0.668
+[E19:split_mnist] replay: mean_final_acc=0.969 BWT=0.009 probeFTD_final=0.6685 max_dev=0.0000  (9.4s)
+
+[E19:split_mnist seed=20260826] --- baseline: cbp ---
+  [cbp] task 0 acc=0.998 probeFTD=0.681
+  [cbp] task 1 acc=0.933 probeFTD=0.680
+  [cbp] task 2 acc=0.949 probeFTD=0.673
+  [cbp] task 3 acc=0.988 probeFTD=0.680
+  [cbp] task 4 acc=0.940 probeFTD=0.673
+[E19:split_mnist] cbp: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6734 max_dev=0.0000  (8.1s)
+
+[E19:split_mnist] SGD sanity gate: {'mean_final_acc': 0.9382242918014526, 'min_mean_acc': 0.6, 'n_tasks_above_chance': 5, 'min_tasks_above_chance': 3, 'task_chance': 0.55, 'passes': True}
+
+[E19:split_mnist seed=20260826] --- controller_c=-1.00 ---
+  [controller] task 0 acc=0.998 probeFTD=0.678
+  [controller] task 1 acc=0.933 probeFTD=0.677
+  [controller] task 2 acc=0.949 probeFTD=0.674
+  [controller] task 3 acc=0.988 probeFTD=0.677
+  [controller] task 4 acc=0.940 probeFTD=0.673
+[E19:split_mnist] controller_c=-1.00: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6731 max_dev=0.0000  (8.1s)
+
+[E19:split_mnist seed=20260826] --- controller_c=-0.75 ---
+  [controller] task 0 acc=0.998 probeFTD=0.683
+  [controller] task 1 acc=0.933 probeFTD=0.678
+  [controller] task 2 acc=0.949 probeFTD=0.675
+  [controller] task 3 acc=0.988 probeFTD=0.676
+  [controller] task 4 acc=0.940 probeFTD=0.671
+[E19:split_mnist] controller_c=-0.75: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6715 max_dev=0.0000  (7.7s)
+
+[E19:split_mnist seed=20260826] --- controller_c=-0.50 ---
+  [controller] task 0 acc=0.998 probeFTD=0.678
+  [controller] task 1 acc=0.933 probeFTD=0.681
+  [controller] task 2 acc=0.949 probeFTD=0.681
+  [controller] task 3 acc=0.988 probeFTD=0.677
+  [controller] task 4 acc=0.940 probeFTD=0.677
+[E19:split_mnist] controller_c=-0.50: mean_final_acc=0.938 BWT=-0.030 probeFTD_final=0.6768 max_dev=0.0000  (7.9s)
+
+[E19:split_mnist seed=20260826] --- controller_c=-0.25 ---
+  [controller] task 0 acc=0.998 probeFTD=0.678
+  [controller] task 1 acc=0.933 probeFTD=0.677
+  [controller] task 2 acc=0.949 probeFTD=0.679
+  [controller] task 3 acc=0.988 probeFTD=0.671
+  [controller] task 4 acc=0.940 probeFTD=0.672
+[E19:split_mnist] controller_c=-0.25: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6724 max_dev=0.0000  (8.3s)
+
+[E19:split_mnist seed=20260826] --- controller_c=+0.00 ---
+  [controller] task 0 acc=0.998 probeFTD=0.678
+  [controller] task 1 acc=0.933 probeFTD=0.680
+  [controller] task 2 acc=0.949 probeFTD=0.676
+  [controller] task 3 acc=0.988 probeFTD=0.677
+  [controller] task 4 acc=0.940 probeFTD=0.666
+[E19:split_mnist] controller_c=+0.00: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6660 max_dev=0.0000  (7.4s)
+
+[E19:split_mnist seed=20260826] --- controller_c=+0.25 ---
+  [controller] task 0 acc=0.998 probeFTD=0.677
+  [controller] task 1 acc=0.933 probeFTD=0.680
+  [controller] task 2 acc=0.949 probeFTD=0.676
+  [controller] task 3 acc=0.988 probeFTD=0.675
+  [controller] task 4 acc=0.940 probeFTD=0.675
+[E19:split_mnist] controller_c=+0.25: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6754 max_dev=0.0000  (7.7s)
+
+[E19:split_mnist seed=20260826] --- controller_c=+0.50 ---
+  [controller] task 0 acc=0.998 probeFTD=0.684
+  [controller] task 1 acc=0.933 probeFTD=0.676
+  [controller] task 2 acc=0.949 probeFTD=0.680
+  [controller] task 3 acc=0.988 probeFTD=0.675
+  [controller] task 4 acc=0.940 probeFTD=0.672
+[E19:split_mnist] controller_c=+0.50: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6722 max_dev=0.0000  (7.6s)
+
+[E19:split_mnist seed=20260826] --- controller_c=+0.75 ---
+  [controller] task 0 acc=0.998 probeFTD=0.679
+  [controller] task 1 acc=0.933 probeFTD=0.677
+  [controller] task 2 acc=0.949 probeFTD=0.676
+  [controller] task 3 acc=0.988 probeFTD=0.678
+  [controller] task 4 acc=0.940 probeFTD=0.669
+[E19:split_mnist] controller_c=+0.75: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6693 max_dev=0.0000  (7.6s)
+
+[E19:split_mnist seed=20260826] --- controller_c=+1.00 ---
+  [controller] task 0 acc=0.998 probeFTD=0.678
+  [controller] task 1 acc=0.933 probeFTD=0.675
+  [controller] task 2 acc=0.949 probeFTD=0.677
+  [controller] task 3 acc=0.988 probeFTD=0.674
+  [controller] task 4 acc=0.940 probeFTD=0.674
+[E19:split_mnist] controller_c=+1.00: mean_final_acc=0.938 BWT=-0.029 probeFTD_final=0.6742 max_dev=0.0000  (7.5s)
+
+[E19] OVERALL VERDICT: DEFINITIVE_NULL
+  split_mnist: NULL  (Pivot1_beats_EWC=False  Pivot2_FTD_reduces=False)

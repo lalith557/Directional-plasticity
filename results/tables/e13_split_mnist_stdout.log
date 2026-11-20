@@ -1,0 +1,83 @@
+[E13] device=cpu profile=cpu
+
+[E13:split_mnist] tasks=5, arms=SGD+EWC+replay+CBP+controller×7
+[E13:split_mnist] u_past estimated ||u_past||=1.0000
+
+[E13:split_mnist] --- baseline: sgd ---
+[baseline:sgd] task 0 acc=0.867 probeFTD=2.306
+[baseline:sgd] task 1 acc=0.516 probeFTD=2.309
+[baseline:sgd] task 2 acc=0.475 probeFTD=2.310
+[baseline:sgd] task 3 acc=0.658 probeFTD=2.301
+[baseline:sgd] task 4 acc=0.397 probeFTD=2.298
+
+[E13:split_mnist] --- baseline: ewc ---
+[baseline:ewc] task 0 acc=0.867 probeFTD=2.306
+[baseline:ewc] task 1 acc=0.500 probeFTD=2.309
+[baseline:ewc] task 2 acc=0.279 probeFTD=2.310
+[baseline:ewc] task 3 acc=0.402 probeFTD=2.301
+[baseline:ewc] task 4 acc=0.036 probeFTD=2.298
+
+[E13:split_mnist] --- baseline: replay ---
+[baseline:replay] task 0 acc=0.867 probeFTD=2.306
+[baseline:replay] task 1 acc=0.000 probeFTD=2.309
+[baseline:replay] task 2 acc=0.000 probeFTD=2.308
+[baseline:replay] task 3 acc=0.000 probeFTD=2.301
+[baseline:replay] task 4 acc=0.000 probeFTD=2.297
+
+[E13:split_mnist] --- baseline: cbp ---
+[baseline:cbp] task 0 acc=0.867 probeFTD=2.306
+[baseline:cbp] task 1 acc=0.516 probeFTD=2.309
+[baseline:cbp] task 2 acc=0.475 probeFTD=2.310
+[baseline:cbp] task 3 acc=0.658 probeFTD=2.301
+[baseline:cbp] task 4 acc=0.397 probeFTD=2.298
+
+[E13:split_mnist] --- controller_c=-1.00 ---
+[baseline:past_axis_controller] task 0 acc=0.882 probeFTD=2.306
+[baseline:past_axis_controller] task 1 acc=0.507 probeFTD=2.309
+[baseline:past_axis_controller] task 2 acc=0.464 probeFTD=2.309
+[baseline:past_axis_controller] task 3 acc=0.591 probeFTD=2.300
+[baseline:past_axis_controller] task 4 acc=0.437 probeFTD=2.298
+
+[E13:split_mnist] --- controller_c=-0.50 ---
+[baseline:past_axis_controller] task 0 acc=0.875 probeFTD=2.306
+[baseline:past_axis_controller] task 1 acc=0.509 probeFTD=2.309
+[baseline:past_axis_controller] task 2 acc=0.468 probeFTD=2.309
+[baseline:past_axis_controller] task 3 acc=0.624 probeFTD=2.301
+[baseline:past_axis_controller] task 4 acc=0.433 probeFTD=2.298
+
+[E13:split_mnist] --- controller_c=-0.25 ---
+[baseline:past_axis_controller] task 0 acc=0.872 probeFTD=2.306
+[baseline:past_axis_controller] task 1 acc=0.513 probeFTD=2.309
+[baseline:past_axis_controller] task 2 acc=0.471 probeFTD=2.309
+[baseline:past_axis_controller] task 3 acc=0.638 probeFTD=2.301
+[baseline:past_axis_controller] task 4 acc=0.418 probeFTD=2.298
+
+[E13:split_mnist] --- controller_c=+0.00 ---
+[baseline:past_axis_controller] task 0 acc=0.867 probeFTD=2.306
+[baseline:past_axis_controller] task 1 acc=0.516 probeFTD=2.309
+[baseline:past_axis_controller] task 2 acc=0.475 probeFTD=2.310
+[baseline:past_axis_controller] task 3 acc=0.658 probeFTD=2.301
+[baseline:past_axis_controller] task 4 acc=0.397 probeFTD=2.298
+
+[E13:split_mnist] --- controller_c=+0.25 ---
+[baseline:past_axis_controller] task 0 acc=0.862 probeFTD=2.306
+[baseline:past_axis_controller] task 1 acc=0.520 probeFTD=2.310
+[baseline:past_axis_controller] task 2 acc=0.480 probeFTD=2.310
+[baseline:past_axis_controller] task 3 acc=0.675 probeFTD=2.301
+[baseline:past_axis_controller] task 4 acc=0.373 probeFTD=2.298
+
+[E13:split_mnist] --- controller_c=+0.50 ---
+[baseline:past_axis_controller] task 0 acc=0.856 probeFTD=2.306
+[baseline:past_axis_controller] task 1 acc=0.522 probeFTD=2.310
+[baseline:past_axis_controller] task 2 acc=0.483 probeFTD=2.310
+[baseline:past_axis_controller] task 3 acc=0.687 probeFTD=2.302
+[baseline:past_axis_controller] task 4 acc=0.338 probeFTD=2.298
+
+[E13:split_mnist] --- controller_c=+1.00 ---
+[baseline:past_axis_controller] task 0 acc=0.840 probeFTD=2.306
+[baseline:past_axis_controller] task 1 acc=0.529 probeFTD=2.310
+[baseline:past_axis_controller] task 2 acc=0.491 probeFTD=2.311
+[baseline:past_axis_controller] task 3 acc=0.711 probeFTD=2.302
+[baseline:past_axis_controller] task 4 acc=0.247 probeFTD=2.298
+
+[E13] OVERALL VERDICT: POSITIVE_WEAK

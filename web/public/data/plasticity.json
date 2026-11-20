@@ -1,0 +1,1816 @@
+{
+  "generatedAt": "2026-11-17T14:19:56+05:30",
+  "meta": {
+    "arms": 7,
+    "seedsPerArm": 5,
+    "tasks": 100,
+    "architectures": 4,
+    "datasets": 2,
+    "architectureList": [
+      "MLP (784-128-128-10)",
+      "MLP (784-16-16-10)",
+      "MLP (784-64-64-10)",
+      "SmallCNN(16,32,fc64)"
+    ],
+    "datasetList": [
+      "Permuted MNIST",
+      "Rotated MNIST"
+    ],
+    "hardware": {
+      "torch": "2.11.0+cu128",
+      "cuda_available": true,
+      "cuda_runtime": "12.8",
+      "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "gpu_free_gb": 7.212105728,
+      "hardware_profile": "gpu"
+    },
+    "matchedStepTolerance": "1e-4"
+  },
+  "r20": {
+    "id": "r20",
+    "name": "R20 \u2014 Plasticity Stress",
+    "status": "Completed",
+    "subtitle": "Long-horizon continual learning on Permuted-MNIST with a shared classifier.",
+    "dataset": "Permuted-MNIST",
+    "architecture": "MLP (width 16)",
+    "arch": "784-16-16-10",
+    "config": {
+      "dataset": "Permuted-MNIST",
+      "architecture": "MLP (width 16)",
+      "tasks": 100,
+      "stepsPerTask": 60,
+      "lr": 0.2,
+      "trainSubset": 6000,
+      "batch": 128,
+      "epochs": 1,
+      "classifier": "Shared 10-way head",
+      "seeds": 5,
+      "hidden": 16,
+      "depth": 2
+    },
+    "seeds": [
+      20260824,
+      20260825,
+      20260826,
+      20260827,
+      20260828
+    ],
+    "arms": [
+      {
+        "key": "sgd",
+        "short": "SGD",
+        "name": "SGD",
+        "tag": "Baseline",
+        "family": "control",
+        "normControl": "none",
+        "matchStep": "reference",
+        "acc": 0.744285581111908,
+        "accStd": 0.014532081452045586,
+        "decay": 0.13291200160980227,
+        "decayStd": 0.03563422166989663,
+        "norm": 20.39256057739258,
+        "normStd": 0.39798056201024273,
+        "dormant": 0.2125,
+        "dormantStd": 0.075,
+        "effRank": 2.9285401821136476,
+        "effRankStd": 0.21646684453145654,
+        "matchDev": 0.0,
+        "peakAcc": 0.8426999807357788,
+        "endAcc": 0.7097879791259766
+      },
+      {
+        "key": "l2_init",
+        "short": "L2",
+        "name": "L2-init",
+        "tag": "Small initial norm",
+        "family": "magnitude",
+        "normControl": "regularize to init",
+        "matchStep": "na",
+        "acc": 0.8185329788923263,
+        "accStd": 0.002929080765076185,
+        "decay": 0.04680599808692933,
+        "decayStd": 0.01229254285605664,
+        "norm": 6.573753833770752,
+        "normStd": 0.05497422665737179,
+        "dormant": 0.1125,
+        "dormantStd": 0.03186887195995491,
+        "effRank": 3.5172045707702635,
+        "effRankStd": 0.2324805576665278,
+        "matchDev": 0.0,
+        "peakAcc": 0.870419979095459,
+        "endAcc": 0.8236139810085297
+      },
+      {
+        "key": "shrink_pert",
+        "short": "S&P",
+        "name": "Shrink & Perturb",
+        "tag": "Controlled shrinkage",
+        "family": "magnitude",
+        "normControl": "shrink + noise",
+        "matchStep": "na",
+        "acc": 0.7987627810239791,
+        "accStd": 0.009693897063805497,
+        "decay": 0.04599000334739685,
+        "decayStd": 0.015601936100423179,
+        "norm": 4.166140842437744,
+        "normStd": 0.02869096784106042,
+        "dormant": 0.00625,
+        "dormantStd": 0.012500000000000002,
+        "effRank": 3.1359761238098143,
+        "effRankStd": 0.04670429134155661,
+        "matchDev": 0.0,
+        "peakAcc": 0.8505599856376648,
+        "endAcc": 0.8045699822902679
+      },
+      {
+        "key": "cbp",
+        "short": "CBP",
+        "name": "Continual Backprop",
+        "tag": "Utility-based unit resets",
+        "family": "control",
+        "normControl": "unit resets",
+        "matchStep": "na",
+        "acc": 0.7282243805527686,
+        "accStd": 0.009791518538710402,
+        "decay": 0.14688199639320373,
+        "decayStd": 0.01883756303996113,
+        "norm": 19.080324172973633,
+        "normStd": 0.14809352412194515,
+        "dormant": 0.225,
+        "dormantStd": 0.036443449342783124,
+        "effRank": 2.958929109573364,
+        "effRankStd": 0.23828996154354104,
+        "matchDev": 0.0,
+        "peakAcc": 0.85201997756958,
+        "endAcc": 0.7051379811763764
+      },
+      {
+        "key": "dir_control_c1.0",
+        "short": "Dir",
+        "name": "Directional",
+        "tag": "Orthogonal to weight vector",
+        "family": "directional",
+        "normControl": "Cor. 1 (orthogonal)",
+        "matchStep": "applicable",
+        "acc": 0.7034553814530373,
+        "accStd": 0.007293902216865275,
+        "decay": 0.1826820081472397,
+        "decayStd": 0.03964209973571097,
+        "norm": 25.086225509643555,
+        "normStd": 0.15356772375528052,
+        "dormant": 0.2875,
+        "dormantStd": 0.053764532919016415,
+        "effRank": 2.2977210521697997,
+        "effRankStd": 0.23043902402144723,
+        "matchDev": 2.2170792650111127e-07,
+        "peakAcc": 0.8249399900436402,
+        "endAcc": 0.6422579818964005
+      },
+      {
+        "key": "dir_inward_g0.6",
+        "short": "In",
+        "name": "Inward",
+        "tag": "Along negative weight vector",
+        "family": "directional",
+        "normControl": "Cor. 2 (inward)",
+        "matchStep": "applicable",
+        "acc": 0.42856658852100366,
+        "accStd": 0.004633899196138549,
+        "decay": 0.051178003549575815,
+        "decayStd": 0.0055120712588380555,
+        "norm": 2.2933959484100344,
+        "normStd": 0.017034874504723598,
+        "dormant": 0.075,
+        "dormantStd": 0.05077524002897475,
+        "effRank": 1.85700364112854,
+        "effRankStd": 0.032330362766105486,
+        "matchDev": 2.0042221986585666e-07,
+        "peakAcc": 0.4838599920272827,
+        "endAcc": 0.4326819884777069
+      },
+      {
+        "key": "adaptive_norm_revive",
+        "short": "ANR",
+        "name": "ANR",
+        "tag": "Adaptive-Norm-Revive",
+        "family": "magnitude",
+        "normControl": "per-unit target",
+        "matchStep": "na",
+        "acc": 0.7346767809689044,
+        "accStd": 0.010259545145283133,
+        "decay": 0.09020599842071535,
+        "decayStd": 0.027440899076533194,
+        "norm": 7.943358707427978,
+        "normStd": 0.39831849878943676,
+        "dormant": 0.00625,
+        "dormantStd": 0.012500000000000002,
+        "effRank": 2.6794834613800047,
+        "effRankStd": 0.2246873296024698,
+        "matchDev": 0.0,
+        "peakAcc": 0.845419979095459,
+        "endAcc": 0.7552139806747437
+      }
+    ],
+    "perSeed": {
+      "sgd": [
+        {
+          "seed": 20260824,
+          "acc": 0.7322059798240662,
+          "decay": 0.11691998839378359,
+          "norm": 19.835439682006836,
+          "dormant": 0.25,
+          "effRank": 2.6505582332611084,
+          "peakAcc": 0.8312999606132507,
+          "endAcc": 0.7143799722194671,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.7644199806451798,
+          "decay": 0.11848002076148989,
+          "norm": 20.555137634277344,
+          "dormant": 0.15625,
+          "effRank": 3.100083112716675,
+          "peakAcc": 0.8447999954223633,
+          "endAcc": 0.7263199746608734,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.7541649818420411,
+          "decay": 0.08288002014160156,
+          "norm": 20.9385929107666,
+          "dormant": 0.09375,
+          "effRank": 3.1916468143463135,
+          "peakAcc": 0.8454999923706055,
+          "endAcc": 0.7626199722290039,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.7464129811525345,
+          "decay": 0.181659996509552,
+          "norm": 20.58654022216797,
+          "dormant": 0.28125,
+          "effRank": 2.6983988285064697,
+          "peakAcc": 0.843999981880188,
+          "endAcc": 0.662339985370636,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.7242239820957184,
+          "decay": 0.16461998224258423,
+          "norm": 20.04709243774414,
+          "dormant": 0.28125,
+          "effRank": 3.002013921737671,
+          "peakAcc": 0.8478999733924866,
+          "endAcc": 0.6832799911499023,
+          "matchDev": 0.0
+        }
+      ],
+      "l2_init": [
+        {
+          "seed": 20260824,
+          "acc": 0.8137019795179367,
+          "decay": 0.03490001559257505,
+          "norm": 6.492682933807373,
+          "dormant": 0.125,
+          "effRank": 3.391155242919922,
+          "peakAcc": 0.8671000003814697,
+          "endAcc": 0.8321999847888947,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.8224909782409668,
+          "decay": 0.03468998670578005,
+          "norm": 6.643414497375488,
+          "dormant": 0.15625,
+          "effRank": 3.639512777328491,
+          "peakAcc": 0.8675999641418457,
+          "endAcc": 0.8329099774360657,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.8174229788780213,
+          "decay": 0.043489986658096336,
+          "norm": 6.61711311340332,
+          "dormant": 0.125,
+          "effRank": 3.8813490867614746,
+          "peakAcc": 0.8715999722480774,
+          "endAcc": 0.8281099855899811,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.818934982419014,
+          "decay": 0.06688997149467468,
+          "norm": 6.53233003616333,
+          "dormant": 0.09375,
+          "effRank": 3.1923623085021973,
+          "peakAcc": 0.8689999580383301,
+          "endAcc": 0.8021099865436554,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.8201139754056931,
+          "decay": 0.05406002998352055,
+          "norm": 6.583228588104248,
+          "dormant": 0.0625,
+          "effRank": 3.4816434383392334,
+          "peakAcc": 0.876800000667572,
+          "endAcc": 0.8227399706840515,
+          "matchDev": 0.0
+        }
+      ],
+      "shrink_pert": [
+        {
+          "seed": 20260824,
+          "acc": 0.7886899822950363,
+          "decay": 0.06950000524520872,
+          "norm": 4.134877681732178,
+          "dormant": 0.0,
+          "effRank": 3.112292766571045,
+          "peakAcc": 0.849399983882904,
+          "endAcc": 0.7798999786376953,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.8090679812431335,
+          "decay": 0.04176000356674192,
+          "norm": 4.206815242767334,
+          "dormant": 0.03125,
+          "effRank": 3.0726165771484375,
+          "peakAcc": 0.8565999865531921,
+          "endAcc": 0.8148399829864502,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.8000199806690216,
+          "decay": 0.021919989585876487,
+          "norm": 4.180909156799316,
+          "dormant": 0.0,
+          "effRank": 3.1792075634002686,
+          "peakAcc": 0.8435999751091003,
+          "endAcc": 0.8216799855232239,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.786626980304718,
+          "decay": 0.053660011291503884,
+          "norm": 4.13198709487915,
+          "dormant": 0.0,
+          "effRank": 3.1997294425964355,
+          "peakAcc": 0.8418999910354614,
+          "endAcc": 0.7882399797439575,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.8094089806079865,
+          "decay": 0.04311000704765322,
+          "norm": 4.176115036010742,
+          "dormant": 0.0,
+          "effRank": 3.1160342693328857,
+          "peakAcc": 0.861299991607666,
+          "endAcc": 0.8181899845600128,
+          "matchDev": 0.0
+        }
+      ],
+      "cbp": [
+        {
+          "seed": 20260824,
+          "acc": 0.7340589773654937,
+          "decay": 0.12315001487731936,
+          "norm": 19.28858184814453,
+          "dormant": 0.1875,
+          "effRank": 3.226203441619873,
+          "peakAcc": 0.8465999960899353,
+          "endAcc": 0.723449981212616,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.7274689823389053,
+          "decay": 0.17101001143455508,
+          "norm": 19.03374481201172,
+          "dormant": 0.1875,
+          "effRank": 3.077702760696411,
+          "peakAcc": 0.8472999930381775,
+          "endAcc": 0.6762899816036224,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.7394379818439484,
+          "decay": 0.15983998775482178,
+          "norm": 18.8660888671875,
+          "dormant": 0.25,
+          "effRank": 3.0696823596954346,
+          "peakAcc": 0.8535999655723572,
+          "endAcc": 0.6937599778175354,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.7104269829392433,
+          "decay": 0.1538399815559387,
+          "norm": 19.198362350463867,
+          "dormant": 0.21875,
+          "effRank": 2.533475160598755,
+          "peakAcc": 0.8578999638557434,
+          "endAcc": 0.7040599822998047,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.7297289782762527,
+          "decay": 0.1265699863433838,
+          "norm": 19.014842987060547,
+          "dormant": 0.28125,
+          "effRank": 2.8875818252563477,
+          "peakAcc": 0.854699969291687,
+          "endAcc": 0.7281299829483032,
+          "matchDev": 0.0
+        }
+      ],
+      "dir_control_c1.0": [
+        {
+          "seed": 20260824,
+          "acc": 0.7060479819774628,
+          "decay": 0.18333002328872683,
+          "norm": 25.15082359313965,
+          "dormant": 0.21875,
+          "effRank": 2.3519325256347656,
+          "peakAcc": 0.8337000012397766,
+          "endAcc": 0.6503699779510498,
+          "matchDev": 2.2757840644961344e-07
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.7012699803709984,
+          "decay": 0.17436999678611753,
+          "norm": 24.91375732421875,
+          "dormant": 0.3125,
+          "effRank": 2.1183786392211914,
+          "peakAcc": 0.8241999745368958,
+          "endAcc": 0.6498299777507782,
+          "matchDev": 2.0632795456917145e-07
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.6912399795651436,
+          "decay": 0.2567800015211106,
+          "norm": 24.894775390625,
+          "dormant": 0.375,
+          "effRank": 2.0848071575164795,
+          "peakAcc": 0.8263999819755554,
+          "endAcc": 0.5696199804544448,
+          "matchDev": 2.2927373989058222e-07
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.7051419818401337,
+          "decay": 0.15620000362396236,
+          "norm": 25.2001953125,
+          "dormant": 0.25,
+          "effRank": 2.2138218879699707,
+          "peakAcc": 0.8192999958992004,
+          "endAcc": 0.6630999922752381,
+          "matchDev": 2.1748557961784984e-07
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.7135769835114479,
+          "decay": 0.14273001551628117,
+          "norm": 25.271575927734375,
+          "dormant": 0.28125,
+          "effRank": 2.719665050506592,
+          "peakAcc": 0.8210999965667725,
+          "endAcc": 0.6783699810504913,
+          "matchDev": 2.2787395197833944e-07
+        }
+      ],
+      "dir_inward_g0.6": [
+        {
+          "seed": 20260824,
+          "acc": 0.4370669877529144,
+          "decay": 0.040939998626708995,
+          "norm": 2.3066012859344482,
+          "dormant": 0.0625,
+          "effRank": 1.8255538940429688,
+          "peakAcc": 0.49399998784065247,
+          "endAcc": 0.45305998921394347,
+          "matchDev": 1.9018175289639554e-07
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.425110989511013,
+          "decay": 0.05654001235961914,
+          "norm": 2.314802885055542,
+          "dormant": 0.15625,
+          "effRank": 1.9107038974761963,
+          "peakAcc": 0.4860000014305115,
+          "endAcc": 0.42945998907089233,
+          "matchDev": 2.147444851984985e-07
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.42395698875188825,
+          "decay": 0.05422000586986542,
+          "norm": 2.288623332977295,
+          "dormant": 0.0625,
+          "effRank": 1.877400517463684,
+          "peakAcc": 0.4803999960422516,
+          "endAcc": 0.42617999017238617,
+          "matchDev": 2.1863923531204327e-07
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.4293039876222611,
+          "decay": 0.05401999652385714,
+          "norm": 2.2652413845062256,
+          "dormant": 0.09375,
+          "effRank": 1.8319365978240967,
+          "peakAcc": 0.47439998388290405,
+          "endAcc": 0.4203799873590469,
+          "matchDev": 2.051952776755058e-07
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.4273939889669418,
+          "decay": 0.05017000436782837,
+          "norm": 2.29171085357666,
+          "dormant": 0.0,
+          "effRank": 1.8394232988357544,
+          "peakAcc": 0.484499990940094,
+          "endAcc": 0.4343299865722656,
+          "matchDev": 1.7335034824684003e-07
+        }
+      ],
+      "adaptive_norm_revive": [
+        {
+          "seed": 20260824,
+          "acc": 0.7354739809036255,
+          "decay": 0.06270997524261479,
+          "norm": 8.033074378967285,
+          "dormant": 0.03125,
+          "effRank": 2.6937005519866943,
+          "peakAcc": 0.858199954032898,
+          "endAcc": 0.7954899787902832,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.7264129801094532,
+          "decay": 0.08131000995635984,
+          "norm": 7.9440436363220215,
+          "dormant": 0.0,
+          "effRank": 2.7037131786346436,
+          "peakAcc": 0.8364999890327454,
+          "endAcc": 0.7551899790763855,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.7363379827141762,
+          "decay": 0.06277998089790349,
+          "norm": 7.560614585876465,
+          "dormant": 0.0,
+          "effRank": 2.7536182403564453,
+          "peakAcc": 0.8395999670028687,
+          "endAcc": 0.7768199861049652,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.7523739808797836,
+          "decay": 0.13052000999450686,
+          "norm": 8.635430335998535,
+          "dormant": 0.0,
+          "effRank": 2.2769272327423096,
+          "peakAcc": 0.8479999899864197,
+          "endAcc": 0.7174799799919128,
+          "matchDev": 0.0
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.7227849802374839,
+          "decay": 0.11371001601219177,
+          "norm": 7.543630599975586,
+          "dormant": 0.0,
+          "effRank": 2.9694581031799316,
+          "peakAcc": 0.8447999954223633,
+          "endAcc": 0.7310899794101715,
+          "matchDev": 0.0
+        }
+      ]
+    },
+    "verdict": "METHOD_NULL_PUBLISH_A",
+    "source": "results/tables/e20_summary.json"
+  },
+  "lambda_": {
+    "values": [
+      0.0,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "points": [
+      {
+        "lam": 0.0,
+        "acc": 0.744285581111908,
+        "accStd": 0.014532081452045586,
+        "decay": 0.13291200160980227,
+        "decayStd": 0.03563422166989663,
+        "norm": 20.39256057739258,
+        "normStd": 0.39798056201024273,
+        "dormant": 0.2125,
+        "dormantStd": 0.075
+      },
+      {
+        "lam": 0.001,
+        "acc": 0.7759881793260573,
+        "accStd": 0.014992481281934724,
+        "decay": 0.07816998720169066,
+        "decayStd": 0.01599994189955159,
+        "norm": 12.110380554199219,
+        "normStd": 0.15911531044815538,
+        "dormant": 0.20625,
+        "dormantStd": 0.054486236794258416
+      },
+      {
+        "lam": 0.003,
+        "acc": 0.7783425801396369,
+        "accStd": 0.01292696134837376,
+        "decay": 0.07547799706459044,
+        "decayStd": 0.012047524644970078,
+        "norm": 8.96107006072998,
+        "normStd": 0.11112583547089512,
+        "dormant": 0.19375,
+        "dormantStd": 0.04592793267718459
+      },
+      {
+        "lam": 0.01,
+        "acc": 0.8185329788923263,
+        "accStd": 0.002929080765076185,
+        "decay": 0.04680599808692933,
+        "decayStd": 0.01229254285605664,
+        "norm": 6.573753833770752,
+        "normStd": 0.05497422665737179,
+        "dormant": 0.1125,
+        "dormantStd": 0.03186887195995491
+      },
+      {
+        "lam": 0.03,
+        "acc": 0.8084913796186447,
+        "accStd": 0.0011476301629870472,
+        "decay": 0.04272998213768007,
+        "decayStd": 0.00691621200650821,
+        "norm": 5.326723957061768,
+        "normStd": 0.052883964012173656,
+        "dormant": 0.03125,
+        "dormantStd": 0.01976423537605237
+      },
+      {
+        "lam": 0.1,
+        "acc": 0.6931643818020821,
+        "accStd": 0.009051601080084874,
+        "decay": 0.07980400443077089,
+        "decayStd": 0.0167130669015741,
+        "norm": 4.2851485252380375,
+        "normStd": 0.036846515870479955,
+        "dormant": 0.05,
+        "dormantStd": 0.03186887195995491
+      }
+    ],
+    "seeds": 5,
+    "grid": "predetermined geometric",
+    "source": "results/tables/e22_lambda_summary.json",
+    "observation": "Moderate controlled norm reduction (lambda ~ 1e-2) performs best; excessive regularization (lambda = 1e-1) becomes harmful."
+  },
+  "radial": {
+    "gammas": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "points": [
+      {
+        "gamma": 0.0,
+        "acc": 0.744285581111908,
+        "accStd": 0.014532081452045586,
+        "decay": 0.13291200160980227,
+        "decayStd": 0.03563422166989663,
+        "norm": 20.39256057739258,
+        "normStd": 0.39798056201024273,
+        "dormant": 0.2125,
+        "dormantStd": 0.075,
+        "effRank": 2.9285401821136476,
+        "radialAlign": 0.009688739341277564,
+        "matchDev": 0.0
+      },
+      {
+        "gamma": 0.2,
+        "acc": 0.7627297805547715,
+        "accStd": 0.002886970209951571,
+        "decay": 0.05284399509429934,
+        "decayStd": 0.00981427819818426,
+        "norm": 4.076241302490234,
+        "normStd": 0.04232281669450243,
+        "dormant": 0.0625,
+        "dormantStd": 0.03423265984407288,
+        "effRank": 2.9729981899261473,
+        "radialAlign": 0.0061273648648277525,
+        "matchDev": 2.143185482954132e-07
+      },
+      {
+        "gamma": 0.4,
+        "acc": 0.654742383480072,
+        "accStd": 0.003730344773630294,
+        "decay": 0.05613600254058839,
+        "decayStd": 0.012045429942023459,
+        "norm": 3.0872122764587404,
+        "normStd": 0.030925483953027088,
+        "dormant": 0.06875,
+        "dormantStd": 0.0414578098794425,
+        "effRank": 2.7340768337249757,
+        "radialAlign": 0.0018002066921591502,
+        "matchDev": 2.0681278637874118e-07
+      },
+      {
+        "gamma": 0.6,
+        "acc": 0.42856658852100366,
+        "accStd": 0.004633899196138549,
+        "decay": 0.051178003549575815,
+        "decayStd": 0.0055120712588380555,
+        "norm": 2.2933959484100344,
+        "normStd": 0.017034874504723598,
+        "dormant": 0.075,
+        "dormantStd": 0.05077524002897475,
+        "effRank": 1.85700364112854,
+        "radialAlign": -0.004650086855555256,
+        "matchDev": 2.0042221986585666e-07
+      },
+      {
+        "gamma": 0.8,
+        "acc": 0.1565869960784912,
+        "accStd": 0.040947669532895206,
+        "decay": 0.2208639954030514,
+        "decayStd": 0.06575716792211031,
+        "norm": 0.2515807688236237,
+        "normStd": 0.37864097457111223,
+        "dormant": 0.80625,
+        "dormantStd": 0.23750000000000002,
+        "effRank": 0.4,
+        "radialAlign": -0.3161333857751914,
+        "matchDev": 2.0863961468575552e-07
+      },
+      {
+        "gamma": 1.0,
+        "acc": 0.10537079720199108,
+        "accStd": 0.0011404366731584288,
+        "decay": 0.2153380036354065,
+        "decayStd": 0.051312101416804534,
+        "norm": 0.0,
+        "normStd": 0.0,
+        "dormant": 1.0,
+        "dormantStd": 0.0,
+        "effRank": 0.0,
+        "radialAlign": -0.6835301974217096,
+        "matchDev": 2.0996183209313827e-07
+      }
+    ],
+    "perSeed": {
+      "0": [
+        {
+          "seed": 20260824,
+          "acc": 0.7322059798240662,
+          "decay": 0.11691998839378359,
+          "norm": 19.835439682006836,
+          "dormant": 0.25
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.7644199806451798,
+          "decay": 0.11848002076148989,
+          "norm": 20.555137634277344,
+          "dormant": 0.15625
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.7541649818420411,
+          "decay": 0.08288002014160156,
+          "norm": 20.9385929107666,
+          "dormant": 0.09375
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.7464129811525345,
+          "decay": 0.181659996509552,
+          "norm": 20.58654022216797,
+          "dormant": 0.28125
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.7242239820957184,
+          "decay": 0.16461998224258423,
+          "norm": 20.04709243774414,
+          "dormant": 0.28125
+        }
+      ],
+      "0.2": [
+        {
+          "seed": 20260824,
+          "acc": 0.765428980588913,
+          "decay": 0.04697000384330752,
+          "norm": 4.112550735473633,
+          "dormant": 0.0625
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.7659279823303222,
+          "decay": 0.06481997966766362,
+          "norm": 4.118247032165527,
+          "dormant": 0.09375
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.7584339791536331,
+          "decay": 0.042899972200393655,
+          "norm": 4.038174629211426,
+          "dormant": 0.0625
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.7604419803619384,
+          "decay": 0.06470000147819521,
+          "norm": 4.098627090454102,
+          "dormant": 0.09375
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.7634159803390503,
+          "decay": 0.04483001828193667,
+          "norm": 4.013607025146484,
+          "dormant": 0.0
+        }
+      ],
+      "0.4": [
+        {
+          "seed": 20260824,
+          "acc": 0.657311982512474,
+          "decay": 0.07057997584342957,
+          "norm": 3.111250638961792,
+          "dormant": 0.0625
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.6475159847736358,
+          "decay": 0.051180028915405296,
+          "norm": 3.113018751144409,
+          "dormant": 0.125
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.6547999840974807,
+          "decay": 0.06055999398231504,
+          "norm": 3.113056182861328,
+          "dormant": 0.0625
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.6573369824886321,
+          "decay": 0.06289001107215886,
+          "norm": 3.051072359085083,
+          "dormant": 0.09375
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.6567469835281372,
+          "decay": 0.0354700028896332,
+          "norm": 3.047663450241089,
+          "dormant": 0.0
+        }
+      ],
+      "0.6": [
+        {
+          "seed": 20260824,
+          "acc": 0.4370669877529144,
+          "decay": 0.040939998626708995,
+          "norm": 2.3066012859344482,
+          "dormant": 0.0625
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.425110989511013,
+          "decay": 0.05654001235961914,
+          "norm": 2.314802885055542,
+          "dormant": 0.15625
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.42395698875188825,
+          "decay": 0.05422000586986542,
+          "norm": 2.288623332977295,
+          "dormant": 0.0625
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.4293039876222611,
+          "decay": 0.05401999652385714,
+          "norm": 2.2652413845062256,
+          "dormant": 0.09375
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.4273939889669418,
+          "decay": 0.05017000436782837,
+          "norm": 2.29171085357666,
+          "dormant": 0.0
+        }
+      ],
+      "0.8": [
+        {
+          "seed": 20260824,
+          "acc": 0.20441099464893342,
+          "decay": 0.1391399919986725,
+          "norm": 0.9769090414047241,
+          "dormant": 0.53125
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.11298299722373485,
+          "decay": 0.2831500001251698,
+          "norm": 0.0,
+          "dormant": 1.0
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.20795099459588529,
+          "decay": 0.169680006057024,
+          "norm": 0.28099480271339417,
+          "dormant": 0.5
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.12633899696171283,
+          "decay": 0.201639986038208,
+          "norm": 0.0,
+          "dormant": 1.0
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.13125099696218967,
+          "decay": 0.3107099927961826,
+          "norm": 0.0,
+          "dormant": 1.0
+        }
+      ],
+      "1": [
+        {
+          "seed": 20260824,
+          "acc": 0.1038909974694252,
+          "decay": 0.11742999404668808,
+          "norm": 0.0,
+          "dormant": 1.0
+        },
+        {
+          "seed": 20260825,
+          "acc": 0.10736399702727795,
+          "decay": 0.2644500061869621,
+          "norm": 0.0,
+          "dormant": 1.0
+        },
+        {
+          "seed": 20260826,
+          "acc": 0.10560299694538117,
+          "decay": 0.23831000700592994,
+          "norm": 0.0,
+          "dormant": 1.0
+        },
+        {
+          "seed": 20260827,
+          "acc": 0.1049329974502325,
+          "decay": 0.2158900074660778,
+          "norm": 0.0,
+          "dormant": 1.0
+        },
+        {
+          "seed": 20260828,
+          "acc": 0.10506299711763858,
+          "decay": 0.2406100034713745,
+          "norm": 0.0,
+          "dormant": 1.0
+        }
+      ]
+    },
+    "seeds": 5,
+    "note": "radial-coefficient sweep; gamma=0 is plain SGD; matched step",
+    "source": "results/tables/e27_radial_sweep_summary.json",
+    "observation": "Increasing inward radial allocation reduces the parameter norm monotonically, but accuracy does not improve monotonically: a mild bias beats SGD while strong inward steering collapses learning. Norm reduction alone is not sufficient."
+  },
+  "ablation": {
+    "variants": [
+      {
+        "key": "anr_full",
+        "name": "ANR (full)",
+        "tag": "both mechanisms",
+        "reference": false,
+        "acc": 0.7346767809689044,
+        "accStd": 0.010259545145283133,
+        "decay": 0.09020599842071535,
+        "decayStd": 0.027440899076533194,
+        "norm": 7.943358707427978,
+        "normStd": 0.39831849878943676,
+        "dormant": 0.00625,
+        "dormantStd": 0.012500000000000002
+      },
+      {
+        "key": "anr_revive_only",
+        "name": "ANR (revive-only)",
+        "tag": "no per-unit cap",
+        "reference": false,
+        "acc": 0.7606653801798821,
+        "accStd": 0.005342721517128889,
+        "decay": 0.07181800365447999,
+        "decayStd": 0.02667936791455509,
+        "norm": 14.436362075805665,
+        "normStd": 0.8850001104139358,
+        "dormant": 0.0,
+        "dormantStd": 0.0
+      },
+      {
+        "key": "anr_shrink_only",
+        "name": "ANR (shrink-only)",
+        "tag": "no revival",
+        "reference": false,
+        "acc": 0.689828982204199,
+        "accStd": 0.02313805032440712,
+        "decay": 0.1498760098218918,
+        "decayStd": 0.03843819826177407,
+        "norm": 14.595154953002929,
+        "normStd": 0.38666191895684415,
+        "dormant": 0.3625,
+        "dormantStd": 0.05796011559684815
+      },
+      {
+        "key": "sgd",
+        "name": "SGD",
+        "tag": "",
+        "reference": true,
+        "acc": 0.744285581111908,
+        "accStd": 0.014532081452045586,
+        "decay": 0.13291200160980227,
+        "decayStd": 0.03563422166989663,
+        "norm": 20.39256057739258,
+        "normStd": 0.39798056201024273,
+        "dormant": 0.2125,
+        "dormantStd": 0.075
+      },
+      {
+        "key": "shrink_pert",
+        "name": "Shrink & Perturb",
+        "tag": "",
+        "reference": true,
+        "acc": 0.7987627810239791,
+        "accStd": 0.009693897063805497,
+        "decay": 0.04599000334739685,
+        "decayStd": 0.015601936100423179,
+        "norm": 4.166140842437744,
+        "normStd": 0.02869096784106042,
+        "dormant": 0.00625,
+        "dormantStd": 0.012500000000000002
+      }
+    ],
+    "seeds": 5,
+    "source": "results/tables/e22_anr_ablation_summary.json",
+    "observation": "In this ablation, removing the per-unit norm cap (revive-only) improves accuracy relative to full ANR, whereas removing revival (shrink-only) is associated with lower accuracy, greater plasticity decay, and more dormant units. These results implicate the cap as a contributor to ANR's underperformance in the evaluated regime, but do not establish it as the sole cause."
+  },
+  "regimes": [
+    {
+      "id": "width16",
+      "name": "Permuted MNIST \u00b7 MLP width 16",
+      "short": "Width 16",
+      "dataset": "Permuted MNIST",
+      "arch": "MLP (784-16-16-10)",
+      "seeds": 5,
+      "arms": 7,
+      "pearson": 0.9698266964814358,
+      "computedHere": true,
+      "source": "e20_summary.json",
+      "points": [
+        {
+          "key": "sgd",
+          "short": "SGD",
+          "name": "SGD",
+          "tag": "Baseline",
+          "family": "control",
+          "normControl": "none",
+          "matchStep": "reference",
+          "norm": 20.39256057739258,
+          "decay": 0.13291200160980227,
+          "acc": 0.744285581111908,
+          "dormant": 0.2125
+        },
+        {
+          "key": "l2_init",
+          "short": "L2",
+          "name": "L2-init",
+          "tag": "Small initial norm",
+          "family": "magnitude",
+          "normControl": "regularize to init",
+          "matchStep": "na",
+          "norm": 6.573753833770752,
+          "decay": 0.04680599808692933,
+          "acc": 0.8185329788923263,
+          "dormant": 0.1125
+        },
+        {
+          "key": "shrink_pert",
+          "short": "S&P",
+          "name": "Shrink & Perturb",
+          "tag": "Controlled shrinkage",
+          "family": "magnitude",
+          "normControl": "shrink + noise",
+          "matchStep": "na",
+          "norm": 4.166140842437744,
+          "decay": 0.04599000334739685,
+          "acc": 0.7987627810239791,
+          "dormant": 0.00625
+        },
+        {
+          "key": "cbp",
+          "short": "CBP",
+          "name": "Continual Backprop",
+          "tag": "Utility-based unit resets",
+          "family": "control",
+          "normControl": "unit resets",
+          "matchStep": "na",
+          "norm": 19.080324172973633,
+          "decay": 0.14688199639320373,
+          "acc": 0.7282243805527686,
+          "dormant": 0.225
+        },
+        {
+          "key": "dir_control_c1.0",
+          "short": "Dir",
+          "name": "Directional",
+          "tag": "Orthogonal to weight vector",
+          "family": "directional",
+          "normControl": "Cor. 1 (orthogonal)",
+          "matchStep": "applicable",
+          "norm": 25.086225509643555,
+          "decay": 0.1826820081472397,
+          "acc": 0.7034553814530373,
+          "dormant": 0.2875
+        },
+        {
+          "key": "dir_inward_g0.6",
+          "short": "In",
+          "name": "Inward",
+          "tag": "Along negative weight vector",
+          "family": "directional",
+          "normControl": "Cor. 2 (inward)",
+          "matchStep": "applicable",
+          "norm": 2.2933959484100344,
+          "decay": 0.051178003549575815,
+          "acc": 0.42856658852100366,
+          "dormant": 0.075
+        },
+        {
+          "key": "adaptive_norm_revive",
+          "short": "ANR",
+          "name": "ANR",
+          "tag": "Adaptive-Norm-Revive",
+          "family": "magnitude",
+          "normControl": "per-unit target",
+          "matchStep": "na",
+          "norm": 7.943358707427978,
+          "decay": 0.09020599842071535,
+          "acc": 0.7346767809689044,
+          "dormant": 0.00625
+        }
+      ]
+    },
+    {
+      "id": "width64",
+      "name": "Permuted MNIST \u00b7 MLP width 64",
+      "short": "Width 64",
+      "dataset": "Permuted MNIST",
+      "arch": "MLP (784-64-64-10)",
+      "seeds": 5,
+      "arms": 7,
+      "pearson": 0.44864071600702055,
+      "source": "e22_arch64_summary.json",
+      "points": [
+        {
+          "key": "sgd",
+          "short": "SGD",
+          "name": "SGD",
+          "tag": "Baseline",
+          "family": "control",
+          "normControl": "none",
+          "matchStep": "reference",
+          "norm": 27.410931015014647,
+          "decay": 0.05234399557113652,
+          "acc": 0.838658179283142,
+          "dormant": 0.3203125
+        },
+        {
+          "key": "l2_init",
+          "short": "L2",
+          "name": "L2-init",
+          "tag": "Small initial norm",
+          "family": "magnitude",
+          "normControl": "regularize to init",
+          "matchStep": "na",
+          "norm": 8.861932945251464,
+          "decay": 0.02333800315856933,
+          "acc": 0.856048577785492,
+          "dormant": 0.040625
+        },
+        {
+          "key": "shrink_pert",
+          "short": "S&P",
+          "name": "Shrink & Perturb",
+          "tag": "Controlled shrinkage",
+          "family": "magnitude",
+          "normControl": "shrink + noise",
+          "matchStep": "na",
+          "norm": 5.108356380462647,
+          "decay": 0.04129999518394469,
+          "acc": 0.8250743794441224,
+          "dormant": 0.0015625
+        },
+        {
+          "key": "cbp",
+          "short": "CBP",
+          "name": "Continual Backprop",
+          "tag": "Utility-based unit resets",
+          "family": "control",
+          "normControl": "unit resets",
+          "matchStep": "na",
+          "norm": 27.3484806060791,
+          "decay": 0.057478005886077876,
+          "acc": 0.8364239784479143,
+          "dormant": 0.3390625
+        },
+        {
+          "key": "dir_control_c1.0",
+          "short": "Dir",
+          "name": "Directional",
+          "tag": "Orthogonal to weight vector",
+          "family": "directional",
+          "normControl": "Cor. 1 (orthogonal)",
+          "matchStep": "applicable",
+          "norm": 28.502055740356447,
+          "decay": 0.06680799245834353,
+          "acc": 0.8283931794166566,
+          "dormant": 0.3390625
+        },
+        {
+          "key": "dir_inward_g0.6",
+          "short": "In",
+          "name": "Inward",
+          "tag": "Along negative weight vector",
+          "family": "directional",
+          "normControl": "Cor. 2 (inward)",
+          "matchStep": "applicable",
+          "norm": 2.705242872238159,
+          "decay": 0.05767398834228514,
+          "acc": 0.6184535852670668,
+          "dormant": 0.075
+        },
+        {
+          "key": "adaptive_norm_revive",
+          "short": "ANR",
+          "name": "ANR",
+          "tag": "Adaptive-Norm-Revive",
+          "family": "magnitude",
+          "normControl": "per-unit target",
+          "matchStep": "na",
+          "norm": 9.974799537658692,
+          "decay": 0.059352017641067525,
+          "acc": 0.8292629797458648,
+          "dormant": 0.003125
+        }
+      ]
+    },
+    {
+      "id": "width128",
+      "name": "Permuted MNIST \u00b7 MLP width 128",
+      "short": "Width 128",
+      "dataset": "Permuted MNIST",
+      "arch": "MLP (784-128-128-10)",
+      "seeds": 5,
+      "arms": 7,
+      "pearson": -0.5151199617901987,
+      "source": "e24_arch128_summary.json",
+      "points": [
+        {
+          "key": "sgd",
+          "short": "SGD",
+          "name": "SGD",
+          "tag": "Baseline",
+          "family": "control",
+          "normControl": "none",
+          "matchStep": "reference",
+          "norm": 30.67824363708496,
+          "decay": 0.03226799607276916,
+          "acc": 0.866526778101921,
+          "dormant": 0.3046875
+        },
+        {
+          "key": "l2_init",
+          "short": "L2",
+          "name": "L2-init",
+          "tag": "Small initial norm",
+          "family": "magnitude",
+          "normControl": "regularize to init",
+          "matchStep": "na",
+          "norm": 11.021532249450683,
+          "decay": 0.023823994398117065,
+          "acc": 0.8648215775489806,
+          "dormant": 0.0265625
+        },
+        {
+          "key": "shrink_pert",
+          "short": "S&P",
+          "name": "Shrink & Perturb",
+          "tag": "Controlled shrinkage",
+          "family": "magnitude",
+          "normControl": "shrink + noise",
+          "matchStep": "na",
+          "norm": 6.196881484985352,
+          "decay": 0.03637800693511963,
+          "acc": 0.8267397786378862,
+          "dormant": 0.00078125
+        },
+        {
+          "key": "cbp",
+          "short": "CBP",
+          "name": "Continual Backprop",
+          "tag": "Utility-based unit resets",
+          "family": "control",
+          "normControl": "unit resets",
+          "matchStep": "na",
+          "norm": 30.6094181060791,
+          "decay": 0.03106800198554993,
+          "acc": 0.8654773780107498,
+          "dormant": 0.29765625
+        },
+        {
+          "key": "dir_control_c1.0",
+          "short": "Dir",
+          "name": "Directional",
+          "tag": "Orthogonal to weight vector",
+          "family": "directional",
+          "normControl": "Cor. 1 (orthogonal)",
+          "matchStep": "applicable",
+          "norm": 29.789908981323244,
+          "decay": 0.035846014022827125,
+          "acc": 0.8626747766733169,
+          "dormant": 0.33125
+        },
+        {
+          "key": "dir_inward_g0.6",
+          "short": "In",
+          "name": "Inward",
+          "tag": "Along negative weight vector",
+          "family": "directional",
+          "normControl": "Cor. 2 (inward)",
+          "matchStep": "applicable",
+          "norm": 2.7048490047454834,
+          "decay": 0.06668600559234619,
+          "acc": 0.6191699855327607,
+          "dormant": 0.0734375
+        },
+        {
+          "key": "adaptive_norm_revive",
+          "short": "ANR",
+          "name": "ANR",
+          "tag": "Adaptive-Norm-Revive",
+          "family": "magnitude",
+          "normControl": "per-unit target",
+          "matchStep": "na",
+          "norm": 11.403768157958984,
+          "decay": 0.040660003423690805,
+          "acc": 0.8552147796750068,
+          "dormant": 0.0015625
+        }
+      ]
+    },
+    {
+      "id": "rot_mlp",
+      "name": "Rotated MNIST \u00b7 MLP width 16",
+      "short": "Rotated (MLP)",
+      "dataset": "Rotated MNIST",
+      "arch": "MLP (784-16-16-10)",
+      "seeds": 5,
+      "arms": 7,
+      "pearson": -0.9388280321923199,
+      "source": "e24_rotmnist_summary.json",
+      "points": [
+        {
+          "key": "sgd",
+          "short": "SGD",
+          "name": "SGD",
+          "tag": "Baseline",
+          "family": "control",
+          "normControl": "none",
+          "matchStep": "reference",
+          "norm": 14.054359626770019,
+          "decay": 0.02052001237869263,
+          "acc": 0.8935580432415007,
+          "dormant": 0.00625
+        },
+        {
+          "key": "l2_init",
+          "short": "L2",
+          "name": "L2-init",
+          "tag": "Small initial norm",
+          "family": "magnitude",
+          "normControl": "regularize to init",
+          "matchStep": "na",
+          "norm": 6.305532741546631,
+          "decay": 0.03600999355316161,
+          "acc": 0.8568830415010453,
+          "dormant": 0.00625
+        },
+        {
+          "key": "shrink_pert",
+          "short": "S&P",
+          "name": "Shrink & Perturb",
+          "tag": "Controlled shrinkage",
+          "family": "magnitude",
+          "normControl": "shrink + noise",
+          "matchStep": "na",
+          "norm": 3.92671480178833,
+          "decay": 0.057579996585845936,
+          "acc": 0.803219037234783,
+          "dormant": 0.0
+        },
+        {
+          "key": "cbp",
+          "short": "CBP",
+          "name": "Continual Backprop",
+          "tag": "Utility-based unit resets",
+          "family": "control",
+          "normControl": "unit resets",
+          "matchStep": "na",
+          "norm": 13.790546989440918,
+          "decay": 0.02360999464988709,
+          "acc": 0.8896620421409608,
+          "dormant": 0.01875
+        },
+        {
+          "key": "dir_control_c1.0",
+          "short": "Dir",
+          "name": "Directional",
+          "tag": "Orthogonal to weight vector",
+          "family": "directional",
+          "normControl": "Cor. 1 (orthogonal)",
+          "matchStep": "applicable",
+          "norm": 17.222637176513672,
+          "decay": 0.02161001205444335,
+          "acc": 0.8777610416412353,
+          "dormant": 0.0125
+        },
+        {
+          "key": "dir_inward_g0.6",
+          "short": "In",
+          "name": "Inward",
+          "tag": "Along negative weight vector",
+          "family": "directional",
+          "normControl": "Cor. 2 (inward)",
+          "matchStep": "applicable",
+          "norm": 2.2610705852508546,
+          "decay": 0.054010006785392764,
+          "acc": 0.44081202125549324,
+          "dormant": 0.1125
+        },
+        {
+          "key": "adaptive_norm_revive",
+          "short": "ANR",
+          "name": "ANR",
+          "tag": "Adaptive-Norm-Revive",
+          "family": "magnitude",
+          "normControl": "per-unit target",
+          "matchStep": "na",
+          "norm": 13.550766563415527,
+          "decay": 0.020180007219314587,
+          "acc": 0.8909870424866675,
+          "dormant": 0.0
+        }
+      ]
+    },
+    {
+      "id": "rot_cnn",
+      "name": "Rotated MNIST \u00b7 Small CNN",
+      "short": "Rotated (CNN)",
+      "dataset": "Rotated MNIST",
+      "arch": "SmallCNN(16,32,fc64)",
+      "seeds": 3,
+      "arms": 6,
+      "pearson": -0.8210726099599591,
+      "source": "e25_cnn_summary.json",
+      "points": [
+        {
+          "key": "sgd",
+          "short": "SGD",
+          "name": "SGD",
+          "tag": "Baseline",
+          "family": "control",
+          "normControl": "none",
+          "matchStep": "reference",
+          "norm": 14.169313748677572,
+          "decay": 0.004016671578089381,
+          "acc": 0.9650717136263847,
+          "dormant": 0.03125
+        },
+        {
+          "key": "l2_init",
+          "short": "L2",
+          "name": "L2-init",
+          "tag": "Small initial norm",
+          "family": "magnitude",
+          "normControl": "regularize to init",
+          "matchStep": "na",
+          "norm": 8.780351956685385,
+          "decay": 0.015883340438206977,
+          "acc": 0.9410933778683344,
+          "dormant": 0.036458333333333336
+        },
+        {
+          "key": "shrink_pert",
+          "short": "S&P",
+          "name": "Shrink & Perturb",
+          "tag": "Controlled shrinkage",
+          "family": "magnitude",
+          "normControl": "shrink + noise",
+          "matchStep": "na",
+          "norm": 5.730889797210693,
+          "decay": 0.03293333252271017,
+          "acc": 0.8862650426725547,
+          "dormant": 0.015625
+        },
+        {
+          "key": "norm_project",
+          "short": "NP",
+          "name": "Norm-Project",
+          "tag": "Projected norm control",
+          "family": "magnitude",
+          "normControl": "norm projection",
+          "matchStep": "na",
+          "norm": 5.9999996821085615,
+          "decay": 0.02244999408721926,
+          "acc": 0.9317750429113706,
+          "dormant": 0.234375
+        },
+        {
+          "key": "dir_control_c1.0",
+          "short": "Dir",
+          "name": "Directional",
+          "tag": "Orthogonal to weight vector",
+          "family": "directional",
+          "normControl": "Cor. 1 (orthogonal)",
+          "matchStep": "applicable",
+          "norm": 12.141247431437174,
+          "decay": 0.004483324289321892,
+          "acc": 0.9611517145236332,
+          "dormant": 0.026041666666666668
+        },
+        {
+          "key": "dir_inward_g0.6",
+          "short": "In",
+          "name": "Inward",
+          "tag": "Along negative weight vector",
+          "family": "directional",
+          "normControl": "Cor. 2 (inward)",
+          "matchStep": "applicable",
+          "norm": 1.8480579455693562,
+          "decay": 0.12713333467642468,
+          "acc": 0.465658355653286,
+          "dormant": 0.7447916666666666
+        },
+        {
+          "key": "random_dir",
+          "short": "Rnd",
+          "name": "Random direction",
+          "tag": "Random unit step",
+          "family": "directional",
+          "normControl": "random",
+          "matchStep": "applicable",
+          "norm": null,
+          "decay": 0.0788833369811376,
+          "acc": 0.11264167202015718,
+          "dormant": 0.08854166666666667
+        }
+      ]
+    }
+  ],
+  "angle": {
+    "cos": [
+      1.0,
+      0.75,
+      0.5,
+      0.25,
+      0.1
+    ],
+    "points": [
+      {
+        "cos": 1.0,
+        "acc": 0.9652333820859592,
+        "accStd": 0.0025950983350655457,
+        "norm": 14.156039873758951,
+        "normStd": 0.10252864182893821,
+        "gradAlign": 1.0000000193748209
+      },
+      {
+        "cos": 0.75,
+        "acc": 0.9523267115155857,
+        "accStd": 0.003327517448691453,
+        "norm": 68.32019805908203,
+        "normStd": 0.3027135598297198,
+        "gradAlign": 0.7500000129375194
+      },
+      {
+        "cos": 0.5,
+        "acc": 0.9269633760054906,
+        "accStd": 0.005534877705785131,
+        "norm": 122.26797993977864,
+        "normStd": 5.326417446552765,
+        "gradAlign": 0.50000001608332
+      },
+      {
+        "cos": 0.25,
+        "acc": 0.7541183684269588,
+        "accStd": 0.04920439759458319,
+        "norm": 263.8658498128255,
+        "normStd": 22.469301921829203,
+        "gradAlign": 0.24999999879714516
+      },
+      {
+        "cos": 0.1,
+        "acc": 0.4258500216404597,
+        "accStd": 0.011839038627071344,
+        "norm": 534.8542175292969,
+        "normStd": 45.981078481539285,
+        "gradAlign": 0.10000000300548144
+      }
+    ],
+    "arch": "SmallCNN(16,32,fc64)",
+    "source": "results/tables/e25_cnn_summary.json"
+  },
+  "normPlasticity": {
+    "primary": {
+      "pearson": 0.9698266964814358,
+      "spearman": 0.857142857142857,
+      "n": 7,
+      "accPearson": 0.23830203787294496,
+      "points": [
+        {
+          "key": "sgd",
+          "short": "SGD",
+          "name": "SGD",
+          "tag": "Baseline",
+          "family": "control",
+          "normControl": "none",
+          "matchStep": "reference",
+          "norm": 20.39256057739258,
+          "decay": 0.13291200160980227,
+          "acc": 0.744285581111908
+        },
+        {
+          "key": "l2_init",
+          "short": "L2",
+          "name": "L2-init",
+          "tag": "Small initial norm",
+          "family": "magnitude",
+          "normControl": "regularize to init",
+          "matchStep": "na",
+          "norm": 6.573753833770752,
+          "decay": 0.04680599808692933,
+          "acc": 0.8185329788923263
+        },
+        {
+          "key": "shrink_pert",
+          "short": "S&P",
+          "name": "Shrink & Perturb",
+          "tag": "Controlled shrinkage",
+          "family": "magnitude",
+          "normControl": "shrink + noise",
+          "matchStep": "na",
+          "norm": 4.166140842437744,
+          "decay": 0.04599000334739685,
+          "acc": 0.7987627810239791
+        },
+        {
+          "key": "cbp",
+          "short": "CBP",
+          "name": "Continual Backprop",
+          "tag": "Utility-based unit resets",
+          "family": "control",
+          "normControl": "unit resets",
+          "matchStep": "na",
+          "norm": 19.080324172973633,
+          "decay": 0.14688199639320373,
+          "acc": 0.7282243805527686
+        },
+        {
+          "key": "dir_control_c1.0",
+          "short": "Dir",
+          "name": "Directional",
+          "tag": "Orthogonal to weight vector",
+          "family": "directional",
+          "normControl": "Cor. 1 (orthogonal)",
+          "matchStep": "applicable",
+          "norm": 25.086225509643555,
+          "decay": 0.1826820081472397,
+          "acc": 0.7034553814530373
+        },
+        {
+          "key": "dir_inward_g0.6",
+          "short": "In",
+          "name": "Inward",
+          "tag": "Along negative weight vector",
+          "family": "directional",
+          "normControl": "Cor. 2 (inward)",
+          "matchStep": "applicable",
+          "norm": 2.2933959484100344,
+          "decay": 0.051178003549575815,
+          "acc": 0.42856658852100366
+        },
+        {
+          "key": "adaptive_norm_revive",
+          "short": "ANR",
+          "name": "ANR",
+          "tag": "Adaptive-Norm-Revive",
+          "family": "magnitude",
+          "normControl": "per-unit target",
+          "matchStep": "na",
+          "norm": 7.943358707427978,
+          "decay": 0.09020599842071535,
+          "acc": 0.7346767809689044
+        }
+      ]
+    },
+    "effRankAcc": 0.8874028564330165,
+    "effRankDecay": -0.21376286915466297,
+    "source": "results/tables/e20_summary.json (arm-level, n=7)"
+  },
+  "rawFiles": [
+    {
+      "name": "e20_summary.json",
+      "path": "results/tables/e20_summary.json",
+      "bytes": 17871
+    },
+    {
+      "name": "e22_lambda_summary.json",
+      "path": "results/tables/e22_lambda_summary.json",
+      "bytes": 2447
+    },
+    {
+      "name": "e27_radial_sweep_summary.json",
+      "path": "results/tables/e27_radial_sweep_summary.json",
+      "bytes": 17660
+    },
+    {
+      "name": "e22_arch64_summary.json",
+      "path": "results/tables/e22_arch64_summary.json",
+      "bytes": 4363
+    },
+    {
+      "name": "e24_arch128_summary.json",
+      "path": "results/tables/e24_arch128_summary.json",
+      "bytes": 4361
+    },
+    {
+      "name": "e24_rotmnist_summary.json",
+      "path": "results/tables/e24_rotmnist_summary.json",
+      "bytes": 4304
+    },
+    {
+      "name": "e25_cnn_summary.json",
+      "path": "results/tables/e25_cnn_summary.json",
+      "bytes": 6549
+    },
+    {
+      "name": "e22_anr_ablation_summary.json",
+      "path": "results/tables/e22_anr_ablation_summary.json",
+      "bytes": 1967
+    }
+  ]
+}

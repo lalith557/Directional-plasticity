@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "name": "permuted_mnist",
+    "n_tasks": 100,
+    "train_subset": 6000
+  },
+  "architecture": {
+    "name": "mlp",
+    "hidden": 16,
+    "depth": 2
+  },
+  "method": {
+    "name": "sgd",
+    "params": {}
+  },
+  "optimization": {
+    "lr": 0.2,
+    "batch": 128,
+    "steps_per_task": 60
+  },
+  "evaluation": {
+    "diag_probe_size": 1000
+  },
+  "seed": 20260824,
+  "device": "auto",
+  "checkpoint_policy": "none",
+  "metadata": {
+    "name": "Reproduce SGD — MLP h=16 · Permuted MNIST",
+    "hypothesis": "",
+    "notes": "Reconstructed from experiments/e20_plasticity_stress.py constants; artifact results/tables/e20_summary.json."
+  }
+}

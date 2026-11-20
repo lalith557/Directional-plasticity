@@ -1,0 +1,41 @@
+[E09] device=cuda profile=gpu:NVIDIA GeForce RTX 4070 Laptop GPU env={'torch': '2.11.0+cu128', 'cuda_available': True, 'cuda_runtime': '12.8', 'device_name': 'NVIDIA GeForce RTX 4070 Laptop GPU', 'gpu_free_gb': 7.396655104, 'hardware_profile': 'gpu'}
+[E09-cifar10] loading CIFAR-10 ...
+[E09-cifar10] tasks: 5  head: 10-way  per=15  probe_steps=200 probe_mode=novel_class
+[E09-cifar10] student params: 591274
+[E09-cifar10] warmup task 0: test_loss=0.691
+[E09-cifar10] warmup task 1: test_loss=0.683
+[E09-cifar10] warmup task 2: test_loss=0.708
+[E09-cifar10] warmup task 3: test_loss=0.674
+[E09-cifar10] generating updates (4 norms x 4 sources x 15)
+[E09-cifar10] total updates: 240
+[E09-cifar10] reference FTD: 0.8788
+[E09-cifar10] measured 20/240
+[E09-cifar10] measured 40/240
+[E09-cifar10] measured 60/240
+[E09-cifar10] measured 80/240
+[E09-cifar10] measured 100/240
+[E09-cifar10] measured 120/240
+[E09-cifar10] measured 140/240
+[E09-cifar10] measured 160/240
+[E09-cifar10] measured 180/240
+[E09-cifar10] measured 200/240
+[E09-cifar10] measured 220/240
+[E09-cifar10] measured 240/240
+
+[E09-cifar10] source summary:
+                  mag             ctb             ptd           d_dir             ftd        
+                 mean     std    mean     std    mean     std    mean     std    mean     std
+source                                                                                       
+convex_mix     0.1875  0.1352  3.5891  3.6731 -4.1284  3.7179 -0.3802  0.2248 -0.0761  0.0536
+orth_perturb   0.1875  0.1352  0.0000  0.0004 -0.0045  0.0171  0.0000  0.0000 -0.0002  0.0007
+random_sphere  0.1875  0.1352  0.0017  0.0125 -0.0016  0.0349 -0.0002  0.0012 -0.0003  0.0008
+sgd_seed       0.1875  0.1352  5.8821  4.2414 -6.3719  3.7412 -0.6230  0.0008 -0.1104  0.0464
+
+[E09-cifar10] VIF: {'mag': 1.7788156823610262, 'ctb': 70.79856731262248, 'ptd': 87.03781009407642, 'd_dir': 4.794819866484031}
+[E09-cifar10] full n=240 R^2=0.9964 beta_d_dir=0.03295 CI=[0.02869,0.03722] p=8.682e-52
+[E09-cifar10] bootstrap mean=0.03293 CI=[0.02855,0.03705] sign_flip=0.000
+[E09-cifar10] c=0.01: n=205 beta=0.03279 CI=[0.02807,0.03751] p=3.525e-42 excludes0=True wvb=0.000
+[E09-cifar10] c=0.02: n=187 beta=0.03399 CI=[0.02783,0.04016] p=3.179e-27 excludes0=True wvb=0.000
+[E09-cifar10] c=0.05: n=187 beta=0.03438 CI=[0.02842,0.04033] p=1.145e-29 excludes0=True wvb=0.000
+[E09-cifar10_novel_class] VERDICT: PASS_with_vif_caveat
+[E09-cifar10_novel_class] wrote C:\Users\Lalith Gona\HTML\Deep Learning Project\results\tables\e09_cifar10_novel_class_summary.json

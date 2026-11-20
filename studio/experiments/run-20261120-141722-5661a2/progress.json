@@ -1,0 +1,1 @@
+{"task": 99, "n_tasks": 100, "step": 60, "steps_per_task": 60, "global_step": 6000, "total_steps": 6000, "elapsed_s": 27.373, "tasks_done": 100, "updated_at": 1795164472.2082832, "gpu_mem_allocated_mb": 48.1, "gpu_mem_peak_mb": 78.1}
